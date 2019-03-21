@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2146B6D2D155539107398778 /* Pods_Iris_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F4B3EDEED8E5F8E5DA0127 /* Pods_Iris_iOS.framework */; };
 		EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5622431F8400AC925F /* AppDelegate.swift */; };
 		EB488B5922431F8400AC925F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5822431F8400AC925F /* ViewController.swift */; };
 		EB488B5C22431F8400AC925F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5A22431F8400AC925F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		548BB03637E4D6DF41C90836 /* Pods-Iris.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iris.iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS.release.xcconfig"; sourceTree = "<group>"; };
+		AD33E770E572DAAF7F747AAD /* Pods-Iris.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iris.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F4B3EDEED8E5F8E5DA0127 /* Pods_Iris_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iris_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB488B5322431F8400AC925F /* Iris.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iris.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB488B5622431F8400AC925F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB488B5822431F8400AC925F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2146B6D2D155539107398778 /* Pods_Iris_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		933B5870148FF97E5869BE84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD33E770E572DAAF7F747AAD /* Pods-Iris.iOS.debug.xcconfig */,
+				548BB03637E4D6DF41C90836 /* Pods-Iris.iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EB488B4A22431F8400AC925F = {
 			isa = PBXGroup;
 			children = (
 				EB488B5522431F8400AC925F /* Iris.iOS */,
 				EB488B5422431F8400AC925F /* Products */,
+				933B5870148FF97E5869BE84 /* Pods */,
+				FAC5FAC4AE30CBFB2DE8E880 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = Iris.iOS;
 			sourceTree = "<group>";
 		};
+		FAC5FAC4AE30CBFB2DE8E880 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2F4B3EDEED8E5F8E5DA0127 /* Pods_Iris_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB488B6522431F8700AC925F /* Build configuration list for PBXNativeTarget "Iris.iOS" */;
 			buildPhases = (
+				7C2D724A02FF2ED8EADECF77 /* [CP] Check Pods Manifest.lock */,
 				EB488B4F22431F8400AC925F /* Sources */,
 				EB488B5022431F8400AC925F /* Frameworks */,
 				EB488B5122431F8400AC925F /* Resources */,
@@ -129,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C2D724A02FF2ED8EADECF77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Iris.iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB488B4F22431F8400AC925F /* Sources */ = {
@@ -280,6 +330,7 @@
 		};
 		EB488B6622431F8700AC925F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD33E770E572DAAF7F747AAD /* Pods-Iris.iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +349,7 @@
 		};
 		EB488B6722431F8700AC925F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 548BB03637E4D6DF41C90836 /* Pods-Iris.iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
