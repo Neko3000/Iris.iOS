@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2146B6D2D155539107398778 /* Pods_Iris_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F4B3EDEED8E5F8E5DA0127 /* Pods_Iris_iOS.framework */; };
+		EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB056861224334F300899DCE /* AvenirLTStd-Roman.otf */; };
+		EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB056862224334FE00899DCE /* AvenirLTStd-Book.otf */; };
+		EB0568672244C78700899DCE /* GradientBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0568662244C78700899DCE /* GradientBorder.swift */; };
+		EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0568692245DC6C00899DCE /* SketchShadow.swift */; };
+		EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05686B2245E6AE00899DCE /* GradientBackground.swift */; };
+		EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB05686D224616FD00899DCE /* Apple Symbols.ttf */; };
 		EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5622431F8400AC925F /* AppDelegate.swift */; };
-		EB488B5922431F8400AC925F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5822431F8400AC925F /* ViewController.swift */; };
+		EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5822431F8400AC925F /* LoginViewController.swift */; };
 		EB488B5C22431F8400AC925F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5A22431F8400AC925F /* Main.storyboard */; };
 		EB488B5E22431F8700AC925F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5D22431F8700AC925F /* Assets.xcassets */; };
 		EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */; };
@@ -19,9 +25,15 @@
 		548BB03637E4D6DF41C90836 /* Pods-Iris.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iris.iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AD33E770E572DAAF7F747AAD /* Pods-Iris.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iris.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D2F4B3EDEED8E5F8E5DA0127 /* Pods_Iris_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iris_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB056861224334F300899DCE /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
+		EB056862224334FE00899DCE /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
+		EB0568662244C78700899DCE /* GradientBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBorder.swift; sourceTree = "<group>"; };
+		EB0568692245DC6C00899DCE /* SketchShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
+		EB05686B2245E6AE00899DCE /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		EB05686D224616FD00899DCE /* Apple Symbols.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Symbols.ttf"; sourceTree = "<group>"; };
 		EB488B5322431F8400AC925F /* Iris.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iris.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB488B5622431F8400AC925F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB488B5822431F8400AC925F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB488B5822431F8400AC925F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB488B5B22431F8400AC925F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB488B5D22431F8700AC925F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB488B6022431F8700AC925F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +61,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EB05685F224334C300899DCE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EB056860224334D800899DCE /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EB056860224334D800899DCE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EB056861224334F300899DCE /* AvenirLTStd-Roman.otf */,
+				EB056862224334FE00899DCE /* AvenirLTStd-Book.otf */,
+				EB05686D224616FD00899DCE /* Apple Symbols.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EB0568652244C70600899DCE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB0568692245DC6C00899DCE /* SketchShadow.swift */,
+				EB0568662244C78700899DCE /* GradientBorder.swift */,
+				EB05686B2245E6AE00899DCE /* GradientBackground.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB0568682245DBA900899DCE /* Funcitions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Funcitions;
+			sourceTree = "<group>";
+		};
 		EB488B4A22431F8400AC925F = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +117,12 @@
 		EB488B5522431F8400AC925F /* Iris.iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EB488B5622431F8400AC925F /* AppDelegate.swift */,
-				EB488B5822431F8400AC925F /* ViewController.swift */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
+				EB488B5622431F8400AC925F /* AppDelegate.swift */,
+				EB488B5822431F8400AC925F /* LoginViewController.swift */,
+				EB0568682245DBA900899DCE /* Funcitions */,
+				EB0568652244C70600899DCE /* Extensions */,
+				EB05685F224334C300899DCE /* Resource */,
 				EB488B5D22431F8700AC925F /* Assets.xcassets */,
 				EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */,
 				EB488B6222431F8700AC925F /* Info.plist */,
@@ -147,9 +197,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
-				EB488B5E22431F8700AC925F /* Assets.xcassets in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
+				EB488B5E22431F8700AC925F /* Assets.xcassets in Resources */,
+				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
+				EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */,
+				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
+				EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB488B5922431F8400AC925F /* ViewController.swift in Sources */,
+				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
+				EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */,
+				EB0568672244C78700899DCE /* GradientBorder.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
+				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
