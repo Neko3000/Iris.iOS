@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="djQ-H1-13j">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -115,6 +115,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cHr-aU-xRG" secondAttribute="bottom" constant="25" id="E5X-5S-pTs"/>
                             <constraint firstItem="ypC-8l-OX9" firstAttribute="bottom" secondItem="cHr-aU-xRG" secondAttribute="bottom" constant="5" id="Ktf-Ou-4wv"/>
                             <constraint firstItem="LDi-b6-K2R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QJj-lc-VaH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ypC-8l-OX9" secondAttribute="trailing" constant="20" id="Qsc-Gu-tUO"/>
                             <constraint firstItem="ypC-8l-OX9" firstAttribute="leading" secondItem="cHr-aU-xRG" secondAttribute="trailing" constant="8" id="sUf-YA-DRI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -122,13 +123,55 @@
                     <connections>
                         <outlet property="loginBtn" destination="FZk-qN-0wl" id="Qwy-yy-Xej"/>
                         <outlet property="passwordImage" destination="fDE-88-ju0" id="vgU-5E-aQX"/>
+                        <outlet property="passwordTextField" destination="gLM-nL-dix" id="HhC-I4-Slr"/>
                         <outlet property="signupBtn" destination="ypC-8l-OX9" id="mBg-Sg-gyR"/>
                         <outlet property="usernameImage" destination="JcE-BJ-hcm" id="FLZ-2a-wga"/>
+                        <outlet property="usernameTextField" destination="EVJ-wc-KnF" id="71W-vf-gZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Daily View Controller-->
+        <scene sceneID="iyt-NQ-yFQ">
+            <objects>
+                <viewController id="djQ-H1-13j" customClass="DailyViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hwK-pd-cmX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-g1-qi4">
+                                <rect key="frame" x="20" y="20" width="335" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mf-oN-Vrb" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="589" width="375" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="mjk-Yi-AYI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fFf-g1-qi4" firstAttribute="top" secondItem="lnN-Xv-q5F" secondAttribute="top" id="IDY-de-vJ3"/>
+                            <constraint firstItem="lnN-Xv-q5F" firstAttribute="trailing" secondItem="5mf-oN-Vrb" secondAttribute="trailing" id="i7B-bI-dyC"/>
+                            <constraint firstItem="lnN-Xv-q5F" firstAttribute="trailing" secondItem="fFf-g1-qi4" secondAttribute="trailing" constant="20" id="n0w-Hz-Cvr"/>
+                            <constraint firstItem="lnN-Xv-q5F" firstAttribute="bottom" secondItem="fFf-g1-qi4" secondAttribute="bottom" id="oe7-YZ-hwP"/>
+                            <constraint firstItem="lnN-Xv-q5F" firstAttribute="bottom" secondItem="5mf-oN-Vrb" secondAttribute="bottom" id="skX-4x-4Eb"/>
+                            <constraint firstItem="5mf-oN-Vrb" firstAttribute="leading" secondItem="lnN-Xv-q5F" secondAttribute="leading" id="z3v-kq-laZ"/>
+                            <constraint firstItem="fFf-g1-qi4" firstAttribute="leading" secondItem="lnN-Xv-q5F" secondAttribute="leading" constant="20" id="zYh-ky-Iut"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lnN-Xv-q5F"/>
+                    </view>
+                    <connections>
+                        <outlet property="dailyTableView" destination="fFf-g1-qi4" id="eVJ-tC-hsk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uor-Qg-hIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>

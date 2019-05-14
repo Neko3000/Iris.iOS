@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="addBtn" destination="ih5-CF-Kzf" id="prY-YZ-6Sy"/>
+                <outlet property="panelView" destination="oNm-Q7-jNR" id="Vrv-J8-CGG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNm-Q7-jNR">
+                    <rect key="frame" x="0.0" y="75" width="375" height="54"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E2-cH-fy2">
+                            <rect key="frame" x="23" y="7" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="A2H-NM-f7e"/>
+                                <constraint firstAttribute="height" constant="40" id="RGF-Jg-R1y"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="icon-news"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-9n-fWV">
+                            <rect key="frame" x="242.5" y="7" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Agb-Rd-0UJ"/>
+                                <constraint firstAttribute="width" constant="40" id="zq0-RB-0q2"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="icon-activity"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-0o-0Ap">
+                            <rect key="frame" x="92.5" y="7" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="CnJ-xh-5ba"/>
+                                <constraint firstAttribute="height" constant="40" id="Jcd-9p-kqI"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="icon-discover"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2P-jE-6QG">
+                            <rect key="frame" x="313" y="7" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="lrJ-AY-gGh"/>
+                                <constraint firstAttribute="height" constant="40" id="vkb-Ua-0s6"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="icon-user-center"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-CF-Kzf">
+                            <rect key="frame" x="160.5" y="-24" width="54" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="54" id="Ue5-GP-PFn"/>
+                                <constraint firstAttribute="height" constant="54" id="nhG-4P-35L"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="btn-add"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="3E2-cH-fy2" firstAttribute="centerY" secondItem="oNm-Q7-jNR" secondAttribute="centerY" id="GWi-f8-ke4"/>
+                        <constraint firstItem="3E2-cH-fy2" firstAttribute="leading" secondItem="oNm-Q7-jNR" secondAttribute="leading" constant="23" id="UuV-3U-0Uk"/>
+                        <constraint firstItem="1E5-0o-0Ap" firstAttribute="centerY" secondItem="oNm-Q7-jNR" secondAttribute="centerY" id="XRI-xU-H7n"/>
+                        <constraint firstAttribute="centerX" secondItem="1E5-0o-0Ap" secondAttribute="trailing" constant="55" id="abs-Z1-n3i"/>
+                        <constraint firstItem="v2P-jE-6QG" firstAttribute="centerY" secondItem="oNm-Q7-jNR" secondAttribute="centerY" id="frr-Hx-ZP1"/>
+                        <constraint firstItem="zhS-9n-fWV" firstAttribute="centerY" secondItem="oNm-Q7-jNR" secondAttribute="centerY" id="ncJ-v8-70F"/>
+                        <constraint firstItem="ih5-CF-Kzf" firstAttribute="centerX" secondItem="oNm-Q7-jNR" secondAttribute="centerX" id="oQ7-dk-OMc"/>
+                        <constraint firstAttribute="bottom" secondItem="ih5-CF-Kzf" secondAttribute="bottom" constant="24" id="v1E-j5-kgy"/>
+                        <constraint firstItem="zhS-9n-fWV" firstAttribute="leading" secondItem="oNm-Q7-jNR" secondAttribute="centerX" constant="55" id="vqI-RW-xkA"/>
+                        <constraint firstAttribute="trailing" secondItem="v2P-jE-6QG" secondAttribute="trailing" constant="22" id="xBA-sE-kFv"/>
+                        <constraint firstAttribute="height" constant="54" id="ziq-X1-fYX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oNm-Q7-jNR" secondAttribute="trailing" id="TZ9-b8-BPh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oNm-Q7-jNR" secondAttribute="bottom" id="eL9-yL-GgM"/>
+                <constraint firstItem="oNm-Q7-jNR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gRu-H7-kNZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="245.59999999999999" y="-126.38680659670166"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn-add" width="54" height="54"/>
+        <image name="icon-activity" width="40" height="40"/>
+        <image name="icon-discover" width="40" height="40"/>
+        <image name="icon-news" width="40" height="40"/>
+        <image name="icon-user-center" width="40" height="40"/>
+    </resources>
+</document>

@@ -14,6 +14,12 @@
 		EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0568692245DC6C00899DCE /* SketchShadow.swift */; };
 		EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05686B2245E6AE00899DCE /* GradientBackground.swift */; };
 		EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB05686D224616FD00899DCE /* Apple Symbols.ttf */; };
+		EB267C31228A857C004979AC /* MainTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB267C30228A857C004979AC /* MainTabBar.xib */; };
+		EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C36228A99E8004979AC /* MainTabBar.swift */; };
+		EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C38228A9A0E004979AC /* XibUIView.swift */; };
+		EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C3A228AA092004979AC /* DailyViewController.swift */; };
+		EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */; };
+		EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */; };
 		EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5622431F8400AC925F /* AppDelegate.swift */; };
 		EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5822431F8400AC925F /* LoginViewController.swift */; };
 		EB488B5C22431F8400AC925F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5A22431F8400AC925F /* Main.storyboard */; };
@@ -31,6 +37,12 @@
 		EB0568692245DC6C00899DCE /* SketchShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		EB05686B2245E6AE00899DCE /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		EB05686D224616FD00899DCE /* Apple Symbols.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Symbols.ttf"; sourceTree = "<group>"; };
+		EB267C30228A857C004979AC /* MainTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBar.xib; sourceTree = "<group>"; };
+		EB267C36228A99E8004979AC /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		EB267C38228A9A0E004979AC /* XibUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibUIView.swift; sourceTree = "<group>"; };
+		EB267C3A228AA092004979AC /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
+		EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyTableViewCell.xib; sourceTree = "<group>"; };
 		EB488B5322431F8400AC925F /* Iris.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iris.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB488B5622431F8400AC925F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB488B5822431F8400AC925F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +104,30 @@
 		EB0568682245DBA900899DCE /* Funcitions */ = {
 			isa = PBXGroup;
 			children = (
+				EB267C38228A9A0E004979AC /* XibUIView.swift */,
 			);
 			path = Funcitions;
+			sourceTree = "<group>";
+		};
+		EB267C32228A8DDC004979AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EB267C33228A8DEB004979AC /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewContollers;
+			sourceTree = "<group>";
+		};
+		EB267C34228A8DF5004979AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EB488B4A22431F8400AC925F = {
@@ -117,15 +151,23 @@
 		EB488B5522431F8400AC925F /* Iris.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EB267C34228A8DF5004979AC /* Models */,
+				EB267C33228A8DEB004979AC /* ViewContollers */,
+				EB267C32228A8DDC004979AC /* Views */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
+				EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */,
+				EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */,
 				EB488B5622431F8400AC925F /* AppDelegate.swift */,
 				EB488B5822431F8400AC925F /* LoginViewController.swift */,
+				EB267C3A228AA092004979AC /* DailyViewController.swift */,
 				EB0568682245DBA900899DCE /* Funcitions */,
 				EB0568652244C70600899DCE /* Extensions */,
 				EB05685F224334C300899DCE /* Resource */,
 				EB488B5D22431F8700AC925F /* Assets.xcassets */,
 				EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */,
 				EB488B6222431F8700AC925F /* Info.plist */,
+				EB267C30228A857C004979AC /* MainTabBar.xib */,
+				EB267C36228A99E8004979AC /* MainTabBar.swift */,
 			);
 			path = Iris.iOS;
 			sourceTree = "<group>";
@@ -171,6 +213,7 @@
 				TargetAttributes = {
 					EB488B5222431F8400AC925F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -197,9 +240,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
 				EB488B5E22431F8700AC925F /* Assets.xcassets in Resources */,
 				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
+				EB267C31228A857C004979AC /* MainTabBar.xib in Resources */,
 				EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */,
 				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
 				EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */,
@@ -238,11 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */,
+				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
 				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
 				EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */,
 				EB0568672244C78700899DCE /* GradientBorder.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
+				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
+				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.neko3000.Iris-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -417,7 +466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.neko3000.Iris-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
