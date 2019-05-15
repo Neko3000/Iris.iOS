@@ -36,6 +36,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Lora-Regular.ttf</string>
 		<string>AvenirLTStd-Roman.otf</string>
 		<string>AvenirLTStd-Book.otf</string>
 		<string>Apple Symbols.ttf</string>

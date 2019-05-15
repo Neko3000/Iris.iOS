@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="djQ-H1-13j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ARg-HD-6Px">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,6 +16,9 @@
         </array>
         <array key="AvenirLTStd-Roman.otf">
             <string>AvenirLTStd-Roman</string>
+        </array>
+        <array key="Lora-Regular.ttf">
+            <string>Lora-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -173,9 +176,97 @@
             </objects>
             <point key="canvasLocation" x="1052" y="132.68365817091455"/>
         </scene>
+        <!--Explore View Controller-->
+        <scene sceneID="Jx5-wr-wHz">
+            <objects>
+                <viewController id="ARg-HD-6Px" customClass="ExploreViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j1b-a6-Irt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ke-ZO-GSL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore-ahri-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-ue-YHl">
+                                        <rect key="frame" x="-50" y="-50" width="475" height="747"/>
+                                    </imageView>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S57-JD-zkp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dIW-ue-YHl" firstAttribute="top" secondItem="2ke-ZO-GSL" secondAttribute="top" constant="-50" id="9Qv-vc-DXD"/>
+                                    <constraint firstAttribute="bottom" secondItem="dIW-ue-YHl" secondAttribute="bottom" constant="-50" id="MAH-fn-vjh"/>
+                                    <constraint firstItem="dIW-ue-YHl" firstAttribute="leading" secondItem="2ke-ZO-GSL" secondAttribute="leading" constant="-50" id="NPq-RO-Zge"/>
+                                    <constraint firstAttribute="trailing" secondItem="dIW-ue-YHl" secondAttribute="trailing" constant="-50" id="pRs-ls-cb3"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="explore." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSS-Oo-Xth">
+                                <rect key="frame" x="120.5" y="171.5" width="134.5" height="51"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="find those charming things you’re interested in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skS-lH-i7K">
+                                <rect key="frame" x="63" y="232.5" width="249.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-2y-2c8">
+                                <rect key="frame" x="41" y="286" width="293" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="NvY-vP-Z2K"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Lora-Regular" family="Lora" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXN-9f-X0Y" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="589" width="375" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="nEZ-Wt-I7k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JqC-CS-MwS" firstAttribute="trailing" secondItem="fXN-9f-X0Y" secondAttribute="trailing" id="3Bd-n9-pAR"/>
+                            <constraint firstItem="Fu0-2y-2c8" firstAttribute="centerX" secondItem="JqC-CS-MwS" secondAttribute="centerX" id="7gx-Ie-qZA"/>
+                            <constraint firstItem="JqC-CS-MwS" firstAttribute="bottom" secondItem="fXN-9f-X0Y" secondAttribute="bottom" id="DnE-gk-Lpp"/>
+                            <constraint firstItem="Fu0-2y-2c8" firstAttribute="top" secondItem="skS-lH-i7K" secondAttribute="bottom" constant="37" id="FIl-2p-k3L"/>
+                            <constraint firstItem="skS-lH-i7K" firstAttribute="top" secondItem="hSS-Oo-Xth" secondAttribute="bottom" constant="10" id="GNE-mE-p9p"/>
+                            <constraint firstItem="JqC-CS-MwS" firstAttribute="trailing" secondItem="Fu0-2y-2c8" secondAttribute="trailing" constant="41" id="HgT-k4-7XA"/>
+                            <constraint firstItem="Fu0-2y-2c8" firstAttribute="centerY" secondItem="JqC-CS-MwS" secondAttribute="centerY" constant="-40" id="KnB-2S-5bQ"/>
+                            <constraint firstItem="hSS-Oo-Xth" firstAttribute="centerX" secondItem="JqC-CS-MwS" secondAttribute="centerX" id="NXL-B7-w7Y"/>
+                            <constraint firstItem="2ke-ZO-GSL" firstAttribute="leading" secondItem="JqC-CS-MwS" secondAttribute="leading" id="OIl-S8-mjc"/>
+                            <constraint firstItem="skS-lH-i7K" firstAttribute="centerX" secondItem="JqC-CS-MwS" secondAttribute="centerX" id="RyJ-he-grD"/>
+                            <constraint firstItem="2ke-ZO-GSL" firstAttribute="top" secondItem="JqC-CS-MwS" secondAttribute="top" id="q03-ZX-2Va"/>
+                            <constraint firstItem="2ke-ZO-GSL" firstAttribute="bottom" secondItem="JqC-CS-MwS" secondAttribute="bottom" id="qKx-BL-Qao"/>
+                            <constraint firstItem="Fu0-2y-2c8" firstAttribute="leading" secondItem="JqC-CS-MwS" secondAttribute="leading" constant="41" id="qv8-xt-fVJ"/>
+                            <constraint firstItem="2ke-ZO-GSL" firstAttribute="trailing" secondItem="JqC-CS-MwS" secondAttribute="trailing" id="yHs-JA-DOP"/>
+                            <constraint firstItem="fXN-9f-X0Y" firstAttribute="leading" secondItem="JqC-CS-MwS" secondAttribute="leading" id="yPW-TP-uFA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JqC-CS-MwS"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageBGContainerView" destination="2ke-ZO-GSL" id="f8D-1v-XNq"/>
+                        <outlet property="imageBGView" destination="dIW-ue-YHl" id="wXK-oa-qQ4"/>
+                        <outlet property="searchTextField" destination="Fu0-2y-2c8" id="reZ-QM-Hwf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bq4-qe-b70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="132.68365817091455"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn-login" width="269" height="46"/>
+        <image name="explore-ahri-1" width="375" height="647"/>
         <image name="input-username" width="269" height="30"/>
         <image name="logo" width="269" height="330"/>
         <namedColor name="input-normal-purple">
