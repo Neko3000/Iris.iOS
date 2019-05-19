@@ -27,6 +27,9 @@ class ExploreViewController: UIViewController {
         
         imageBGContainerView.layer.masksToBounds = true
         setImageBG(image: UIImage(named: "explore-ahri-1")!)
+        
+        searchTextField.layer.cornerRadius = 10.0
+        searchTextField.layer.masksToBounds = true
     }
     
 

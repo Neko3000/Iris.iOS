@@ -116,13 +116,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="artImageView" destination="j66-ui-LHD" id="Kn4-Na-wRt"/>
                 <outlet property="authorAvatarImageView" destination="NfH-5f-ruW" id="mYx-tK-ELr"/>
                 <outlet property="authorNameLabel" destination="YSW-uV-5Z1" id="E7g-4Y-p9M"/>
                 <outlet property="commentCountLabel" destination="07P-aD-plH" id="Yzc-it-gbO"/>
                 <outlet property="containerView" destination="GRc-0K-uLq" id="5xN-FG-7MZ"/>
                 <outlet property="likeCountLabel" destination="r1x-ON-uWe" id="sWG-Ih-huj"/>
                 <outlet property="titleLabel" destination="Aul-My-PJH" id="BJl-A1-wdY"/>
-                <outlet property="workImageView" destination="j66-ui-LHD" id="Vye-gg-rzm"/>
             </connections>
             <point key="canvasLocation" x="42.753623188405797" y="127.90178571428571"/>
         </tableViewCell>

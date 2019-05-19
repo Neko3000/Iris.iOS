@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 54f8ed5ec429a425047c3d859519711ce63def11
+PODS:
+  - TwicketSegmentedControl (0.1.2)
+
+DEPENDENCIES:
+  - TwicketSegmentedControl
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - TwicketSegmentedControl
+
+SPEC CHECKSUMS:
+  TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
+
+PODFILE CHECKSUM: 92aae558144170e1d5c77bc8e803174cf9a57043
 
 COCOAPODS: 1.5.3

@@ -25,8 +25,12 @@
 		EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5622431F8400AC925F /* AppDelegate.swift */; };
 		EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5822431F8400AC925F /* LoginViewController.swift */; };
 		EB488B5C22431F8400AC925F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5A22431F8400AC925F /* Main.storyboard */; };
-		EB488B5E22431F8700AC925F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5D22431F8700AC925F /* Assets.xcassets */; };
 		EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */; };
+		EB66429C228FC76B00FE71B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB66429B228FC76B00FE71B6 /* Assets.xcassets */; };
+		EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */; };
+		EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */; };
+		EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */; };
+		EB6642A8228FF8A000FE71B6 /* ArtListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +55,13 @@
 		EB488B5622431F8400AC925F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB488B5822431F8400AC925F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB488B5B22431F8400AC925F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EB488B5D22431F8700AC925F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB488B6022431F8700AC925F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB488B6222431F8700AC925F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB66429B228FC76B00FE71B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListViewController.swift; sourceTree = "<group>"; };
+		EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMasonryViewLayout.swift; sourceTree = "<group>"; };
+		EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtListCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,10 +164,13 @@
 		EB488B5522431F8400AC925F /* Iris.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EB66429B228FC76B00FE71B6 /* Assets.xcassets */,
 				EB267C34228A8DF5004979AC /* Models */,
 				EB267C33228A8DEB004979AC /* ViewContollers */,
 				EB267C32228A8DDC004979AC /* Views */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
+				EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */,
+				EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */,
 				EB267C41228BEB06004979AC /* ExploreViewController.swift */,
 				EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */,
 				EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */,
@@ -169,11 +180,12 @@
 				EB0568682245DBA900899DCE /* Funcitions */,
 				EB0568652244C70600899DCE /* Extensions */,
 				EB05685F224334C300899DCE /* Resource */,
-				EB488B5D22431F8700AC925F /* Assets.xcassets */,
 				EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */,
 				EB488B6222431F8700AC925F /* Info.plist */,
 				EB267C30228A857C004979AC /* MainTabBar.xib */,
 				EB267C36228A99E8004979AC /* MainTabBar.swift */,
+				EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */,
+				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
 			);
 			path = Iris.iOS;
 			sourceTree = "<group>";
@@ -197,6 +209,7 @@
 				EB488B4F22431F8400AC925F /* Sources */,
 				EB488B5022431F8400AC925F /* Frameworks */,
 				EB488B5122431F8400AC925F /* Resources */,
+				FB626D734BDA9D9894C4FF37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,12 +261,13 @@
 			files = (
 				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
-				EB488B5E22431F8700AC925F /* Assets.xcassets in Resources */,
 				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
 				EB267C31228A857C004979AC /* MainTabBar.xib in Resources */,
 				EB267C44228C020F004979AC /* Lora-Regular.ttf in Resources */,
 				EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */,
+				EB6642A8228FF8A000FE71B6 /* ArtListCollectionViewCell.xib in Resources */,
 				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
+				EB66429C228FC76B00FE71B6 /* Assets.xcassets in Resources */,
 				EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +297,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FB626D734BDA9D9894C4FF37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwicketSegmentedControl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -296,10 +332,13 @@
 				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
 				EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */,
 				EB0568672244C78700899DCE /* GradientBorder.swift in Sources */,
+				EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */,
+				EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
+				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X2LR7X4335;
+				DEVELOPMENT_TEAM = J25N7959VU;
 				INFOPLIST_FILE = Iris.iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,7 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X2LR7X4335;
+				DEVELOPMENT_TEAM = J25N7959VU;
 				INFOPLIST_FILE = Iris.iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

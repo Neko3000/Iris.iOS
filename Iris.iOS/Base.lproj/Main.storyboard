@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ARg-HD-6Px">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tzA-Ui-6IC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -261,12 +261,97 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bq4-qe-b70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1948" y="133"/>
+        </scene>
+        <!--Art List View Controller-->
+        <scene sceneID="MJ6-Lf-CEt">
+            <objects>
+                <viewController id="tzA-Ui-6IC" customClass="ArtListViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HZi-kC-1fh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLI-CD-ctB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="82"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-cj-YV1">
+                                        <rect key="frame" x="17" y="14" width="293" height="26"/>
+                                        <color key="backgroundColor" name="text-light-grey-3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="hec-jt-gXt"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wt3-cy-Ti4">
+                                        <rect key="frame" x="330" y="14" width="26" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="DdF-Mk-b3G"/>
+                                            <constraint firstAttribute="width" constant="26" id="LLf-2U-uGi"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-menu"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cG-AS-uYf" customClass="TwicketSegmentedControl" customModule="TwicketSegmentedControl">
+                                        <rect key="frame" x="0.0" y="48" width="375" height="26"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="R0J-qR-4wA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wt3-cy-Ti4" firstAttribute="top" secondItem="lLI-CD-ctB" secondAttribute="top" constant="14" id="KFL-Rs-YwH"/>
+                                    <constraint firstItem="WEf-cj-YV1" firstAttribute="top" secondItem="lLI-CD-ctB" secondAttribute="top" constant="14" id="KQQ-4V-TfU"/>
+                                    <constraint firstAttribute="bottom" secondItem="1cG-AS-uYf" secondAttribute="bottom" constant="8" id="KqY-hu-ur2"/>
+                                    <constraint firstAttribute="height" constant="82" id="Prj-VP-GF0"/>
+                                    <constraint firstAttribute="trailing" secondItem="wt3-cy-Ti4" secondAttribute="trailing" constant="19" id="Tk3-dg-9Vf"/>
+                                    <constraint firstItem="WEf-cj-YV1" firstAttribute="leading" secondItem="lLI-CD-ctB" secondAttribute="leading" constant="17" id="agC-ug-wWh"/>
+                                    <constraint firstItem="wt3-cy-Ti4" firstAttribute="leading" secondItem="WEf-cj-YV1" secondAttribute="trailing" constant="20" id="xxY-Zx-z8t"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me2-R6-ej0">
+                                <rect key="frame" x="0.0" y="102" width="375" height="565"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fBf-zp-j4d">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pGw-LQ-4pP" firstAttribute="trailing" secondItem="1cG-AS-uYf" secondAttribute="trailing" id="8dc-7p-kcR"/>
+                            <constraint firstItem="pGw-LQ-4pP" firstAttribute="trailing" secondItem="lLI-CD-ctB" secondAttribute="trailing" id="DIn-NM-Sm1"/>
+                            <constraint firstItem="Me2-R6-ej0" firstAttribute="top" secondItem="lLI-CD-ctB" secondAttribute="bottom" id="MIP-JH-4RK"/>
+                            <constraint firstItem="Me2-R6-ej0" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="ePb-eh-U3V"/>
+                            <constraint firstItem="lLI-CD-ctB" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="ky7-Jp-GRv"/>
+                            <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="pGw-LQ-4pP" secondAttribute="bottom" id="lU7-u5-HGU"/>
+                            <constraint firstItem="Me2-R6-ej0" firstAttribute="trailing" secondItem="pGw-LQ-4pP" secondAttribute="trailing" id="uMS-BY-Ihi"/>
+                            <constraint firstItem="1cG-AS-uYf" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="yFw-Di-8vl"/>
+                            <constraint firstItem="lLI-CD-ctB" firstAttribute="top" secondItem="pGw-LQ-4pP" secondAttribute="top" id="ybP-hI-xil"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pGw-LQ-4pP"/>
+                    </view>
+                    <connections>
+                        <outlet property="artListCollectionView" destination="Me2-R6-ej0" id="UVZ-cp-grU"/>
+                        <outlet property="categorySelectorTwicketSegmentedControl" destination="1cG-AS-uYf" id="5Gf-GZ-5OY"/>
+                        <outlet property="searchTextField" destination="WEf-cj-YV1" id="s0r-oT-Qmc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9J-tT-qGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2845.5999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>
         <image name="btn-login" width="269" height="46"/>
         <image name="explore-ahri-1" width="375" height="647"/>
+        <image name="icon-menu" width="26" height="20"/>
         <image name="input-username" width="269" height="30"/>
         <image name="logo" width="269" height="330"/>
         <namedColor name="input-normal-purple">
@@ -274,6 +359,9 @@
         </namedColor>
         <namedColor name="text-light-grey">
             <color red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text-light-grey-3">
+            <color red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text-normal-purple">
             <color red="0.60392156862745094" green="0.43137254901960786" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

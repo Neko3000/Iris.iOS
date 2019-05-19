@@ -47,7 +47,7 @@ class DailyViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let specificCell = tableView.dequeueReusableCell(withIdentifier: "DailyTableViewCell") as! DailyTableViewCell
         
         // Setting
-        specificCell.setWork(work: UIImage(named: "daily-ahri-1")!)
+        specificCell.setArt(art: UIImage(named: "daily-ahri-1")!)
         specificCell.setTitle(title: "Ahri for iPhone case")
         specificCell.setCommentCount(commentCount: "\(2310)")
         specificCell.setLikeCount(likeCount: "\(10410)")

@@ -11,7 +11,7 @@ import UIKit
 class DailyTableViewCell: UITableViewCell {
     
     // Outlets
-    @IBOutlet weak var workImageView: UIImageView!
+    @IBOutlet weak var artImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var likeCountLabel: UILabel!
@@ -45,8 +45,8 @@ class DailyTableViewCell: UITableViewCell {
     }
     
     // Sets
-    public func setWork(work:UIImage){
-        workImageView.image = work
+    public func setArt(art:UIImage){
+        artImageView.image = art
     }
     public func setTitle(title:String){
         titleLabel.text = title

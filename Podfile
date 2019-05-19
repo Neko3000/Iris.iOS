@@ -6,5 +6,5 @@ target 'Iris.iOS' do
   use_frameworks!
 
   # Pods for Iris.iOS
-
+  pod 'TwicketSegmentedControl'
 end

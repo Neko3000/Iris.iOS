@@ -3,43 +3,88 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		503DE964E5EF4E8F605089D235B84A6A /* Pods-Iris.iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C66BD7960B3640D422FFF121B6898A9 /* Pods-Iris.iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		680754A84FEB5C647AC8DB52E7467017 /* Pods-Iris.iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C22BF90A1AF443ED1BE80CABDA501 /* Pods-Iris.iOS-dummy.m */; };
-		B29FF87DE34C11ACEEC1D8A7A21100DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		1B7ADC6C425390D1C9BEB9CBC36578CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		4C62FCD432400C35AB28C240A3D256CA /* TwicketSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0BEF335A6EAA119544FF4C506FBD1 /* TwicketSegmentedControl.swift */; };
+		660227556894FAE35E7C7CD89A34F5FA /* TwicketSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 731DBF85346A24A0EA1744293FE413A3 /* TwicketSegmentedControl-dummy.m */; };
+		B3148AA16AA882A340D4F5380A694D84 /* Pods-Iris.iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C66BD7960B3640D422FFF121B6898A9 /* Pods-Iris.iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEF5A5B25D803D9DEC9E59731A591000 /* TwicketSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD00C725CCA7593CB75A9902DBA9F32 /* TwicketSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB9BF4FAD72D754BBE29957CBD7DC1DB /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3F42BD2531FC6CAA94BA61EE0893C /* UIViewShadowExtension.swift */; };
+		D5EBABC409DCA66100A397BC61F41826 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		DEF21477AE0D2BBDD290877D01789827 /* Pods-Iris.iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C22BF90A1AF443ED1BE80CABDA501 /* Pods-Iris.iOS-dummy.m */; };
+		F32F9936AA724DBFA0B71F96BF851DF5 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E558CF186947C12A6488B1AEB88C5 /* Palette.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D32C2C7601400F3B3CB0FBA22909F0E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24B6E71DEE026F87B7EDB8744CDCDDFE;
+			remoteInfo = TwicketSegmentedControl;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3361F45FCE6E734EF3298F966228E8C5 /* Pods-Iris.iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Iris.iOS-frameworks.sh"; sourceTree = "<group>"; };
 		45DD95E8B002573452C9298C72EC626A /* Pods-Iris.iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Iris.iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4A64061F7512B243550A175DC56950A8 /* TwicketSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TwicketSegmentedControl.xcconfig; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5E2C5F9015D77BCA208FECA6D6927F0D /* Pods_Iris_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iris_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B052889B54FDE06CC3800E40458C2D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		705FFC1964078568FA887B28827265CF /* TwicketSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TwicketSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		731DBF85346A24A0EA1744293FE413A3 /* TwicketSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TwicketSegmentedControl-dummy.m"; sourceTree = "<group>"; };
+		81F0BEF335A6EAA119544FF4C506FBD1 /* TwicketSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwicketSegmentedControl.swift; path = TwicketSegmentedControl/TwicketSegmentedControl.swift; sourceTree = "<group>"; };
+		8FF645C56DC29167CFE8BA3E525A8F4F /* TwicketSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwicketSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		958E558CF186947C12A6488B1AEB88C5 /* Palette.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Palette.swift; path = TwicketSegmentedControl/Palette.swift; sourceTree = "<group>"; };
+		9BCF84D1858AAEE9F4B399646A540E3F /* TwicketSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TwicketSegmentedControl.modulemap; sourceTree = "<group>"; };
 		9C66BD7960B3640D422FFF121B6898A9 /* Pods-Iris.iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Iris.iOS-umbrella.h"; sourceTree = "<group>"; };
 		B3CDB61A0CB979052404F3AD4CE007A0 /* Pods-Iris.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Iris.iOS.release.xcconfig"; sourceTree = "<group>"; };
-		BB6B2971CA64DC98E1B7A6BBC6F78656 /* Pods_Iris_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Iris_iOS.framework; path = "Pods-Iris.iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C687DC5819663422D9FA789DE4E32730 /* Pods-Iris.iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Iris.iOS.modulemap"; sourceTree = "<group>"; };
 		CC2C22BF90A1AF443ED1BE80CABDA501 /* Pods-Iris.iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Iris.iOS-dummy.m"; sourceTree = "<group>"; };
 		D0D479964F18CAA60CA0DD8851C39078 /* Pods-Iris.iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Iris.iOS-resources.sh"; sourceTree = "<group>"; };
+		D5E3F42BD2531FC6CAA94BA61EE0893C /* UIViewShadowExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewShadowExtension.swift; path = TwicketSegmentedControl/UIViewShadowExtension.swift; sourceTree = "<group>"; };
+		F05092E3D1890A716F5BE0057204D224 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD00C725CCA7593CB75A9902DBA9F32 /* TwicketSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TwicketSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
 		FAEB6450A66472CD9685C522E6BFC34A /* Pods-Iris.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Iris.iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FF6D2F26A62498B724A1AEF33E2829B4 /* Pods-Iris.iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Iris.iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A76A0BADE1B8B3344C64457B9531877 /* Frameworks */ = {
+		151D94A55EBE91BF6511A7E00B73EBCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B29FF87DE34C11ACEEC1D8A7A21100DD /* Foundation.framework in Frameworks */,
+				D5EBABC409DCA66100A397BC61F41826 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2388434E3AE296283F6E9CCC626FB396 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B7ADC6C425390D1C9BEB9CBC36578CC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3921AF1F912AA7BD12493F24F0C670B6 /* TwicketSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				958E558CF186947C12A6488B1AEB88C5 /* Palette.swift */,
+				81F0BEF335A6EAA119544FF4C506FBD1 /* TwicketSegmentedControl.swift */,
+				D5E3F42BD2531FC6CAA94BA61EE0893C /* UIViewShadowExtension.swift */,
+				5B91AF91EC6D092805933FDD9835C44E /* Support Files */,
+			);
+			path = TwicketSegmentedControl;
+			sourceTree = "<group>";
+		};
 		4A92F4DC825100E8D221B4801C1F023C /* Pods-Iris.iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +103,20 @@
 			path = "Target Support Files/Pods-Iris.iOS";
 			sourceTree = "<group>";
 		};
+		5B91AF91EC6D092805933FDD9835C44E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F05092E3D1890A716F5BE0057204D224 /* Info.plist */,
+				9BCF84D1858AAEE9F4B399646A540E3F /* TwicketSegmentedControl.modulemap */,
+				4A64061F7512B243550A175DC56950A8 /* TwicketSegmentedControl.xcconfig */,
+				731DBF85346A24A0EA1744293FE413A3 /* TwicketSegmentedControl-dummy.m */,
+				705FFC1964078568FA887B28827265CF /* TwicketSegmentedControl-prefix.pch */,
+				FAD00C725CCA7593CB75A9902DBA9F32 /* TwicketSegmentedControl-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TwicketSegmentedControl";
+			sourceTree = "<group>";
+		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,17 +130,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BBE96AF6DDFEE42CABA3FE9CDB37C371 /* Products */,
+				BDC67CD0199D90D16A01B422CDE0DD98 /* Pods */,
+				E5571AD4F817980A8E8E69A81F1A8F36 /* Products */,
 				D2B56A8DF89C466F6D69895E2395D16E /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		BBE96AF6DDFEE42CABA3FE9CDB37C371 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BB6B2971CA64DC98E1B7A6BBC6F78656 /* Pods_Iris_iOS.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -92,6 +144,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BDC67CD0199D90D16A01B422CDE0DD98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3921AF1F912AA7BD12493F24F0C670B6 /* TwicketSegmentedControl */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D2B56A8DF89C466F6D69895E2395D16E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,36 +160,72 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		E5571AD4F817980A8E8E69A81F1A8F36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E2C5F9015D77BCA208FECA6D6927F0D /* Pods_Iris_iOS.framework */,
+				8FF645C56DC29167CFE8BA3E525A8F4F /* TwicketSegmentedControl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		AF35B5FB830023181DB7E36CA4E6513D /* Headers */ = {
+		4C2E18C79BB078F89B5AB5F50D47E87B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				503DE964E5EF4E8F605089D235B84A6A /* Pods-Iris.iOS-umbrella.h in Headers */,
+				BEF5A5B25D803D9DEC9E59731A591000 /* TwicketSegmentedControl-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28FA421661FC2BDEDB5D9CF1DF065FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3148AA16AA882A340D4F5380A694D84 /* Pods-Iris.iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6B5091E53BC2AB697E4BC1644A58C596 /* Pods-Iris.iOS */ = {
+		24B6E71DEE026F87B7EDB8744CDCDDFE /* TwicketSegmentedControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CA7A11BF6B636E7757100A241D3EB16 /* Build configuration list for PBXNativeTarget "Pods-Iris.iOS" */;
+			buildConfigurationList = 949BB3973AE08104E7F37E2AF2C80CA0 /* Build configuration list for PBXNativeTarget "TwicketSegmentedControl" */;
 			buildPhases = (
-				AF35B5FB830023181DB7E36CA4E6513D /* Headers */,
-				38C34B6114519623A100B6E21B4D41C8 /* Sources */,
-				1A76A0BADE1B8B3344C64457B9531877 /* Frameworks */,
-				30EE3169DEF7DD80590FB92E0060D74D /* Resources */,
+				4C2E18C79BB078F89B5AB5F50D47E87B /* Headers */,
+				4CEA639E05F6DA445160B9F5A0580D56 /* Sources */,
+				2388434E3AE296283F6E9CCC626FB396 /* Frameworks */,
+				1C119099726D997285E6CEBC698E45ED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = TwicketSegmentedControl;
+			productName = TwicketSegmentedControl;
+			productReference = 8FF645C56DC29167CFE8BA3E525A8F4F /* TwicketSegmentedControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8A871403ACCD6F65AE574796215EC0BD /* Pods-Iris.iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 495C4016A311A919132E8F6E57134E88 /* Build configuration list for PBXNativeTarget "Pods-Iris.iOS" */;
+			buildPhases = (
+				C28FA421661FC2BDEDB5D9CF1DF065FC /* Headers */,
+				3B15685A67A9471B2F66567BA5B4747A /* Sources */,
+				151D94A55EBE91BF6511A7E00B73EBCE /* Frameworks */,
+				90D41AEC1395B08BFCD4FADC6B27C749 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12A9D0DE918050E34E36396AD3BB907E /* PBXTargetDependency */,
+			);
 			name = "Pods-Iris.iOS";
 			productName = "Pods-Iris.iOS";
-			productReference = BB6B2971CA64DC98E1B7A6BBC6F78656 /* Pods_Iris_iOS.framework */;
+			productReference = 5E2C5F9015D77BCA208FECA6D6927F0D /* Pods_Iris_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -146,20 +242,29 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BBE96AF6DDFEE42CABA3FE9CDB37C371 /* Products */;
+			productRefGroup = E5571AD4F817980A8E8E69A81F1A8F36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B5091E53BC2AB697E4BC1644A58C596 /* Pods-Iris.iOS */,
+				8A871403ACCD6F65AE574796215EC0BD /* Pods-Iris.iOS */,
+				24B6E71DEE026F87B7EDB8744CDCDDFE /* TwicketSegmentedControl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		30EE3169DEF7DD80590FB92E0060D74D /* Resources */ = {
+		1C119099726D997285E6CEBC698E45ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D41AEC1395B08BFCD4FADC6B27C749 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -169,17 +274,70 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38C34B6114519623A100B6E21B4D41C8 /* Sources */ = {
+		3B15685A67A9471B2F66567BA5B4747A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				680754A84FEB5C647AC8DB52E7467017 /* Pods-Iris.iOS-dummy.m in Sources */,
+				DEF21477AE0D2BBDD290877D01789827 /* Pods-Iris.iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CEA639E05F6DA445160B9F5A0580D56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F32F9936AA724DBFA0B71F96BF851DF5 /* Palette.swift in Sources */,
+				660227556894FAE35E7C7CD89A34F5FA /* TwicketSegmentedControl-dummy.m in Sources */,
+				4C62FCD432400C35AB28C240A3D256CA /* TwicketSegmentedControl.swift in Sources */,
+				CB9BF4FAD72D754BBE29957CBD7DC1DB /* UIViewShadowExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		12A9D0DE918050E34E36396AD3BB907E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TwicketSegmentedControl;
+			target = 24B6E71DEE026F87B7EDB8744CDCDDFE /* TwicketSegmentedControl */;
+			targetProxy = D32C2C7601400F3B3CB0FBA22909F0E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		638A0754175D53D404AA1503864B6222 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A64061F7512B243550A175DC56950A8 /* TwicketSegmentedControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TwicketSegmentedControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = TwicketSegmentedControl;
+				PRODUCT_NAME = TwicketSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8322AE3FB6DF16A80BCBA121575DBB8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -244,9 +402,9 @@
 			};
 			name = Debug;
 		};
-		84468A21EBAF53E5CEAD14E1C876988A /* Debug */ = {
+		84643DC180720AA409546ABCFE5A5CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAEB6450A66472CD9685C522E6BFC34A /* Pods-Iris.iOS.debug.xcconfig */;
+			baseConfigurationReference = B3CDB61A0CB979052404F3AD4CE007A0 /* Pods-Iris.iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -262,11 +420,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Iris.iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS.modulemap";
 				OTHER_LDFLAGS = "";
@@ -276,11 +430,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		8DC861F53B471F106BC8ACC4475EFA12 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -341,9 +497,9 @@
 			};
 			name = Release;
 		};
-		C1AB5A34128B06FC7DE691A33351BD1C /* Release */ = {
+		9E8CB75B6BAE63856AE24C6B4DD007BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3CDB61A0CB979052404F3AD4CE007A0 /* Pods-Iris.iOS.release.xcconfig */;
+			baseConfigurationReference = FAEB6450A66472CD9685C522E6BFC34A /* Pods-Iris.iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -359,11 +515,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Iris.iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Iris.iOS/Pods-Iris.iOS.modulemap";
 				OTHER_LDFLAGS = "";
@@ -373,12 +525,45 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		E47FEB828DA391D42F68694160FAFDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A64061F7512B243550A175DC56950A8 /* TwicketSegmentedControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TwicketSegmentedControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = TwicketSegmentedControl;
+				PRODUCT_NAME = TwicketSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -392,11 +577,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CA7A11BF6B636E7757100A241D3EB16 /* Build configuration list for PBXNativeTarget "Pods-Iris.iOS" */ = {
+		495C4016A311A919132E8F6E57134E88 /* Build configuration list for PBXNativeTarget "Pods-Iris.iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84468A21EBAF53E5CEAD14E1C876988A /* Debug */,
-				C1AB5A34128B06FC7DE691A33351BD1C /* Release */,
+				9E8CB75B6BAE63856AE24C6B4DD007BD /* Debug */,
+				84643DC180720AA409546ABCFE5A5CB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		949BB3973AE08104E7F37E2AF2C80CA0 /* Build configuration list for PBXNativeTarget "TwicketSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E47FEB828DA391D42F68694160FAFDE9 /* Debug */,
+				638A0754175D53D404AA1503864B6222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
