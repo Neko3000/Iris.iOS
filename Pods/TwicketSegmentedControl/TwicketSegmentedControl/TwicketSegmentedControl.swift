@@ -91,6 +91,12 @@ open class TwicketSegmentedControl: UIControl {
             backgroundView.backgroundColor = segmentsBackgroundColor
         }
     }
+    
+    open var containerViewBackgroundColor: UIColor = .blue {
+        didSet {
+            containerView.backgroundColor = containerViewBackgroundColor
+        }
+    }
 
     open var sliderBackgroundColor: UIColor = Palette.sliderColor {
         didSet {
@@ -144,6 +150,7 @@ open class TwicketSegmentedControl: UIControl {
     // MARK: Setup
 
     private func setup() {
+        
         
         
         addSubview(containerView)

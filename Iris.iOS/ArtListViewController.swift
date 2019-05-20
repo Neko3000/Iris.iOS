@@ -15,6 +15,7 @@ class ArtListViewController: UIViewController,UICollectionViewDelegate,UICollect
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var categorySelectorTwicketSegmentedControl: TwicketSegmentedControl!
     @IBOutlet weak var artListCollectionView: UICollectionView!
+    @IBOutlet weak var toolbarView: UIView!
     
     var posts:[UIImage] = [UIImage]()
     
@@ -35,16 +36,20 @@ class ArtListViewController: UIViewController,UICollectionViewDelegate,UICollect
         searchTextField.leftView = leftPadding
         searchTextField.leftViewMode = .always
         
-        let titles = ["First", "Second", "Third"]
+        toolbarView.backgroundColor = UIColor.white.withAlphaComponent(0.98)
+        
+        let titles = ["Popular", "New", "Undiscovered"]
         categorySelectorTwicketSegmentedControl.setSegmentItems(titles)
         categorySelectorTwicketSegmentedControl.defaultTextColor = UIColor(named: "text-normal-grey")!
+        categorySelectorTwicketSegmentedControl.backgroundColor = .clear
+        categorySelectorTwicketSegmentedControl.containerViewBackgroundColor = .clear
         categorySelectorTwicketSegmentedControl.segmentsBackgroundColor = .clear
         categorySelectorTwicketSegmentedControl.sliderBackgroundColor = UIColor(named: "background-normal-blue")!
         categorySelectorTwicketSegmentedControl.isSliderShadowHidden = false
         
         artListCollectionView.delegate = self
         artListCollectionView.dataSource = self
-        artListCollectionView.contentInset = UIEdgeInsets(top: 0, left: 10.0, bottom: 0, right: 10.0)
+        artListCollectionView.contentInset = UIEdgeInsets(top: 82, left: 10.0, bottom: 0, right: 10.0)
         artListCollectionView.register(UINib(nibName: "ArtListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArtListCollectionViewCell")
         
         let collectionViewMasonryViewLayout = CollectionViewMasonryLayout()
@@ -88,7 +93,7 @@ extension ArtListViewController{
         let specificCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArtListCollectionViewCell", for: indexPath) as! ArtListCollectionViewCell
         
         specificCell.setArt(art: posts[indexPath.item])
-        specificCell.setAuthorName(authorName: "- \(indexPath.item)")
+        specificCell.setAuthorName(authorName: "- author\(indexPath.item)")
         
         cell = specificCell
         
@@ -102,6 +107,8 @@ extension ArtListViewController:CollectionViewMasonryLayoutDelegate{
         let post = posts[indexPath.item]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
         let rect = AVMakeRect(aspectRatio: post.size, insideRect: boundingRect)
+        
+        print("\(indexPath.item): \(post.size.width) - \(post.size.height)")
         
         return rect.size.height + 29
     }

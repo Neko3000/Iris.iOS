@@ -47,11 +47,11 @@ class CollectionViewMasonryLayout: UICollectionViewLayout {
                 
                 let cellWidth = columnWidth - cellHorizontalMargin * 2
                 
-                // Calculate the frame
+                // Calculate frame
                 let cellHeight:CGFloat = (delegate?.collectionView(collectionView: collectionView!, heightForCellAt: indexPath, with: cellWidth))!
                 
-                let height = cellPadding + cellHeight + cellPadding
-                let frame = CGRect(x: xOffsets[column], y: yOffsets[column], width: columnWidth, height: height)
+                let blockHeight = cellHeight + cellVerticalMargin * 2
+                let frame = CGRect(x: xOffsets[column], y: yOffsets[column], width: columnWidth, height: blockHeight)
                 let insetFrame = frame.insetBy(dx: cellHorizontalMargin, dy: cellVerticalMargin)
                 
                 // Create cell attribute
@@ -59,9 +59,9 @@ class CollectionViewMasonryLayout: UICollectionViewLayout {
                 attribute.frame = insetFrame
                 attributesCache.append(attribute)
                 
-                // update column, yOffset
+                // Update
                 contentHeight = max(contentHeight,frame.maxY)
-                yOffsets[column] = yOffsets[column] + height
+                yOffsets[column] = yOffsets[column] + blockHeight
                 
                 column += 1
                 column = column % 2
