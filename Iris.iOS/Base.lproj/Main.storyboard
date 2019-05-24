@@ -322,23 +322,34 @@
                                     <constraint firstItem="wt3-cy-Ti4" firstAttribute="leading" secondItem="WEf-cj-YV1" secondAttribute="trailing" constant="20" id="xxY-Zx-z8t"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BA9-ug-Vu9">
+                                <rect key="frame" x="35" y="133.5" width="305" height="420"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="L5o-d6-Mg7"/>
+                                    <constraint firstAttribute="width" constant="305" id="zLm-f6-ecO"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pGw-LQ-4pP" firstAttribute="trailing" secondItem="1cG-AS-uYf" secondAttribute="trailing" constant="53" id="8dc-7p-kcR"/>
                             <constraint firstItem="pGw-LQ-4pP" firstAttribute="trailing" secondItem="lLI-CD-ctB" secondAttribute="trailing" id="DIn-NM-Sm1"/>
+                            <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerY" secondItem="pGw-LQ-4pP" secondAttribute="centerY" id="abk-x0-de0"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="ePb-eh-U3V"/>
                             <constraint firstItem="lLI-CD-ctB" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="ky7-Jp-GRv"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="pGw-LQ-4pP" secondAttribute="bottom" id="lU7-u5-HGU"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="top" secondItem="pGw-LQ-4pP" secondAttribute="top" id="lh5-Hu-Bk3"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="trailing" secondItem="pGw-LQ-4pP" secondAttribute="trailing" id="uMS-BY-Ihi"/>
                             <constraint firstItem="1cG-AS-uYf" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" constant="53" id="yFw-Di-8vl"/>
+                            <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerX" secondItem="pGw-LQ-4pP" secondAttribute="centerX" id="yLO-DO-v7q"/>
                             <constraint firstItem="lLI-CD-ctB" firstAttribute="top" secondItem="pGw-LQ-4pP" secondAttribute="top" id="ybP-hI-xil"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pGw-LQ-4pP"/>
                     </view>
                     <connections>
                         <outlet property="artListCollectionView" destination="Me2-R6-ej0" id="UVZ-cp-grU"/>
+                        <outlet property="categorySelectorTableView" destination="BA9-ug-Vu9" id="4mZ-ER-vDE"/>
                         <outlet property="categorySelectorTwicketSegmentedControl" destination="1cG-AS-uYf" id="5Gf-GZ-5OY"/>
                         <outlet property="searchTextField" destination="WEf-cj-YV1" id="s0r-oT-Qmc"/>
                         <outlet property="toolbarView" destination="lLI-CD-ctB" id="QKL-nE-26F"/>
@@ -346,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9J-tT-qGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2845.5999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1948" y="877.51124437781118"/>
         </scene>
     </scenes>
     <resources>

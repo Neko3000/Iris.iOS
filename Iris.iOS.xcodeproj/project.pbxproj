@@ -31,6 +31,11 @@
 		EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */; };
 		EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */; };
 		EB6642A8228FF8A000FE71B6 /* ArtListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */; };
+		EB6642AA229280F000FE71B6 /* TreeStructureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642A9229280F000FE71B6 /* TreeStructureView.swift */; };
+		EB6642AC2292810200FE71B6 /* TreeStructureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642AB2292810200FE71B6 /* TreeStructureView.xib */; };
+		EB6642AE229285E200FE71B6 /* art-categories.json in Resources */ = {isa = PBXBuildFile; fileRef = EB6642AD229285E200FE71B6 /* art-categories.json */; };
+		EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */; };
+		EB6642B222929B8F00FE71B6 /* CategorySelectorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,11 @@
 		EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMasonryViewLayout.swift; sourceTree = "<group>"; };
 		EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtListCollectionViewCell.xib; sourceTree = "<group>"; };
+		EB6642A9229280F000FE71B6 /* TreeStructureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeStructureView.swift; sourceTree = "<group>"; };
+		EB6642AB2292810200FE71B6 /* TreeStructureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TreeStructureView.xib; sourceTree = "<group>"; };
+		EB6642AD229285E200FE71B6 /* art-categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "art-categories.json"; sourceTree = "<group>"; };
+		EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorTableViewCell.swift; sourceTree = "<group>"; };
+		EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectorTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,11 +174,16 @@
 		EB488B5522431F8400AC925F /* Iris.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EB6642AD229285E200FE71B6 /* art-categories.json */,
 				EB66429B228FC76B00FE71B6 /* Assets.xcassets */,
 				EB267C34228A8DF5004979AC /* Models */,
 				EB267C33228A8DEB004979AC /* ViewContollers */,
 				EB267C32228A8DDC004979AC /* Views */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
+				EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */,
+				EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */,
+				EB6642A9229280F000FE71B6 /* TreeStructureView.swift */,
+				EB6642AB2292810200FE71B6 /* TreeStructureView.xib */,
 				EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */,
 				EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */,
 				EB267C41228BEB06004979AC /* ExploreViewController.swift */,
@@ -261,9 +276,12 @@
 			files = (
 				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
+				EB6642AC2292810200FE71B6 /* TreeStructureView.xib in Resources */,
 				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
 				EB267C31228A857C004979AC /* MainTabBar.xib in Resources */,
+				EB6642AE229285E200FE71B6 /* art-categories.json in Resources */,
 				EB267C44228C020F004979AC /* Lora-Regular.ttf in Resources */,
+				EB6642B222929B8F00FE71B6 /* CategorySelectorTableViewCell.xib in Resources */,
 				EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */,
 				EB6642A8228FF8A000FE71B6 /* ArtListCollectionViewCell.xib in Resources */,
 				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
@@ -330,11 +348,13 @@
 				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
 				EB267C42228BEB06004979AC /* ExploreViewController.swift in Sources */,
 				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
+				EB6642AA229280F000FE71B6 /* TreeStructureView.swift in Sources */,
 				EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */,
 				EB0568672244C78700899DCE /* GradientBorder.swift in Sources */,
 				EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */,
 				EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
+				EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,

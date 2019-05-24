@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ArtListViewController.tableView(_:cellForRowAt:):ArtListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.indexPathsForSelectedRows ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ArtListViewController.createTreeStructure():ArtListViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ArtListViewController.tableView(_:didSelectRowAt:):ArtListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.indexPathsForSelectedRows">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

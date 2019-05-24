@@ -1,0 +1,130 @@
+{
+    "categories": [
+        {
+            "catpath": "/",
+            "title": "All Categories",
+            "has_subcategory": false,
+            "parent_catpath": "/",
+        },
+        {
+            "catpath": "/digitalart",
+            "title": "Digital Art",
+            "has_subcategory": true,
+            "parent_catpath": "/",
+        },
+        {
+            "catpath": "/traditional",
+            "title": "Traditional Art",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/photography",
+            "title": "Photography",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/artisan",
+            "title": "Artisan Crafts",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/literature",
+            "title": "Literature",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/film",
+            "title": "Film & Animation",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/motionbooks",
+            "title": "Motion Books",
+            "has_subcategory": false,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/flash",
+            "title": "Flash",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/designs",
+            "title": "Designs & Interfaces",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/customization",
+            "title": "Customization",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/cartoons",
+            "title": "Cartoons & Comics",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/manga",
+            "title": "Manga & Anime",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/anthro",
+            "title": "Anthro",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/fanart",
+            "title": "Fan Art",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/resources",
+            "title": "Resources & Stock Images",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/projects",
+            "title": "Community Projects",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/contests",
+            "title": "Contests",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/journals",
+            "title": "Journals",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/darelated",
+            "title": "deviantART Related",
+            "has_subcategory": true,
+            "parent_catpath": "/"
+        },
+        {
+            "catpath": "/scraps",
+            "title": "Scraps",
+            "has_subcategory": false,
+            "parent_catpath": "/"
+        }
+    ]
+}
