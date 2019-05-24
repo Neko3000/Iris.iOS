@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailyViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class DailyViewController: UIViewController{
 
     // Outlets
     @IBOutlet weak var dailyTableView: UITableView!
@@ -33,7 +33,10 @@ class DailyViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension DailyViewController:UITableViewDelegate,UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tzA-Ui-6IC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="joN-y5-0JI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -254,14 +254,54 @@
                         <viewLayoutGuide key="safeArea" id="JqC-CS-MwS"/>
                     </view>
                     <connections>
-                        <outlet property="imageBGContainerView" destination="2ke-ZO-GSL" id="f8D-1v-XNq"/>
-                        <outlet property="imageBGView" destination="dIW-ue-YHl" id="wXK-oa-qQ4"/>
+                        <outlet property="backgroundContainerView" destination="2ke-ZO-GSL" id="POs-TG-XTa"/>
+                        <outlet property="backgroundImageView" destination="dIW-ue-YHl" id="fe2-r3-ueh"/>
                         <outlet property="searchTextField" destination="Fu0-2y-2c8" id="reZ-QM-Hwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bq4-qe-b70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="133"/>
+        </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="ez4-nm-mTf">
+            <objects>
+                <viewController id="joN-y5-0JI" customClass="ActivityViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fP5-Jt-IZY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="twU-4b-21F">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mT-DX-OEK" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="589" width="375" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="Lvp-41-o9z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p07-hE-9Uf" firstAttribute="bottom" secondItem="9mT-DX-OEK" secondAttribute="bottom" id="4Qi-gN-E3a"/>
+                            <constraint firstItem="9mT-DX-OEK" firstAttribute="leading" secondItem="p07-hE-9Uf" secondAttribute="leading" id="5iS-E5-zb8"/>
+                            <constraint firstItem="twU-4b-21F" firstAttribute="leading" secondItem="p07-hE-9Uf" secondAttribute="leading" id="Iz4-MN-BBy"/>
+                            <constraint firstItem="twU-4b-21F" firstAttribute="bottom" secondItem="p07-hE-9Uf" secondAttribute="bottom" id="fPs-wE-Zv5"/>
+                            <constraint firstItem="twU-4b-21F" firstAttribute="top" secondItem="p07-hE-9Uf" secondAttribute="top" id="jPh-9y-c35"/>
+                            <constraint firstItem="twU-4b-21F" firstAttribute="trailing" secondItem="p07-hE-9Uf" secondAttribute="trailing" id="mA5-ky-2e6"/>
+                            <constraint firstItem="p07-hE-9Uf" firstAttribute="trailing" secondItem="9mT-DX-OEK" secondAttribute="trailing" id="sxb-Ec-BtR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p07-hE-9Uf"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityTableView" destination="twU-4b-21F" id="l7W-cE-fQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctx-C8-uqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2844" y="132.68365817091455"/>
         </scene>
         <!--Art List View Controller-->
         <scene sceneID="MJ6-Lf-CEt">
@@ -330,16 +370,26 @@
                                     <constraint firstAttribute="width" constant="305" id="zLm-f6-ecO"/>
                                 </constraints>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzY-MA-efG" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="589" width="375" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="Itx-Kg-UWb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LzY-MA-efG" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="68y-oP-1VM"/>
                             <constraint firstItem="pGw-LQ-4pP" firstAttribute="trailing" secondItem="1cG-AS-uYf" secondAttribute="trailing" constant="53" id="8dc-7p-kcR"/>
+                            <constraint firstItem="pGw-LQ-4pP" firstAttribute="bottom" secondItem="LzY-MA-efG" secondAttribute="bottom" id="B6i-IU-bdG"/>
                             <constraint firstItem="pGw-LQ-4pP" firstAttribute="trailing" secondItem="lLI-CD-ctB" secondAttribute="trailing" id="DIn-NM-Sm1"/>
                             <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerY" secondItem="pGw-LQ-4pP" secondAttribute="centerY" id="abk-x0-de0"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="ePb-eh-U3V"/>
                             <constraint firstItem="lLI-CD-ctB" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" id="ky7-Jp-GRv"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="pGw-LQ-4pP" secondAttribute="bottom" id="lU7-u5-HGU"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="top" secondItem="pGw-LQ-4pP" secondAttribute="top" id="lh5-Hu-Bk3"/>
+                            <constraint firstItem="pGw-LQ-4pP" firstAttribute="trailing" secondItem="LzY-MA-efG" secondAttribute="trailing" id="oYd-ji-nCz"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="trailing" secondItem="pGw-LQ-4pP" secondAttribute="trailing" id="uMS-BY-Ihi"/>
                             <constraint firstItem="1cG-AS-uYf" firstAttribute="leading" secondItem="pGw-LQ-4pP" secondAttribute="leading" constant="53" id="yFw-Di-8vl"/>
                             <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerX" secondItem="pGw-LQ-4pP" secondAttribute="centerX" id="yLO-DO-v7q"/>

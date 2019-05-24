@@ -10,8 +10,8 @@ import UIKit
 
 class ExploreViewController: UIViewController {
 
-    @IBOutlet weak var imageBGView: UIImageView!
-    @IBOutlet weak var imageBGContainerView: UIView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var backgroundContainerView: UIView!
     
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -25,7 +25,7 @@ class ExploreViewController: UIViewController {
         
         searchTextField.attributedPlaceholder = NSAttributedString(string: "enter keyword to find", attributes: [.foregroundColor:UIColor(named: "text-light-grey-2")!])
         
-        imageBGContainerView.layer.masksToBounds = true
+        backgroundContainerView.layer.masksToBounds = true
         setImageBG(image: UIImage(named: "explore-ahri-1")!)
         
         searchTextField.layer.cornerRadius = 10.0
@@ -51,6 +51,6 @@ class ExploreViewController: UIViewController {
         blurFilter?.setValue("10.0", forKey: "inputRadius")
         
         let resultImage = blurFilter?.value(forKey: "outputImage") as? CIImage
-        imageBGView.image = UIImage(ciImage: resultImage!)
+        backgroundImageView.image = UIImage(ciImage: resultImage!)
     }
 }

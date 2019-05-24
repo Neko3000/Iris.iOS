@@ -22,6 +22,8 @@
 		EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */; };
 		EB267C42228BEB06004979AC /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C41228BEB06004979AC /* ExploreViewController.swift */; };
 		EB267C44228C020F004979AC /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB267C43228C020F004979AC /* Lora-Regular.ttf */; };
+		EB2A98272296E08000977FC8 /* ActivityTableViewCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A98262296E08000977FC8 /* ActivityTableViewCommentCell.swift */; };
+		EB2A98292296E09200977FC8 /* ActivityTableViewCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2A98282296E09200977FC8 /* ActivityTableViewCommentCell.xib */; };
 		EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5622431F8400AC925F /* AppDelegate.swift */; };
 		EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5822431F8400AC925F /* LoginViewController.swift */; };
 		EB488B5C22431F8400AC925F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5A22431F8400AC925F /* Main.storyboard */; };
@@ -36,6 +38,9 @@
 		EB6642AE229285E200FE71B6 /* art-categories.json in Resources */ = {isa = PBXBuildFile; fileRef = EB6642AD229285E200FE71B6 /* art-categories.json */; };
 		EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */; };
 		EB6642B222929B8F00FE71B6 /* CategorySelectorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */; };
+		EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */; };
+		EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */; };
+		EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,8 @@
 		EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyTableViewCell.xib; sourceTree = "<group>"; };
 		EB267C41228BEB06004979AC /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		EB267C43228C020F004979AC /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
+		EB2A98262296E08000977FC8 /* ActivityTableViewCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCommentCell.swift; sourceTree = "<group>"; };
+		EB2A98282296E09200977FC8 /* ActivityTableViewCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCommentCell.xib; sourceTree = "<group>"; };
 		EB488B5322431F8400AC925F /* Iris.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iris.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB488B5622431F8400AC925F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB488B5822431F8400AC925F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +79,9 @@
 		EB6642AD229285E200FE71B6 /* art-categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "art-categories.json"; sourceTree = "<group>"; };
 		EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorTableViewCell.swift; sourceTree = "<group>"; };
 		EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectorTableViewCell.xib; sourceTree = "<group>"; };
+		EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewSubmitCell.swift; sourceTree = "<group>"; };
+		EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewSubmitCell.xib; sourceTree = "<group>"; };
+		EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		EB05685F224334C300899DCE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				EB6642AD229285E200FE71B6 /* art-categories.json */,
 				EB056860224334D800899DCE /* Fonts */,
 			);
 			path = Resource;
@@ -127,6 +138,7 @@
 		EB0568682245DBA900899DCE /* Funcitions */ = {
 			isa = PBXGroup;
 			children = (
+				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
 				EB267C38228A9A0E004979AC /* XibUIView.swift */,
 			);
 			path = Funcitions;
@@ -135,6 +147,16 @@
 		EB267C32228A8DDC004979AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EB267C30228A857C004979AC /* MainTabBar.xib */,
+				EB267C36228A99E8004979AC /* MainTabBar.swift */,
+				EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */,
+				EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */,
+				EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */,
+				EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */,
+				EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */,
+				EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */,
+				EB6642A9229280F000FE71B6 /* TreeStructureView.swift */,
+				EB6642AB2292810200FE71B6 /* TreeStructureView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +164,11 @@
 		EB267C33228A8DEB004979AC /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				EB488B5822431F8400AC925F /* LoginViewController.swift */,
+				EB267C3A228AA092004979AC /* DailyViewController.swift */,
+				EB267C41228BEB06004979AC /* ExploreViewController.swift */,
+				EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */,
+				EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -174,33 +201,21 @@
 		EB488B5522431F8400AC925F /* Iris.iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EB6642AD229285E200FE71B6 /* art-categories.json */,
 				EB66429B228FC76B00FE71B6 /* Assets.xcassets */,
 				EB267C34228A8DF5004979AC /* Models */,
 				EB267C33228A8DEB004979AC /* ViewContollers */,
 				EB267C32228A8DDC004979AC /* Views */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
-				EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */,
-				EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */,
-				EB6642A9229280F000FE71B6 /* TreeStructureView.swift */,
-				EB6642AB2292810200FE71B6 /* TreeStructureView.xib */,
-				EB6642A5228FF8A000FE71B6 /* ArtListCollectionViewCell.swift */,
-				EB6642A6228FF8A000FE71B6 /* ArtListCollectionViewCell.xib */,
-				EB267C41228BEB06004979AC /* ExploreViewController.swift */,
-				EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */,
-				EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */,
+				EB2A98262296E08000977FC8 /* ActivityTableViewCommentCell.swift */,
+				EB2A98282296E09200977FC8 /* ActivityTableViewCommentCell.xib */,
+				EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */,
+				EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */,
 				EB488B5622431F8400AC925F /* AppDelegate.swift */,
-				EB488B5822431F8400AC925F /* LoginViewController.swift */,
-				EB267C3A228AA092004979AC /* DailyViewController.swift */,
 				EB0568682245DBA900899DCE /* Funcitions */,
 				EB0568652244C70600899DCE /* Extensions */,
 				EB05685F224334C300899DCE /* Resource */,
 				EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */,
 				EB488B6222431F8700AC925F /* Info.plist */,
-				EB267C30228A857C004979AC /* MainTabBar.xib */,
-				EB267C36228A99E8004979AC /* MainTabBar.swift */,
-				EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */,
-				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
 			);
 			path = Iris.iOS;
 			sourceTree = "<group>";
@@ -275,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
+				EB2A98292296E09200977FC8 /* ActivityTableViewCommentCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
 				EB6642AC2292810200FE71B6 /* TreeStructureView.xib in Resources */,
 				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
@@ -287,6 +303,7 @@
 				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
 				EB66429C228FC76B00FE71B6 /* Assets.xcassets in Resources */,
 				EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */,
+				EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +363,10 @@
 			files = (
 				EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */,
 				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
+				EB2A98272296E08000977FC8 /* ActivityTableViewCommentCell.swift in Sources */,
 				EB267C42228BEB06004979AC /* ExploreViewController.swift in Sources */,
 				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
+				EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */,
 				EB6642AA229280F000FE71B6 /* TreeStructureView.swift in Sources */,
 				EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */,
 				EB0568672244C78700899DCE /* GradientBorder.swift in Sources */,
@@ -358,6 +377,7 @@
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
+				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
