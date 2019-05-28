@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pq-ax-AKA">
+                    <rect key="frame" x="0.0" y="42.5" width="29" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Z6l-5l-8oA">
+                    <rect key="frame" x="29" y="42.5" width="329" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-aA-Q0E">
+                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                            <state key="normal" image="icon-gallery"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ool-OB-YWW">
+                            <rect key="frame" x="58.5" y="0.0" width="35" height="35"/>
+                            <state key="normal" image="icon-journal"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I03-6m-ghQ">
+                            <rect key="frame" x="117.5" y="0.0" width="35" height="35"/>
+                            <state key="normal" image="icon-calendar"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-zA-Wld">
+                            <rect key="frame" x="176.5" y="0.0" width="35" height="35"/>
+                            <state key="normal" image="icon-favourite"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-Nb-YBg">
+                            <rect key="frame" x="235" y="0.0" width="35" height="35"/>
+                            <state key="normal" image="icon-follower"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hko-xT-wbl">
+                            <rect key="frame" x="294" y="0.0" width="35" height="35"/>
+                            <state key="normal" image="icon-chart"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="eac-On-RWF"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGC-US-xl7">
+                    <rect key="frame" x="357" y="42.5" width="29" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9pq-ax-AKA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7Wy-T2-Zfi"/>
+                <constraint firstItem="vGC-US-xl7" firstAttribute="top" secondItem="Z6l-5l-8oA" secondAttribute="top" id="Fb2-7R-gok"/>
+                <constraint firstItem="Z6l-5l-8oA" firstAttribute="leading" secondItem="9pq-ax-AKA" secondAttribute="trailing" id="TBf-w3-ryz"/>
+                <constraint firstItem="9pq-ax-AKA" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.0746" id="WMx-bx-Qz5"/>
+                <constraint firstItem="Z6l-5l-8oA" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="eDK-Gv-Fcr"/>
+                <constraint firstItem="Z6l-5l-8oA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-28" id="f4U-9G-6ZB"/>
+                <constraint firstItem="vGC-US-xl7" firstAttribute="bottom" secondItem="Z6l-5l-8oA" secondAttribute="bottom" id="hzV-jL-osy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vGC-US-xl7" secondAttribute="trailing" id="nIe-RT-Xjd"/>
+                <constraint firstItem="9pq-ax-AKA" firstAttribute="top" secondItem="Z6l-5l-8oA" secondAttribute="top" id="nek-PY-TaX"/>
+                <constraint firstItem="9pq-ax-AKA" firstAttribute="bottom" secondItem="Z6l-5l-8oA" secondAttribute="bottom" id="tEI-gy-c2g"/>
+                <constraint firstItem="vGC-US-xl7" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.0746" id="uU3-LC-epf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="272.46376811594206" y="-157.36607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-calendar" width="35" height="35"/>
+        <image name="icon-chart" width="35" height="35"/>
+        <image name="icon-favourite" width="35" height="35"/>
+        <image name="icon-follower" width="35" height="35"/>
+        <image name="icon-gallery" width="35" height="35"/>
+        <image name="icon-journal" width="35" height="35"/>
+    </resources>
+</document>

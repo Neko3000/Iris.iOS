@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aip-vb-f7w">
+                    <rect key="frame" x="16" y="15.5" width="22" height="22"/>
+                    <state key="normal" image="icon-left-arrow"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-edit" translatesAutoresizingMaskIntoConstraints="NO" id="Ul2-xZ-gJ1">
+                    <rect key="frame" x="285" y="14.5" width="22" height="24"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ul2-xZ-gJ1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Lwe-3f-PWl"/>
+                <constraint firstItem="aip-vb-f7w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="bSg-ZY-CWD"/>
+                <constraint firstItem="aip-vb-f7w" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="bdP-B2-hwi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ul2-xZ-gJ1" secondAttribute="trailing" constant="17" id="ehd-CS-5dv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="8" y="-240.62968515742131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-edit" width="22" height="24"/>
+        <image name="icon-left-arrow" width="22" height="22"/>
+    </resources>
+</document>

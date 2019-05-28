@@ -31,9 +31,10 @@ class ActivityTableViewCommentCell: UITableViewCell {
     }
     
     public func setMask(){
-        let topMask = UIView(frame: CGRect(x: 0, y: 0, width: backgroundContainerView.bounds.size.width, height: backgroundContainerView.bounds.size.height - 20))
+        let topMask = UIView()
+        topMask.frame = CGRect(x: 0, y: 0, width: backgroundContainerView.bounds.size.width, height: backgroundContainerView.bounds.size.height - 20)
         topMask.layer.cornerRadius = 8.0
-        topMask.backgroundColor = .red
+        topMask.backgroundColor = .black
         backgroundContainerView.addSubview(topMask)
         backgroundContainerView.mask = topMask
         

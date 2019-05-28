@@ -41,6 +41,17 @@
 		EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */; };
 		EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */; };
 		EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */; };
+		EBB63AEF229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */; };
+		EBB63AF0229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */; };
+		EBB63AF2229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */; };
+		EBB63AF4229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AF3229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib */; };
+		EBB63AF6229A5ED200F789BD /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF5229A5ED200F789BD /* ArtDetailViewController.swift */; };
+		EBB63AF8229D1C1F00F789BD /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AF7229D1C1F00F789BD /* UserInfoView.xib */; };
+		EBB63AFA229D43E700F789BD /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF9229D43E700F789BD /* UserInfoView.swift */; };
+		EBB63AFC229D457300F789BD /* UserCenterNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AFB229D457300F789BD /* UserCenterNavigationView.xib */; };
+		EBB63AFE229D48CA00F789BD /* UserCenterNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AFD229D48CA00F789BD /* UserCenterNavigationView.swift */; };
+		EBB63B00229D493F00F789BD /* UserCenterContentSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AFF229D493F00F789BD /* UserCenterContentSwitchView.swift */; };
+		EBB63B02229D495C00F789BD /* UserCenterContentSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63B01229D495C00F789BD /* UserCenterContentSwitchView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +93,17 @@
 		EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewSubmitCell.swift; sourceTree = "<group>"; };
 		EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewSubmitCell.xib; sourceTree = "<group>"; };
 		EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailCommentTableViewTableViewCell.swift; sourceTree = "<group>"; };
+		EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtDetailCommentTableViewTableViewCell.xib; sourceTree = "<group>"; };
+		EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtDetailSubCommentTableViewTableViewCell.swift; sourceTree = "<group>"; };
+		EBB63AF3229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtDetailSubCommentTableViewTableViewCell.xib; sourceTree = "<group>"; };
+		EBB63AF5229A5ED200F789BD /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
+		EBB63AF7229D1C1F00F789BD /* UserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
+		EBB63AF9229D43E700F789BD /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		EBB63AFB229D457300F789BD /* UserCenterNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterNavigationView.xib; sourceTree = "<group>"; };
+		EBB63AFD229D48CA00F789BD /* UserCenterNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterNavigationView.swift; sourceTree = "<group>"; };
+		EBB63AFF229D493F00F789BD /* UserCenterContentSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterContentSwitchView.swift; sourceTree = "<group>"; };
+		EBB63B01229D495C00F789BD /* UserCenterContentSwitchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterContentSwitchView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +191,7 @@
 				EB267C41228BEB06004979AC /* ExploreViewController.swift */,
 				EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */,
 				EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */,
+				EBB63AF5229A5ED200F789BD /* ArtDetailViewController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -206,6 +229,16 @@
 				EB267C33228A8DEB004979AC /* ViewContollers */,
 				EB267C32228A8DDC004979AC /* Views */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
+				EBB63AFB229D457300F789BD /* UserCenterNavigationView.xib */,
+				EBB63AFD229D48CA00F789BD /* UserCenterNavigationView.swift */,
+				EBB63B01229D495C00F789BD /* UserCenterContentSwitchView.xib */,
+				EBB63AFF229D493F00F789BD /* UserCenterContentSwitchView.swift */,
+				EBB63AF7229D1C1F00F789BD /* UserInfoView.xib */,
+				EBB63AF9229D43E700F789BD /* UserInfoView.swift */,
+				EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */,
+				EBB63AF3229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib */,
+				EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */,
+				EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */,
 				EB2A98262296E08000977FC8 /* ActivityTableViewCommentCell.swift */,
 				EB2A98282296E09200977FC8 /* ActivityTableViewCommentCell.xib */,
 				EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */,
@@ -289,13 +322,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB63AF4229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib in Resources */,
 				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
 				EB2A98292296E09200977FC8 /* ActivityTableViewCommentCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
+				EBB63B02229D495C00F789BD /* UserCenterContentSwitchView.xib in Resources */,
 				EB6642AC2292810200FE71B6 /* TreeStructureView.xib in Resources */,
 				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
 				EB267C31228A857C004979AC /* MainTabBar.xib in Resources */,
 				EB6642AE229285E200FE71B6 /* art-categories.json in Resources */,
+				EBB63AFC229D457300F789BD /* UserCenterNavigationView.xib in Resources */,
 				EB267C44228C020F004979AC /* Lora-Regular.ttf in Resources */,
 				EB6642B222929B8F00FE71B6 /* CategorySelectorTableViewCell.xib in Resources */,
 				EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */,
@@ -303,6 +339,8 @@
 				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
 				EB66429C228FC76B00FE71B6 /* Assets.xcassets in Resources */,
 				EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */,
+				EBB63AF8229D1C1F00F789BD /* UserInfoView.xib in Resources */,
+				EBB63AF0229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib in Resources */,
 				EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,19 +401,25 @@
 			files = (
 				EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */,
 				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
+				EBB63AF6229A5ED200F789BD /* ArtDetailViewController.swift in Sources */,
 				EB2A98272296E08000977FC8 /* ActivityTableViewCommentCell.swift in Sources */,
 				EB267C42228BEB06004979AC /* ExploreViewController.swift in Sources */,
 				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
 				EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */,
 				EB6642AA229280F000FE71B6 /* TreeStructureView.swift in Sources */,
 				EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */,
+				EBB63AFA229D43E700F789BD /* UserInfoView.swift in Sources */,
 				EB0568672244C78700899DCE /* GradientBorder.swift in Sources */,
+				EBB63AEF229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift in Sources */,
+				EBB63B00229D493F00F789BD /* UserCenterContentSwitchView.swift in Sources */,
 				EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */,
+				EBB63AF2229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift in Sources */,
 				EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
 				EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
+				EBB63AFE229D48CA00F789BD /* UserCenterNavigationView.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
 				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
