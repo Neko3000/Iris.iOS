@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class UserInfoView: XibUIView {
 
     @IBOutlet weak var avatarImageView: UIImageView!

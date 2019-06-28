@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class UserCenterContentSwitchView: XibUIView {
 
     private var isInitialized:Bool = false

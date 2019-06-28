@@ -13,38 +13,38 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="386" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="418" height="111"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pq-ax-AKA">
-                    <rect key="frame" x="0.0" y="42.5" width="29" height="35"/>
+                    <rect key="frame" x="0.0" y="43" width="31" height="35"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Z6l-5l-8oA">
-                    <rect key="frame" x="29" y="42.5" width="329" height="35"/>
+                    <rect key="frame" x="31" y="43" width="359" height="35"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-aA-Q0E">
                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                             <state key="normal" image="icon-gallery"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ool-OB-YWW">
-                            <rect key="frame" x="58.5" y="0.0" width="35" height="35"/>
+                            <rect key="frame" x="65" y="0.0" width="35" height="35"/>
                             <state key="normal" image="icon-journal"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I03-6m-ghQ">
-                            <rect key="frame" x="117.5" y="0.0" width="35" height="35"/>
+                            <rect key="frame" x="129.5" y="0.0" width="35" height="35"/>
                             <state key="normal" image="icon-calendar"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-zA-Wld">
-                            <rect key="frame" x="176.5" y="0.0" width="35" height="35"/>
+                            <rect key="frame" x="194.5" y="0.0" width="35" height="35"/>
                             <state key="normal" image="icon-favourite"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-Nb-YBg">
-                            <rect key="frame" x="235" y="0.0" width="35" height="35"/>
+                            <rect key="frame" x="259" y="0.0" width="35" height="35"/>
                             <state key="normal" image="icon-follower"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hko-xT-wbl">
-                            <rect key="frame" x="294" y="0.0" width="35" height="35"/>
+                            <rect key="frame" x="324" y="0.0" width="35" height="35"/>
                             <state key="normal" image="icon-chart"/>
                         </button>
                     </subviews>
@@ -53,7 +53,7 @@
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGC-US-xl7">
-                    <rect key="frame" x="357" y="42.5" width="29" height="35"/>
+                    <rect key="frame" x="387" y="43" width="31" height="35"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
@@ -73,7 +73,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="272.46376811594206" y="-157.36607142857142"/>
+            <point key="canvasLocation" x="295.6521739130435" y="-157.03125"/>
         </view>
     </objects>
     <resources>
