@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCenterStatusTableViewCell" rowHeight="115" id="KGk-i7-Jjw" customClass="UserCenterStatusTableViewCell" customModule="Iris_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="114.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2I-iL-gNp">
+                        <rect key="frame" x="4" y="0.0" width="1" height="114.5"/>
+                        <color key="backgroundColor" name="text-light-grey-4"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="y4y-V1-OYh"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="August 16, 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrH-Ot-jVd">
+                        <rect key="frame" x="302.5" y="100.5" width="73.5" height="14"/>
+                        <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="10"/>
+                        <color key="textColor" name="text-normal-grey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvY-Um-YHe">
+                        <rect key="frame" x="48" y="20" width="328" height="41"/>
+                        <string key="text">Hello ! Sorry for the sudden hiatus. I’ve been focusing on schrool and haven’t been able to get the chance to wrok on my commissions or drawings…</string>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="10"/>
+                        <color key="textColor" name="text-normal-grey-3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fvY-Um-YHe" secondAttribute="trailing" id="8aB-P8-TCN"/>
+                    <constraint firstItem="fvY-Um-YHe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="48" id="9bs-pD-esa"/>
+                    <constraint firstItem="w2I-iL-gNp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="LFo-dM-5ua"/>
+                    <constraint firstAttribute="trailing" secondItem="SrH-Ot-jVd" secondAttribute="trailing" id="WG6-1G-Vc6"/>
+                    <constraint firstItem="fvY-Um-YHe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ZAo-MZ-RrT"/>
+                    <constraint firstItem="w2I-iL-gNp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mt9-MN-mRM"/>
+                    <constraint firstAttribute="bottom" secondItem="w2I-iL-gNp" secondAttribute="bottom" id="neU-NY-s7N"/>
+                    <constraint firstAttribute="bottom" secondItem="SrH-Ot-jVd" secondAttribute="bottom" id="uGE-ds-Jxz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="178.2608695652174" y="163.72767857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="text-light-grey-4">
+            <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text-normal-grey">
+            <color red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text-normal-grey-3">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

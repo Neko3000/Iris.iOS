@@ -41,7 +41,6 @@
 		EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */; };
 		EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */; };
 		EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */; };
-		EB9CC18022C6481A00F665BD /* 1UserCenterJournalsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC17F22C6481A00F665BD /* 1UserCenterJournalsTableViewCell.xib */; };
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift */; };
 		EB9CC18422C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC18222C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib */; };
 		EB9CC18622C64E5C00F665BD /* UserCenterJournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18522C64E5C00F665BD /* UserCenterJournalsViewController.swift */; };
@@ -59,6 +58,11 @@
 		EBB63B3B229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63B39229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift */; };
 		EBB63B3C229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63B3A229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib */; };
 		EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */; };
+		EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */; };
+		EBF3487522CD8F60001A4793 /* UserCenterStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */; };
+		EBF3487722CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */; };
+		EBF3488122CDC562001A4793 /* UserCenterStatusHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */; };
+		EBF3488322CDC579001A4793 /* UserCenterStatusHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF3488222CDC579001A4793 /* UserCenterStatusHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,7 +104,6 @@
 		EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewSubmitCell.swift; sourceTree = "<group>"; };
 		EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewSubmitCell.xib; sourceTree = "<group>"; };
 		EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		EB9CC17F22C6481A00F665BD /* 1UserCenterJournalsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 1UserCenterJournalsTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalsTableViewCell.swift; sourceTree = "<group>"; };
 		EB9CC18222C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterJournalsTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18522C64E5C00F665BD /* UserCenterJournalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterJournalsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +121,11 @@
 		EBB63B39229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterGalleryTableViewCell.swift; sourceTree = "<group>"; };
 		EBB63B3A229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterGalleryTableViewCell.xib; sourceTree = "<group>"; };
 		EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterGalleryViewController.swift; sourceTree = "<group>"; };
+		EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusViewController.swift; sourceTree = "<group>"; };
+		EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterStatusTableViewCell.xib; sourceTree = "<group>"; };
+		EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusTableViewCell.swift; sourceTree = "<group>"; };
+		EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterStatusHeaderView.swift; sourceTree = "<group>"; };
+		EBF3488222CDC579001A4793 /* UserCenterStatusHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterStatusHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,9 +193,12 @@
 			children = (
 				EB267C36228A99E8004979AC /* MainTabBar.swift */,
 				EB267C30228A857C004979AC /* MainTabBar.xib */,
+				EBF3488222CDC579001A4793 /* UserCenterStatusHeaderView.xib */,
+				EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */,
+				EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */,
+				EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */,
 				EB9CC18222C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib */,
 				EB9CC18122C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift */,
-				EB9CC17F22C6481A00F665BD /* 1UserCenterJournalsTableViewCell.xib */,
 				EBB63B3A229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib */,
 				EBB63B39229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift */,
 				EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */,
@@ -213,6 +224,7 @@
 				EBB63AF5229A5ED200F789BD /* ArtDetailViewController.swift */,
 				EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */,
 				EB9CC18522C64E5C00F665BD /* UserCenterJournalsViewController.swift */,
+				EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -346,7 +358,6 @@
 				EBB63B3C229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib in Resources */,
 				EBB63AF4229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib in Resources */,
 				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
-				EB9CC18022C6481A00F665BD /* 1UserCenterJournalsTableViewCell.xib in Resources */,
 				EB2A98292296E09200977FC8 /* ActivityTableViewCommentCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
 				EBB63B02229D495C00F789BD /* UserCenterContentSwitchView.xib in Resources */,
@@ -358,6 +369,8 @@
 				EBB63AFC229D457300F789BD /* UserCenterNavigationView.xib in Resources */,
 				EB267C44228C020F004979AC /* Lora-Regular.ttf in Resources */,
 				EB6642B222929B8F00FE71B6 /* CategorySelectorTableViewCell.xib in Resources */,
+				EBF3488322CDC579001A4793 /* UserCenterStatusHeaderView.xib in Resources */,
+				EBF3487522CD8F60001A4793 /* UserCenterStatusTableViewCell.xib in Resources */,
 				EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */,
 				EB6642A8228FF8A000FE71B6 /* ArtListCollectionViewCell.xib in Resources */,
 				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
@@ -442,11 +455,14 @@
 				EB9CC18322C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift in Sources */,
 				EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
+				EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */,
 				EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
 				EB9CC18622C64E5C00F665BD /* UserCenterJournalsViewController.swift in Sources */,
 				EBB63AFE229D48CA00F789BD /* UserCenterNavigationView.swift in Sources */,
+				EBF3488122CDC562001A4793 /* UserCenterStatusHeaderView.swift in Sources */,
+				EBF3487722CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
 				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
@@ -604,7 +620,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.neko3000.Iris-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RoseAndCage.Iris-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -623,7 +639,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.neko3000.Iris-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RoseAndCage.Iris-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

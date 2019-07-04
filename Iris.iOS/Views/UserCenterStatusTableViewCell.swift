@@ -1,5 +1,5 @@
 //
-//  UserCenterJournalsTableViewCell.swift
+//  UserCenterStatusTableViewCell.swift
 //  Iris.iOS
 //
 //  Created by Xueliang Chen on 6/28/19.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class UserCenterJournalsTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var editorAvatarImageView: UIImageView!
+class UserCenterStatusTableViewCell: UITableViewCell {
     
     private var isInitialized:Bool = false
     
@@ -18,11 +16,10 @@ class UserCenterJournalsTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
-            editorAvatarImageView.layer.cornerRadius = 13.0
-            editorAvatarImageView.layer.masksToBounds = true
-            
+
             isInitialized = true
         }
+        
     }
     
     override func awakeFromNib() {
