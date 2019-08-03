@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (4.6.0)
   - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
+  - Alamofire
   - TwicketSegmentedControl
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 730cbb635840c62c41aed7133652f9d31beb60a0
+PODFILE CHECKSUM: 10a1ffe21746f54e7e57fbc077bd4ce48244e968
 
 COCOAPODS: 1.5.3
