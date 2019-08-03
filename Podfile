@@ -7,5 +7,5 @@ target 'Iris.iOS' do
 
   # Pods for Iris.iOS
   pod 'TwicketSegmentedControl'
-  pod 'Alamofire'
+  pod 'Alamofire', '5.0.0-beta.7'
 end

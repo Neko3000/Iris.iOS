@@ -8,22 +8,22 @@
 
 import UIKit
 
-class UserCenterJournalsViewController: UIViewController {
+class UserCenterJournalViewController: UIViewController {
 
-    @IBOutlet weak var journalsTableView: UITableView!
+    @IBOutlet weak var journalTableView: UITableView!
     
-    @IBOutlet weak var journalsTableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var journalTableViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        journalsTableView.delegate = self
-        journalsTableView.dataSource = self
-        journalsTableView.register(UINib(nibName: "UserCenterJournalsTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterJournalsTableViewCell")
+        journalTableView.delegate = self
+        journalTableView.dataSource = self
+        journalTableView.register(UINib(nibName: "UserCenterJournalTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterJournalTableViewCell")
         
-        journalsTableView.separatorStyle = .none
-        journalsTableView.isScrollEnabled = false
+        journalTableView.separatorStyle = .none
+        journalTableView.isScrollEnabled = false
         
         
     }
@@ -31,7 +31,7 @@ class UserCenterJournalsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        journalsTableViewHeightConstraint.constant = 10 * (147 + 20)
+        journalTableViewHeightConstraint.constant = 10 * (147 + 20)
     }
     
 
@@ -47,7 +47,7 @@ class UserCenterJournalsViewController: UIViewController {
 
 }
 
-extension UserCenterJournalsViewController:UITableViewDelegate,UITableViewDataSource{
+extension UserCenterJournalViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -59,7 +59,7 @@ extension UserCenterJournalsViewController:UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:UITableViewCell?
         
-        let specificCell = tableView.dequeueReusableCell(withIdentifier: "UserCenterJournalsTableViewCell") as! UserCenterJournalsTableViewCell
+        let specificCell = tableView.dequeueReusableCell(withIdentifier: "UserCenterJournalTableViewCell") as! UserCenterJournalTableViewCell
         
         cell = specificCell
         

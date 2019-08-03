@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ol6-ts-zJG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sI0-Zv-Lzy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -651,10 +651,10 @@
             </objects>
             <point key="canvasLocation" x="1948" y="877.51124437781118"/>
         </scene>
-        <!--User Center Journals View Controller-->
+        <!--User Center Journal View Controller-->
         <scene sceneID="Ymh-3d-M6e">
             <objects>
-                <viewController id="5tl-69-nsM" customClass="UserCenterJournalsViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5tl-69-nsM" customClass="UserCenterJournalViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ydm-Jc-DCq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -718,8 +718,8 @@
                         <viewLayoutGuide key="safeArea" id="u9U-x3-wC4"/>
                     </view>
                     <connections>
-                        <outlet property="journalsTableView" destination="rJF-ZP-3Qy" id="5zP-Gk-6sv"/>
-                        <outlet property="journalsTableViewHeightConstraint" destination="aE9-jG-k9A" id="MlS-f1-ZL2"/>
+                        <outlet property="journalTableView" destination="rJF-ZP-3Qy" id="haZ-LH-BJV"/>
+                        <outlet property="journalTableViewHeightConstraint" destination="aE9-jG-k9A" id="9dL-sX-Sd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zd-hD-xsg" userLabel="First Responder" sceneMemberID="firstResponder"/>

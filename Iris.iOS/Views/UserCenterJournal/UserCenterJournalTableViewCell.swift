@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserCenterJournalsTableViewCell: UITableViewCell {
+class UserCenterJournalTableViewCell: UITableViewCell {
     
     @IBOutlet weak var editorAvatarImageView: UIImageView!
     

@@ -1,5 +1,5 @@
 //
-//  DispatchQueue+Alamofire.swift
+//  HTTPMethod.swift
 //
 //  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
@@ -22,16 +22,26 @@
 //  THE SOFTWARE.
 //
 
-import Dispatch
-import Foundation
-
-extension DispatchQueue {
-    /// Execute the provided closure after a `TimeInterval`.
-    ///
-    /// - Parameters:
-    ///   - delay:   `TimeInterval` to delay execution.
-    ///   - closure: Closure to execute.
-    func after(_ delay: TimeInterval, execute closure: @escaping () -> Void) {
-        asyncAfter(deadline: .now() + delay, execute: closure)
-    }
+/// HTTP method definitions.
+///
+/// See https://tools.ietf.org/html/rfc7231#section-4.3
+public enum HTTPMethod: String {
+    /// `CONNECT` method.
+    case connect = "CONNECT"
+    /// `DELETE` method.
+    case delete  = "DELETE"
+    /// `GET` method.
+    case get     = "GET"
+    /// `HEAD` method.
+    case head    = "HEAD"
+    /// `OPTIONS` method.
+    case options = "OPTIONS"
+    /// `PATCH` method.
+    case patch   = "PATCH"
+    /// `POST` method.
+    case post    = "POST"
+    /// `PUT` method.
+    case put     = "PUT"
+    /// `TRACE` method.
+    case trace   = "TRACE"
 }
