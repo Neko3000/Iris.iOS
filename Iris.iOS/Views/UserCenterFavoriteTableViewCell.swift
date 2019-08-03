@@ -42,10 +42,6 @@ class UserCenterFavoriteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    public func setTableViewWidth(width:CGFloat){
-        tableViewWidth = width
-    }
-    
     public func setContentImage(leftContentImage:UIImage,rightContentImage:UIImage,fullHeight:CGFloat,fullWidth:CGFloat,gapWidth:CGFloat){
         
         leftContentImageView.image = leftContentImage

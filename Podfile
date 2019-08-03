@@ -7,4 +7,5 @@ target 'Iris.iOS' do
 
   # Pods for Iris.iOS
   pod 'TwicketSegmentedControl'
+
 end

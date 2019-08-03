@@ -1,5 +1,5 @@
 //
-//  UserCenterHournalsViewController.swift
+//  UserCenterFollowerViewController.swift
 //  Iris.iOS
 //
 //  Created by Xueliang Chen on 5/29/19.
@@ -8,32 +8,32 @@
 
 import UIKit
 
-class UserCenterJournalsViewController: UIViewController {
+class UserCenterFollowerViewController: UIViewController {
 
-    @IBOutlet weak var journalsTableView: UITableView!
+    @IBOutlet weak var followerTableView: UITableView!
     
-    @IBOutlet weak var journalsTableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var followerTableViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        journalsTableView.delegate = self
-        journalsTableView.dataSource = self
-        journalsTableView.register(UINib(nibName: "UserCenterJournalsTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterJournalsTableViewCell")
+        followerTableView.delegate = self
+        followerTableView.dataSource = self
+        followerTableView.register(UINib(nibName: "UserCenterFollowerTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterFollowerTableViewCell")
         
-        journalsTableView.separatorStyle = .none
-        journalsTableView.isScrollEnabled = false
+        followerTableView.separatorStyle = .none
+        followerTableView.isScrollEnabled = false
         
-        
+        followerTableView.allowsSelection =  false
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        journalsTableViewHeightConstraint.constant = 10 * (147 + 20)
+        followerTableViewHeightConstraint.constant = 5 * ( 60 + 15 ) + 15
     }
-    
 
     /*
     // MARK: - Navigation
@@ -47,26 +47,28 @@ class UserCenterJournalsViewController: UIViewController {
 
 }
 
-extension UserCenterJournalsViewController:UITableViewDelegate,UITableViewDataSource{
+extension UserCenterFollowerViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return 5
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:UITableViewCell?
         
-        let specificCell = tableView.dequeueReusableCell(withIdentifier: "UserCenterJournalsTableViewCell") as! UserCenterJournalsTableViewCell
+        let specificCell = tableView.dequeueReusableCell(withIdentifier: "UserCenterFollowerTableViewCell") as! UserCenterFollowerTableViewCell
         
         cell = specificCell
         
         return cell!
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 147
+        return 60
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -83,11 +85,11 @@ extension UserCenterJournalsViewController:UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 0
+        return 15
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
-        return 20
+        return 0
     }
 }

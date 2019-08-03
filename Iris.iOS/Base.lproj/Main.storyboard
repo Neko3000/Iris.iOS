@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oJ2-K0-SNh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ol6-ts-zJG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -875,6 +875,137 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKY-hx-yQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4766" y="2101"/>
+        </scene>
+        <!--User Center Follower View Controller-->
+        <scene sceneID="RJ9-oV-nxd">
+            <objects>
+                <viewController id="QBm-lx-G8b" customClass="UserCenterFollowerViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EE3-qk-flR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKD-BL-pPD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0m-QQ-IU0" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="295" id="NmA-O3-RjB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sny-to-UnG" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="JHi-ff-Rd9"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qbl-RN-qPa">
+                                        <rect key="frame" x="20" y="367" width="335" height="200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="bn8-lT-nSm"/>
+                                        </constraints>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sny-to-UnG" firstAttribute="leading" secondItem="eKD-BL-pPD" secondAttribute="leading" id="4b7-TC-zE9"/>
+                                    <constraint firstItem="Sny-to-UnG" firstAttribute="top" secondItem="f0m-QQ-IU0" secondAttribute="bottom" constant="27" id="8e5-CK-K5U"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sny-to-UnG" secondAttribute="trailing" id="KdZ-0o-7rr"/>
+                                    <constraint firstAttribute="trailing" secondItem="f0m-QQ-IU0" secondAttribute="trailing" id="MhU-mm-G4E"/>
+                                    <constraint firstItem="Qbl-RN-qPa" firstAttribute="leading" secondItem="eKD-BL-pPD" secondAttribute="leading" constant="20" id="gxl-Ub-Tt6"/>
+                                    <constraint firstItem="Qbl-RN-qPa" firstAttribute="top" secondItem="Sny-to-UnG" secondAttribute="bottom" constant="10" id="k13-Nn-9UZ"/>
+                                    <constraint firstItem="f0m-QQ-IU0" firstAttribute="top" secondItem="eKD-BL-pPD" secondAttribute="top" id="ktP-3E-4vl"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qbl-RN-qPa" secondAttribute="bottom" id="peg-br-gn2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qbl-RN-qPa" secondAttribute="trailing" constant="20" id="uQV-O8-iyE"/>
+                                    <constraint firstItem="f0m-QQ-IU0" firstAttribute="leading" secondItem="eKD-BL-pPD" secondAttribute="leading" id="x3L-d1-nHX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Wx-u2-A3t" firstAttribute="bottom" secondItem="eKD-BL-pPD" secondAttribute="bottom" id="25F-0N-E99"/>
+                            <constraint firstItem="f0m-QQ-IU0" firstAttribute="width" secondItem="EE3-qk-flR" secondAttribute="width" id="HnG-Vf-xEV"/>
+                            <constraint firstItem="eKD-BL-pPD" firstAttribute="leading" secondItem="1Wx-u2-A3t" secondAttribute="leading" id="LqN-ho-xkS"/>
+                            <constraint firstItem="eKD-BL-pPD" firstAttribute="top" secondItem="1Wx-u2-A3t" secondAttribute="top" id="tdR-pj-Ys3"/>
+                            <constraint firstItem="1Wx-u2-A3t" firstAttribute="trailing" secondItem="eKD-BL-pPD" secondAttribute="trailing" id="tjm-t2-faX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Wx-u2-A3t"/>
+                    </view>
+                    <connections>
+                        <outlet property="followerTableView" destination="Qbl-RN-qPa" id="QgH-pb-Eeb"/>
+                        <outlet property="followerTableViewHeightConstraint" destination="bn8-lT-nSm" id="RTj-VP-UVI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hks-CX-EpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4766" y="2768"/>
+        </scene>
+        <!--User Center Comment View Controller-->
+        <scene sceneID="Uhv-1m-Rt9">
+            <objects>
+                <viewController id="Ol6-ts-zJG" customClass="UserCenterCommentViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="obQ-fM-3kP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDr-6B-cI4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIw-X9-V59" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="295" id="tFe-Me-gUc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iA0-ZC-sOH" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="8c7-F7-BnB"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QNH-IN-r0p">
+                                        <rect key="frame" x="20" y="387" width="335" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="che-wc-CfI"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OIw-X9-V59" secondAttribute="trailing" id="12L-nX-Pyn"/>
+                                    <constraint firstItem="QNH-IN-r0p" firstAttribute="top" secondItem="iA0-ZC-sOH" secondAttribute="bottom" constant="30" id="BrC-4G-6or"/>
+                                    <constraint firstAttribute="trailing" secondItem="iA0-ZC-sOH" secondAttribute="trailing" id="Cis-mk-niM"/>
+                                    <constraint firstItem="iA0-ZC-sOH" firstAttribute="top" secondItem="OIw-X9-V59" secondAttribute="bottom" constant="27" id="ECJ-y0-KYx"/>
+                                    <constraint firstItem="QNH-IN-r0p" firstAttribute="leading" secondItem="HDr-6B-cI4" secondAttribute="leading" constant="20" id="F2o-Sa-pUv"/>
+                                    <constraint firstItem="OIw-X9-V59" firstAttribute="leading" secondItem="HDr-6B-cI4" secondAttribute="leading" id="L2c-0h-zOY"/>
+                                    <constraint firstAttribute="bottom" secondItem="QNH-IN-r0p" secondAttribute="bottom" constant="10" id="eHm-rh-9QC"/>
+                                    <constraint firstItem="OIw-X9-V59" firstAttribute="top" secondItem="HDr-6B-cI4" secondAttribute="top" id="nYb-qp-mvJ"/>
+                                    <constraint firstItem="iA0-ZC-sOH" firstAttribute="leading" secondItem="HDr-6B-cI4" secondAttribute="leading" id="rpT-fg-uam"/>
+                                    <constraint firstAttribute="trailing" secondItem="QNH-IN-r0p" secondAttribute="trailing" constant="20" id="s5u-9X-DIX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9oz-GQ-oxo" firstAttribute="bottom" secondItem="HDr-6B-cI4" secondAttribute="bottom" id="0Aj-CI-HKJ"/>
+                            <constraint firstItem="HDr-6B-cI4" firstAttribute="top" secondItem="9oz-GQ-oxo" secondAttribute="top" id="6dx-ju-YaA"/>
+                            <constraint firstItem="HDr-6B-cI4" firstAttribute="leading" secondItem="9oz-GQ-oxo" secondAttribute="leading" id="9ee-lv-it6"/>
+                            <constraint firstItem="OIw-X9-V59" firstAttribute="width" secondItem="obQ-fM-3kP" secondAttribute="width" id="Mfq-AJ-UJl"/>
+                            <constraint firstItem="9oz-GQ-oxo" firstAttribute="trailing" secondItem="HDr-6B-cI4" secondAttribute="trailing" id="mNB-gw-eV4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9oz-GQ-oxo"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentStackView" destination="QNH-IN-r0p" id="76M-g5-tto"/>
+                        <outlet property="commentStackViewHeightConstraint" destination="che-wc-CfI" id="wpp-Ho-wqt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9P-dB-Ff1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4766" y="3446"/>
         </scene>
     </scenes>
     <resources>

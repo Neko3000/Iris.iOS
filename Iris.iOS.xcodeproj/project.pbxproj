@@ -31,6 +31,13 @@
 		EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB488B5822431F8400AC925F /* LoginViewController.swift */; };
 		EB488B5C22431F8400AC925F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5A22431F8400AC925F /* Main.storyboard */; };
 		EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */; };
+		EB48B5DB22EF1D3500F60F15 /* UserCenterCommentHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48B5DA22EF1D3500F60F15 /* UserCenterCommentHeaderTableViewCell.swift */; };
+		EB48B5DD22EF1D4600F60F15 /* UserCenterCommentHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB48B5DC22EF1D4600F60F15 /* UserCenterCommentHeaderTableViewCell.xib */; };
+		EB48B5DF22EF20B100F60F15 /* UserCenterCommentHeaderStackViewSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB48B5DE22EF20B100F60F15 /* UserCenterCommentHeaderStackViewSubview.xib */; };
+		EB48B5E122EF20D900F60F15 /* UserCenterCommentHeaderStackViewSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48B5E022EF20D900F60F15 /* UserCenterCommentHeaderStackViewSubview.swift */; };
+		EB48B5E322EF269E00F60F15 /* UserCenterCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48B5E222EF269E00F60F15 /* UserCenterCommentViewController.swift */; };
+		EB48B5E522EF661E00F60F15 /* UserCenterCommentReplyStackViewSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB48B5E422EF661E00F60F15 /* UserCenterCommentReplyStackViewSubview.xib */; };
+		EB48B5E722EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48B5E622EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift */; };
 		EB66429C228FC76B00FE71B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB66429B228FC76B00FE71B6 /* Assets.xcassets */; };
 		EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */; };
 		EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */; };
@@ -47,6 +54,9 @@
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift */; };
 		EB9CC18422C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC18222C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib */; };
 		EB9CC18622C64E5C00F665BD /* UserCenterJournalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18522C64E5C00F665BD /* UserCenterJournalsViewController.swift */; };
+		EBAE40E222EEE72E008425A2 /* UserCenterFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */; };
+		EBAE40E422EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE40E322EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift */; };
+		EBAE40E622EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAE40E522EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib */; };
 		EBB63AEF229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */; };
 		EBB63AF0229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */; };
 		EBB63AF2229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */; };
@@ -97,6 +107,13 @@
 		EB488B5B22431F8400AC925F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB488B6022431F8700AC925F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB488B6222431F8700AC925F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB48B5DA22EF1D3500F60F15 /* UserCenterCommentHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterCommentHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EB48B5DC22EF1D4600F60F15 /* UserCenterCommentHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterCommentHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		EB48B5DE22EF20B100F60F15 /* UserCenterCommentHeaderStackViewSubview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterCommentHeaderStackViewSubview.xib; sourceTree = "<group>"; };
+		EB48B5E022EF20D900F60F15 /* UserCenterCommentHeaderStackViewSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterCommentHeaderStackViewSubview.swift; sourceTree = "<group>"; };
+		EB48B5E222EF269E00F60F15 /* UserCenterCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterCommentViewController.swift; sourceTree = "<group>"; };
+		EB48B5E422EF661E00F60F15 /* UserCenterCommentReplyStackViewSubview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterCommentReplyStackViewSubview.xib; sourceTree = "<group>"; };
+		EB48B5E622EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterCommentReplyStackViewSubview.swift; sourceTree = "<group>"; };
 		EB66429B228FC76B00FE71B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListViewController.swift; sourceTree = "<group>"; };
 		EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMasonryViewLayout.swift; sourceTree = "<group>"; };
@@ -113,6 +130,9 @@
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalsTableViewCell.swift; sourceTree = "<group>"; };
 		EB9CC18222C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterJournalsTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18522C64E5C00F665BD /* UserCenterJournalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterJournalsViewController.swift; sourceTree = "<group>"; };
+		EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFollowerViewController.swift; sourceTree = "<group>"; };
+		EBAE40E322EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFollowerTableViewCell.swift; sourceTree = "<group>"; };
+		EBAE40E522EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterFollowerTableViewCell.xib; sourceTree = "<group>"; };
 		EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailCommentTableViewTableViewCell.swift; sourceTree = "<group>"; };
 		EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtDetailCommentTableViewTableViewCell.xib; sourceTree = "<group>"; };
 		EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtDetailSubCommentTableViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -199,6 +219,14 @@
 			children = (
 				EB267C36228A99E8004979AC /* MainTabBar.swift */,
 				EB267C30228A857C004979AC /* MainTabBar.xib */,
+				EB48B5DA22EF1D3500F60F15 /* UserCenterCommentHeaderTableViewCell.swift */,
+				EB48B5DC22EF1D4600F60F15 /* UserCenterCommentHeaderTableViewCell.xib */,
+				EB48B5E022EF20D900F60F15 /* UserCenterCommentHeaderStackViewSubview.swift */,
+				EB48B5DE22EF20B100F60F15 /* UserCenterCommentHeaderStackViewSubview.xib */,
+				EB48B5E622EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift */,
+				EB48B5E422EF661E00F60F15 /* UserCenterCommentReplyStackViewSubview.xib */,
+				EBAE40E322EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift */,
+				EBAE40E522EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib */,
 				EB40B34322D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift */,
 				EB40B34122D5BD9400E75C9B /* UserCenterFavoriteTableViewCell.xib */,
 				EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */,
@@ -234,6 +262,8 @@
 				EB9CC18522C64E5C00F665BD /* UserCenterJournalsViewController.swift */,
 				EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */,
 				EB40B33F22D5BC0400E75C9B /* UserCenterFavoriateViewController.swift */,
+				EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */,
+				EB48B5E222EF269E00F60F15 /* UserCenterCommentViewController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -370,6 +400,7 @@
 				EB40B34222D5BD9400E75C9B /* UserCenterFavoriteTableViewCell.xib in Resources */,
 				EB2A98292296E09200977FC8 /* ActivityTableViewCommentCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
+				EB48B5DD22EF1D4600F60F15 /* UserCenterCommentHeaderTableViewCell.xib in Resources */,
 				EBB63B02229D495C00F789BD /* UserCenterContentSwitchView.xib in Resources */,
 				EB9CC18422C64D3E00F665BD /* UserCenterJournalsTableViewCell.xib in Resources */,
 				EB6642AC2292810200FE71B6 /* TreeStructureView.xib in Resources */,
@@ -382,11 +413,14 @@
 				EBF3488322CDC579001A4793 /* UserCenterStatusHeaderView.xib in Resources */,
 				EBF3487522CD8F60001A4793 /* UserCenterStatusTableViewCell.xib in Resources */,
 				EB05686322433F5800899DCE /* AvenirLTStd-Roman.otf in Resources */,
+				EB48B5E522EF661E00F60F15 /* UserCenterCommentReplyStackViewSubview.xib in Resources */,
 				EB6642A8228FF8A000FE71B6 /* ArtListCollectionViewCell.xib in Resources */,
 				EB05686422433F5F00899DCE /* AvenirLTStd-Book.otf in Resources */,
 				EB66429C228FC76B00FE71B6 /* Assets.xcassets in Resources */,
 				EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */,
+				EB48B5DF22EF20B100F60F15 /* UserCenterCommentHeaderStackViewSubview.xib in Resources */,
 				EBB63AF8229D1C1F00F789BD /* UserInfoView.xib in Resources */,
+				EBAE40E622EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib in Resources */,
 				EBB63AF0229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib in Resources */,
 				EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */,
 			);
@@ -452,6 +486,8 @@
 				EBB63AF6229A5ED200F789BD /* ArtDetailViewController.swift in Sources */,
 				EB2A98272296E08000977FC8 /* ActivityTableViewCommentCell.swift in Sources */,
 				EB267C42228BEB06004979AC /* ExploreViewController.swift in Sources */,
+				EBAE40E422EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift in Sources */,
+				EBAE40E222EEE72E008425A2 /* UserCenterFollowerViewController.swift in Sources */,
 				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
 				EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */,
 				EB6642AA229280F000FE71B6 /* TreeStructureView.swift in Sources */,
@@ -466,19 +502,23 @@
 				EB9CC18322C64D3E00F665BD /* UserCenterJournalsTableViewCell.swift in Sources */,
 				EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
+				EB48B5E322EF269E00F60F15 /* UserCenterCommentViewController.swift in Sources */,
 				EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */,
 				EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
 				EB9CC18622C64E5C00F665BD /* UserCenterJournalsViewController.swift in Sources */,
+				EB48B5E122EF20D900F60F15 /* UserCenterCommentHeaderStackViewSubview.swift in Sources */,
 				EBB63AFE229D48CA00F789BD /* UserCenterNavigationView.swift in Sources */,
 				EBF3488122CDC562001A4793 /* UserCenterStatusHeaderView.swift in Sources */,
 				EBF3487722CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift in Sources */,
+				EB48B5DB22EF1D3500F60F15 /* UserCenterCommentHeaderTableViewCell.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
 				EB40B34422D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift in Sources */,
 				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
 				EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */,
+				EB48B5E722EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

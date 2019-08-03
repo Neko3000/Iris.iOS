@@ -62,9 +62,6 @@ extension UserCenterFavoriteViewController:UITableViewDelegate,UITableViewDataSo
         
         let specificCell = tableView.dequeueReusableCell(withIdentifier: "UserCenterFavoriteTableViewCell") as! UserCenterFavoriteTableViewCell
         
-        specificCell.setTableViewWidth(width:tableView.bounds.width)
-        
-        
         specificCell.setContentImage(leftContentImage: UIImage(named: "user-center-favorite-ahri-1")!, rightContentImage: UIImage(named: "user-center-favorite-ahri-2")!, fullHeight: 142, fullWidth: tableView.frame.width, gapWidth: 8)
         
         cell = specificCell
