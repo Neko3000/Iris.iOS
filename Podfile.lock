@@ -1,20 +1,26 @@
 PODS:
   - Alamofire (5.0.0-beta.7)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
   - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-beta.7)
+  - NVActivityIndicatorView
   - TwicketSegmentedControl
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - NVActivityIndicatorView
     - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
   Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 4775a0eadbd5142d4d11ede46a16448b368e1362
+PODFILE CHECKSUM: b3d7f1d8093847df8ad31f5dcd689cb37ab37e43
 
 COCOAPODS: 1.5.3
