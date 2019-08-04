@@ -13,8 +13,10 @@ class ActiveUserInfo{
     // Single-Skeleton for UserInfo
     
     private static var username:String = ""
-    private static var token:String = ""
+    private static var accessToken:String = ""
+    private static var refreshToken:String = ""
     
+    // Setter/Getter
     public static func getUsername()->String{
         return username
     }
@@ -23,17 +25,26 @@ class ActiveUserInfo{
         self.username = username
     }
     
-    public static func getToken()->String{
-        return token
+    public static func getAccesssToken()->String{
+        return accessToken
     }
     
-    public static func setToken(token:String){
-        self.token = token
+    public static func setAcesssToken(accessToken:String){
+        self.accessToken = accessToken
+    }
+    
+    public static func getRefreshToken()->String{
+        return refreshToken
+    }
+    
+    public static func setRefreshToken(refreshToken:String){
+        self.refreshToken = refreshToken
     }
     
     public static func clear(){
         
         username = ""
-        token = ""
+        accessToken = ""
+        refreshToken = ""
     }
 }
