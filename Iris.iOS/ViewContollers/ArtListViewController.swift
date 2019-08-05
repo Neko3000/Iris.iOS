@@ -11,6 +11,8 @@ import AVFoundation
 import TwicketSegmentedControl
 
 class ArtListViewController: UIViewController{
+    
+    var searchKeyword:String = ""
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var categorySelectorTwicketSegmentedControl: TwicketSegmentedControl!
@@ -45,6 +47,8 @@ class ArtListViewController: UIViewController{
             } catch {
                 // handle error
             }
+            
+            print(navigationController?.viewControllers.count)
         }
         
         searchTextField.layer.cornerRadius = 10.0

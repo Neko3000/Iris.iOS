@@ -38,13 +38,14 @@ class LoginViewController: UIViewController{
         if let loadedUserInfo = UserInfo.loadUserInfo(){
             
             self.changeLayoutToLoading()
-            // Check Token
+            
+            // check Token
             AlamofireManager.sharedSession.request(DeviantArtManager.generateCheckTokenURL(accessToken: loadedUserInfo.accessToken)).responseJSON(completionHandler: {
                 (response) in
                 
                 switch(response.result){
                     
-                case .success(let json):
+                case .success(_):
                     
                     if(response.response?.statusCode == 200){
                         
@@ -52,9 +53,11 @@ class LoginViewController: UIViewController{
                         ActiveUserInfo.setRefreshToken(refreshToken: loadedUserInfo.refreshToken)
                         
                         //segue to explore
-                        print("seuge!")
+                        self.performSegue(withIdentifier: "LoginToExplore", sender: nil)
                     }
                     else if(response.response?.statusCode == 401){
+                        
+                        // refresh token
                         AlamofireManager.sharedSession.request(DeviantArtManager.generateRefreshTokenURL(clientId: ApplicationKey.clientKey, clientSecret: ApplicationKey.secretKey, grantType: "refresh_token", refreshToken: loadedUserInfo.refreshToken)).responseJSON(completionHandler: {
                             (response) in
                             
@@ -77,8 +80,8 @@ class LoginViewController: UIViewController{
                                     let userInfo = UserInfo(accessToken: accessToken, refreshToken: refreshToken)
                                     UserInfo.saveUserInfo(userInfoObject: userInfo)
                                     
-                                    //segue to explore
-                                    print("seuge!")
+                                    // segue to explore
+                                    self.performSegue(withIdentifier: "LoginToExplore", sender: nil)
                                     
                                 }
                                 else if(response.response?.statusCode == 401){
@@ -87,19 +90,22 @@ class LoginViewController: UIViewController{
                                     
                                     print(dict["error"] as! String)
                                     
+                                    // set layout for login
                                     self.changeLayoutToLogin()
                                 }
-                                
+                                else{
+                                    self.changeLayoutToLogin()
+                                }
                                 break
                                 
                             case .failure(_):
                                 break
                             }
-                            
                         })
-                        
                     }
-                    
+                    else{
+                        self.changeLayoutToLogin()
+                    }
                     break
                     
                 case .failure(_):
@@ -112,7 +118,8 @@ class LoginViewController: UIViewController{
     }
     
     private func getAccessToken(code:String){
-    AlamofireManager.sharedSession.request(DeviantArtManager.generateAccessTokenURL(clientId: ApplicationKey.clientKey, clientSecret: ApplicationKey.secretKey, grantType: "authorization_code", code: code, redirectUrl: "https://www.roseandcage.com")).responseJSON(completionHandler: {
+        
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateAccessTokenURL(clientId: ApplicationKey.clientKey, clientSecret: ApplicationKey.secretKey, grantType: "authorization_code", code: code, redirectUrl: "https://www.roseandcage.com")).responseJSON(completionHandler: {
             (response) in
             
             switch(response.result){
@@ -132,7 +139,7 @@ class LoginViewController: UIViewController{
                     UserInfo.saveUserInfo(userInfoObject: userInfo)
                     
                     // segue to explore
-                    print("seuge!")
+                    self.performSegue(withIdentifier: "LoginToExplore", sender: nil)
                 }
                 else if(response.response?.statusCode == 401){
                     
@@ -168,7 +175,7 @@ class LoginViewController: UIViewController{
         loginActivityIndicatorView.startAnimating()
     }
     func changeLayoutToLogin(){
-        loginBtn.alpha = 1
+        loginBtn.alpha = 1.0
         loginBtn.isUserInteractionEnabled = true
         
         loginActivityIndicatorView.stopAnimating()

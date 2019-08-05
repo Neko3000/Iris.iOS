@@ -19,7 +19,7 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         searchTextField.layer.cornerRadius = 10.0
         searchTextField.layer.masksToBounds = true
         
@@ -30,6 +30,11 @@ class ExploreViewController: UIViewController {
         
         searchTextField.layer.cornerRadius = 10.0
         searchTextField.layer.masksToBounds = true
+        
+        searchTextField.returnKeyType = .go
+        searchTextField.delegate = self
+        
+        
     }
     
 
@@ -44,13 +49,39 @@ class ExploreViewController: UIViewController {
     */
 
     private func setImageBG(image:UIImage){
-        let ciImage = CIImage(image: image)
+        let orgCIImage = CIImage(image: image)
         
         let blurFilter = CIFilter(name: "CIGaussianBlur")
-        blurFilter?.setValue(ciImage, forKey: "inputImage")
+        blurFilter?.setValue(orgCIImage, forKey: "inputImage")
         blurFilter?.setValue("10.0", forKey: "inputRadius")
         
-        let resultImage = blurFilter?.value(forKey: "outputImage") as? CIImage
-        backgroundImageView.image = UIImage(ciImage: resultImage!)
+        let destCIImage = blurFilter?.value(forKey: "outputImage") as! CIImage
+        
+        let ciContext = CIContext()
+        let finalCGImage = ciContext.createCGImage(destCIImage, from: orgCIImage!.extent)
+        
+        backgroundImageView.image = UIImage(cgImage: finalCGImage!)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "ExploreToArtList"){
+            
+            let destVC = segue.destination as! ArtListViewController
+            destVC.searchKeyword = self.searchTextField.text!
+            
+            print(navigationController?.viewControllers.count)
+        }
+    }
+}
+
+extension ExploreViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField.returnKeyType == .go){
+            
+            performSegue(withIdentifier: "ExploreToArtList", sender: nil)
+        }
+        
+        return true
     }
 }
