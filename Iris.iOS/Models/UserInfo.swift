@@ -14,7 +14,7 @@ class UserInfo: NSObject,NSCoding {
     var accessToken:String
     var refreshToken:String
     
-    init(username:String,accessToken:String,refreshToken:String = "") {
+    init(username:String = "unnamed",accessToken:String,refreshToken:String = "") {
         self.username = username
         self.accessToken = accessToken
         self.refreshToken = refreshToken

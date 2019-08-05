@@ -33,6 +33,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-b6-K2R">
                                 <rect key="frame" x="53" y="75" width="269" height="475"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uku-9U-dsf" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="119.5" y="437" width="30" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="R7K-yz-pBX"/>
+                                            <constraint firstAttribute="height" constant="30" id="oLt-cj-fP8"/>
+                                        </constraints>
+                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="WQN-Zm-k6M">
                                         <rect key="frame" x="0.0" y="0.0" width="269" height="320"/>
                                         <constraints>
@@ -69,6 +77,8 @@ of the gods.</string>
                                 <constraints>
                                     <constraint firstItem="FZk-qN-0wl" firstAttribute="top" secondItem="PUp-k2-QlZ" secondAttribute="bottom" constant="35" id="Apa-yc-fmB"/>
                                     <constraint firstItem="FZk-qN-0wl" firstAttribute="leading" secondItem="LDi-b6-K2R" secondAttribute="leading" id="Bg9-vl-F8h"/>
+                                    <constraint firstItem="Uku-9U-dsf" firstAttribute="centerY" secondItem="FZk-qN-0wl" secondAttribute="centerY" id="CZA-wE-TOo"/>
+                                    <constraint firstItem="Uku-9U-dsf" firstAttribute="centerX" secondItem="LDi-b6-K2R" secondAttribute="centerX" id="G6A-vZ-yh0"/>
                                     <constraint firstAttribute="width" constant="269" id="Nvp-Fg-X7P"/>
                                     <constraint firstAttribute="bottom" secondItem="FZk-qN-0wl" secondAttribute="bottom" id="PKR-eW-Ina"/>
                                     <constraint firstItem="PUp-k2-QlZ" firstAttribute="leading" secondItem="LDi-b6-K2R" secondAttribute="leading" id="Res-s1-cNE"/>
@@ -81,8 +91,8 @@ of the gods.</string>
                                     <constraint firstItem="vd1-VW-0gx" firstAttribute="centerX" secondItem="PUp-k2-QlZ" secondAttribute="centerX" id="zS2-Bg-gsp"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driven by deviantArt." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SL-JZ-4rM">
-                                <rect key="frame" x="120" y="629" width="135" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driven by DeviantArt with love♡." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SL-JZ-4rM">
+                                <rect key="frame" x="82" y="629" width="211" height="20"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <color key="textColor" name="text-normal-grey"/>
                                 <nil key="highlightedColor"/>
@@ -98,6 +108,7 @@ of the gods.</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loginActivityIndicatorView" destination="Uku-9U-dsf" id="b2V-bv-atP"/>
                         <outlet property="loginBtn" destination="FZk-qN-0wl" id="Qwy-yy-Xej"/>
                     </connections>
                 </viewController>
