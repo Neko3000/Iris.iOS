@@ -60,6 +60,7 @@
 		EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */; };
 		EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */; };
 		EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */; };
+		EB74337222F9B491002884BB /* ImageWithColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74337122F9B491002884BB /* ImageWithColorExtension.swift */; };
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */; };
 		EB9CC18422C64D3E00F665BD /* UserCenterJournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */; };
 		EB9CC18622C64E5C00F665BD /* UserCenterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */; };
@@ -145,6 +146,7 @@
 		EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewSubmitCell.swift; sourceTree = "<group>"; };
 		EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewSubmitCell.xib; sourceTree = "<group>"; };
 		EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		EB74337122F9B491002884BB /* ImageWithColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithColorExtension.swift; sourceTree = "<group>"; };
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalTableViewCell.swift; sourceTree = "<group>"; };
 		EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterJournalTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterJournalViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */,
 				EB48B5E222EF269E00F60F15 /* UserCenterCommentViewController.swift */,
 				EB1E9E2D22F80CCC0095FDA9 /* MainTabBarController.swift */,
+				EB74337122F9B491002884BB /* ImageWithColorExtension.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */,
 				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
 				EB40B34022D5BC0400E75C9B /* UserCenterFavoriateViewController.swift in Sources */,
+				EB74337222F9B491002884BB /* ImageWithColorExtension.swift in Sources */,
 				EBB63AF6229A5ED200F789BD /* ArtDetailViewController.swift in Sources */,
 				EB2A98272296E08000977FC8 /* ActivityTableViewCommentCell.swift in Sources */,
 				EB267C42228BEB06004979AC /* ExploreViewController.swift in Sources */,

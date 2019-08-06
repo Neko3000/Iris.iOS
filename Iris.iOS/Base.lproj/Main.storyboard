@@ -139,7 +139,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vhq-uw-XE6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icon-news" id="faP-WN-oVd">
+                    <tabBarItem key="tabBarItem" title="" id="faP-WN-oVd">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -176,7 +176,7 @@ of the gods.</string>
         <scene sceneID="e8Y-9S-958">
             <objects>
                 <navigationController navigationBarHidden="YES" id="8mF-Z1-8EZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icon-discover" id="s2l-Yn-ZBL"/>
+                    <tabBarItem key="tabBarItem" title="" id="s2l-Yn-ZBL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qxj-6B-6tS">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -314,7 +314,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2VP-St-p9R"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icon-activity" id="grI-El-XDG"/>
+                    <tabBarItem key="tabBarItem" title="" id="grI-El-XDG"/>
                     <connections>
                         <outlet property="activityTableView" destination="twU-4b-21F" id="l7W-cE-fQw"/>
                     </connections>
@@ -556,7 +556,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SrV-Ma-hLY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icon-user-center" id="BSa-5P-fKv"/>
+                    <tabBarItem key="tabBarItem" title="" id="BSa-5P-fKv"/>
                     <connections>
                         <outlet property="galleryTableView" destination="bcR-w5-UmG" id="PT5-50-snZ"/>
                         <outlet property="galleryTableViewHeightConstraint" destination="qYY-z8-nN7" id="1eJ-5S-huR"/>
@@ -1142,15 +1142,11 @@ of the gods.</string>
         <image name="btn-login" width="269" height="46"/>
         <image name="explore-ahri-1" width="375" height="647"/>
         <image name="horizontal-line" width="147" height="2"/>
-        <image name="icon-activity" width="40" height="40"/>
-        <image name="icon-discover" width="40" height="40"/>
         <image name="icon-download" width="22" height="22"/>
         <image name="icon-left-arrow" width="22" height="22"/>
         <image name="icon-like-2" width="24" height="21"/>
         <image name="icon-menu" width="26" height="20"/>
-        <image name="icon-news" width="40" height="40"/>
         <image name="icon-share" width="25" height="25"/>
-        <image name="icon-user-center" width="40" height="40"/>
         <image name="input-username" width="269" height="30"/>
         <image name="logo" width="269" height="330"/>
         <namedColor name="input-normal-purple">
