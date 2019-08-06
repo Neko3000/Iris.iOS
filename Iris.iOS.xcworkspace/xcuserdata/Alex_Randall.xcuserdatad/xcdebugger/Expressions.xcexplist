@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #1 in LoginViewController.initUserState():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.response?.statusCode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ArtListViewController.tableView(_:cellForRowAt:):ArtListViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -11,15 +19,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ArtListViewController.createTreeStructure():ArtListViewController.swift">
-      </ContextState>
-      <ContextState
          contextName = "ArtListViewController.tableView(_:didSelectRowAt:):ArtListViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "tableView.indexPathsForSelectedRows">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ArtListViewController.createTreeStructure():ArtListViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

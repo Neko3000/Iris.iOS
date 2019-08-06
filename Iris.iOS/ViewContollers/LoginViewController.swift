@@ -61,6 +61,8 @@ class LoginViewController: UIViewController{
                         AlamofireManager.sharedSession.request(DeviantArtManager.generateRefreshTokenURL(clientId: ApplicationKey.clientKey, clientSecret: ApplicationKey.secretKey, grantType: "refresh_token", refreshToken: loadedUserInfo.refreshToken)).responseJSON(completionHandler: {
                             (response) in
                             
+                            print(DeviantArtManager.generateRefreshTokenURL(clientId: ApplicationKey.clientKey, clientSecret: ApplicationKey.secretKey, grantType: "refresh_token", refreshToken: loadedUserInfo.refreshToken))
+                            
                             switch(response.result){
                                 
                             case .success(let json):

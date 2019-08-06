@@ -57,7 +57,7 @@ class DeviantArtManager{
             URLQueryItem(name: "client_id", value: clientId),
             URLQueryItem(name: "client_secret", value: clientSecret),
             URLQueryItem(name: "grant_type", value: grantType),
-            URLQueryItem(name: "refreshToken", value: refreshToken)
+            URLQueryItem(name: "refresh_token", value: refreshToken)
         ]
         
         return urlComponents!.url!

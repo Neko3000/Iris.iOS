@@ -223,7 +223,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		EB0568682245DBA900899DCE /* Funcitions */ = {
+		EB0568682245DBA900899DCE /* Functions */ = {
 			isa = PBXGroup;
 			children = (
 				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
@@ -232,7 +232,7 @@
 				EB39BAB922F6BCD60022ACDB /* DeviantArtManager.swift */,
 				EB39BABB22F6BEEE0022ACDB /* ApplicationKey.swift */,
 			);
-			path = Funcitions;
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		EB267C32228A8DDC004979AC /* Views */ = {
@@ -445,7 +445,7 @@
 				EB267C34228A8DF5004979AC /* Models */,
 				EB267C33228A8DEB004979AC /* ViewContollers */,
 				EB267C32228A8DDC004979AC /* Views */,
-				EB0568682245DBA900899DCE /* Funcitions */,
+				EB0568682245DBA900899DCE /* Functions */,
 				EB0568652244C70600899DCE /* Extensions */,
 				EB05685F224334C300899DCE /* Resource */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,

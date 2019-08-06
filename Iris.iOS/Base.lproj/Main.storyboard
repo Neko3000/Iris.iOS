@@ -164,8 +164,8 @@ of the gods.</string>
                     <connections>
                         <segue destination="djQ-H1-13j" kind="relationship" relationship="viewControllers" id="pvM-4Q-Ucm"/>
                         <segue destination="8mF-Z1-8EZ" kind="relationship" relationship="viewControllers" id="6t9-VG-jPX"/>
-                        <segue destination="joN-y5-0JI" kind="relationship" relationship="viewControllers" id="dTU-Wm-hAA"/>
-                        <segue destination="jau-Rs-CPO" kind="relationship" relationship="viewControllers" id="ds8-dh-7bt"/>
+                        <segue destination="joN-y5-0JI" kind="relationship" relationship="viewControllers" id="p8y-de-GAb"/>
+                        <segue destination="jau-Rs-CPO" kind="relationship" relationship="viewControllers" id="duh-Ks-iYT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTU-j3-Syz" userLabel="First Responder" sceneMemberID="firstResponder"/>
