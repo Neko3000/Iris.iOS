@@ -3,24 +3,28 @@ PODS:
   - NVActivityIndicatorView (4.7.0):
     - NVActivityIndicatorView/Presenter (= 4.7.0)
   - NVActivityIndicatorView/Presenter (4.7.0)
+  - SwiftyJSON (4.3.0)
   - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-beta.7)
   - NVActivityIndicatorView
+  - SwiftyJSON (~> 4.0)
   - TwicketSegmentedControl
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - NVActivityIndicatorView
+    - SwiftyJSON
     - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
   Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: b3d7f1d8093847df8ad31f5dcd689cb37ab37e43
+PODFILE CHECKSUM: cb3e2c07570d654734f6bf54069334c4681f03ab
 
 COCOAPODS: 1.5.3

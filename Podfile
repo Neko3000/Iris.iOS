@@ -9,4 +9,5 @@ target 'Iris.iOS' do
   pod 'TwicketSegmentedControl'
   pod 'Alamofire', '5.0.0-beta.7'
   pod 'NVActivityIndicatorView'
+  pod 'SwiftyJSON', '~> 4.0'
 end
