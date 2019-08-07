@@ -161,11 +161,17 @@ class LoginViewController: UIViewController{
             })
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "LoginToExplore"){
+            
+        }
+    }
 
     @IBAction func loginBtnTouchUpInside(_ sender: Any) {
         view.addSubview(loginWKWebView!)
         
-        let request = URLRequest(url: DeviantArtManager.generateAuthorizationCodeURL(responseType: "code", clientId: ApplicationKey.clientKey, redirectUrl: "https://www.roseandcage.com", scope: "basic", state: "bingo"))
+        let request = URLRequest(url: DeviantArtManager.generateAuthorizationCodeURL(responseType: "code", clientId: ApplicationKey.clientKey, redirectUrl: "https://www.roseandcage.com", scope: "basic browse", state: "bingo"))
         
         loginWKWebView?.load(request)
     }

@@ -34,6 +34,11 @@ class ExploreViewController: UIViewController {
         searchTextField.returnKeyType = .go
         searchTextField.delegate = self
         
+        print("view did load")
+    }
+    
+    override func loadView() {
+        super.loadView()
         
     }
     
@@ -70,7 +75,6 @@ class ExploreViewController: UIViewController {
             let destVC = segue.destination as! ArtListViewController
             destVC.searchKeyword = self.searchTextField.text!
             
-            print(navigationController?.viewControllers.count)
         }
     }
 }
@@ -79,7 +83,9 @@ extension ExploreViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if(textField.returnKeyType == .go){
             
-            performSegue(withIdentifier: "ExploreToArtList", sender: nil)
+            if(textField.text != nil){
+                performSegue(withIdentifier: "ExploreToArtList", sender: nil)
+            }
         }
         
         return true

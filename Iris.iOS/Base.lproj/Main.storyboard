@@ -197,16 +197,16 @@ of the gods.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijF-NG-huy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="648"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ke-ZO-GSL">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="648"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore-ahri-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-ue-YHl">
-                                                <rect key="frame" x="-50" y="-50" width="475" height="748"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore-ahri-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-ue-YHl">
+                                                <rect key="frame" x="-50" y="-50" width="475" height="747"/>
                                             </imageView>
                                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S57-JD-zkp">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="648"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -223,7 +223,7 @@ of the gods.</string>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-2y-2c8">
-                                        <rect key="frame" x="41" y="266.5" width="293" height="35"/>
+                                        <rect key="frame" x="41" y="266" width="293" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="NvY-vP-Z2K"/>
                                         </constraints>
@@ -245,13 +245,13 @@ of the gods.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="explore." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSS-Oo-Xth">
-                                <rect key="frame" x="120.5" y="172" width="134" height="51"/>
+                                <rect key="frame" x="120.5" y="171.5" width="134" height="51"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="find those charming things you’re interested in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skS-lH-i7K">
-                                <rect key="frame" x="62.5" y="233" width="250" height="16.5"/>
+                                <rect key="frame" x="62.5" y="232.5" width="250" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -266,7 +266,7 @@ of the gods.</string>
                             <constraint firstItem="ijF-NG-huy" firstAttribute="leading" secondItem="p2u-ib-HdY" secondAttribute="leading" id="Wd4-8o-NwS"/>
                             <constraint firstItem="Fu0-2y-2c8" firstAttribute="top" secondItem="skS-lH-i7K" secondAttribute="bottom" constant="37" id="Xj2-ym-EcN"/>
                             <constraint firstItem="ijF-NG-huy" firstAttribute="top" secondItem="p2u-ib-HdY" secondAttribute="top" id="jeL-MC-K5x"/>
-                            <constraint firstItem="p2u-ib-HdY" firstAttribute="bottom" secondItem="ijF-NG-huy" secondAttribute="bottom" constant="-50" id="pCD-lG-aBn"/>
+                            <constraint firstItem="p2u-ib-HdY" firstAttribute="bottom" secondItem="ijF-NG-huy" secondAttribute="bottom" constant="-49" id="pCD-lG-aBn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p2u-ib-HdY"/>
                     </view>
@@ -291,26 +291,16 @@ of the gods.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="twU-4b-21F">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="648"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mT-DX-OEK" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="540" width="375" height="78"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="Lvp-41-o9z"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2VP-St-p9R" firstAttribute="bottom" secondItem="9mT-DX-OEK" secondAttribute="bottom" id="4Qi-gN-E3a"/>
-                            <constraint firstItem="9mT-DX-OEK" firstAttribute="leading" secondItem="2VP-St-p9R" secondAttribute="leading" id="5iS-E5-zb8"/>
                             <constraint firstItem="twU-4b-21F" firstAttribute="leading" secondItem="2VP-St-p9R" secondAttribute="leading" id="Iz4-MN-BBy"/>
-                            <constraint firstItem="twU-4b-21F" firstAttribute="bottom" secondItem="2VP-St-p9R" secondAttribute="bottom" id="fPs-wE-Zv5"/>
+                            <constraint firstItem="twU-4b-21F" firstAttribute="bottom" secondItem="2VP-St-p9R" secondAttribute="bottom" constant="50" id="fPs-wE-Zv5"/>
                             <constraint firstItem="twU-4b-21F" firstAttribute="top" secondItem="2VP-St-p9R" secondAttribute="top" id="jPh-9y-c35"/>
                             <constraint firstItem="twU-4b-21F" firstAttribute="trailing" secondItem="2VP-St-p9R" secondAttribute="trailing" id="mA5-ky-2e6"/>
-                            <constraint firstItem="2VP-St-p9R" firstAttribute="trailing" secondItem="9mT-DX-OEK" secondAttribute="trailing" id="sxb-Ec-BtR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2VP-St-p9R"/>
                     </view>
@@ -575,7 +565,7 @@ of the gods.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Me2-R6-ej0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="648"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fBf-zp-j4d">
                                     <size key="itemSize" width="50" height="50"/>
@@ -589,7 +579,7 @@ of the gods.</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="82"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-cj-YV1">
-                                        <rect key="frame" x="17" y="14" width="293" height="26"/>
+                                        <rect key="frame" x="44" y="14" width="266" height="26"/>
                                         <color key="backgroundColor" name="text-light-grey-3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="hec-jt-gXt"/>
@@ -613,15 +603,21 @@ of the gods.</string>
                                             <constraint firstAttribute="height" constant="26" id="R0J-qR-4wA"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAY-VD-JTz">
+                                        <rect key="frame" x="11" y="17" width="20" height="20"/>
+                                        <state key="normal" image="icon-left-arrow"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="EAY-VD-JTz" firstAttribute="centerY" secondItem="WEf-cj-YV1" secondAttribute="centerY" id="2Q1-nd-gne"/>
+                                    <constraint firstItem="EAY-VD-JTz" firstAttribute="leading" secondItem="lLI-CD-ctB" secondAttribute="leading" constant="10" id="IM2-1p-tCP"/>
                                     <constraint firstItem="wt3-cy-Ti4" firstAttribute="top" secondItem="lLI-CD-ctB" secondAttribute="top" constant="14" id="KFL-Rs-YwH"/>
                                     <constraint firstItem="WEf-cj-YV1" firstAttribute="top" secondItem="lLI-CD-ctB" secondAttribute="top" constant="14" id="KQQ-4V-TfU"/>
                                     <constraint firstAttribute="bottom" secondItem="1cG-AS-uYf" secondAttribute="bottom" constant="8" id="KqY-hu-ur2"/>
                                     <constraint firstAttribute="height" constant="82" id="Prj-VP-GF0"/>
                                     <constraint firstAttribute="trailing" secondItem="wt3-cy-Ti4" secondAttribute="trailing" constant="19" id="Tk3-dg-9Vf"/>
-                                    <constraint firstItem="WEf-cj-YV1" firstAttribute="leading" secondItem="lLI-CD-ctB" secondAttribute="leading" constant="17" id="agC-ug-wWh"/>
+                                    <constraint firstItem="WEf-cj-YV1" firstAttribute="leading" secondItem="lLI-CD-ctB" secondAttribute="leading" constant="44" id="agC-ug-wWh"/>
                                     <constraint firstItem="wt3-cy-Ti4" firstAttribute="leading" secondItem="WEf-cj-YV1" secondAttribute="trailing" constant="20" id="xxY-Zx-z8t"/>
                                 </constraints>
                             </view>
@@ -633,26 +629,16 @@ of the gods.</string>
                                     <constraint firstAttribute="width" constant="305" id="zLm-f6-ecO"/>
                                 </constraints>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzY-MA-efG" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="540" width="375" height="78"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="Itx-Kg-UWb"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LzY-MA-efG" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" id="68y-oP-1VM"/>
                             <constraint firstItem="9cV-dy-ZiU" firstAttribute="trailing" secondItem="1cG-AS-uYf" secondAttribute="trailing" constant="53" id="8dc-7p-kcR"/>
-                            <constraint firstItem="9cV-dy-ZiU" firstAttribute="bottom" secondItem="LzY-MA-efG" secondAttribute="bottom" id="B6i-IU-bdG"/>
                             <constraint firstItem="9cV-dy-ZiU" firstAttribute="trailing" secondItem="lLI-CD-ctB" secondAttribute="trailing" id="DIn-NM-Sm1"/>
                             <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerY" secondItem="HZi-kC-1fh" secondAttribute="centerY" id="abk-x0-de0"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" id="ePb-eh-U3V"/>
                             <constraint firstItem="lLI-CD-ctB" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" id="ky7-Jp-GRv"/>
-                            <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="9cV-dy-ZiU" secondAttribute="bottom" id="lU7-u5-HGU"/>
+                            <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="9cV-dy-ZiU" secondAttribute="bottom" constant="50" id="lU7-u5-HGU"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="top" secondItem="9cV-dy-ZiU" secondAttribute="top" id="lh5-Hu-Bk3"/>
-                            <constraint firstItem="9cV-dy-ZiU" firstAttribute="trailing" secondItem="LzY-MA-efG" secondAttribute="trailing" id="oYd-ji-nCz"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="trailing" secondItem="9cV-dy-ZiU" secondAttribute="trailing" id="uMS-BY-Ihi"/>
                             <constraint firstItem="1cG-AS-uYf" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" constant="53" id="yFw-Di-8vl"/>
                             <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerX" secondItem="9cV-dy-ZiU" secondAttribute="centerX" id="yLO-DO-v7q"/>

@@ -14,6 +14,7 @@
 		EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0568692245DC6C00899DCE /* SketchShadow.swift */; };
 		EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05686B2245E6AE00899DCE /* GradientBackground.swift */; };
 		EB05686E224616FD00899DCE /* Apple Symbols.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB05686D224616FD00899DCE /* Apple Symbols.ttf */; };
+		EB188A7A22FA9D0400524B77 /* ObjectDictionaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB188A7922FA9D0300524B77 /* ObjectDictionaryProtocols.swift */; };
 		EB1E9E2A22F805F70095FDA9 /* MainBottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E9E2922F805F70095FDA9 /* MainBottomTabBar.swift */; };
 		EB1E9E2C22F808B20095FDA9 /* MainBottomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1E9E2B22F808B20095FDA9 /* MainBottomTabBar.xib */; };
 		EB1E9E2E22F80CCC0095FDA9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E9E2D22F80CCC0095FDA9 /* MainTabBarController.swift */; };
@@ -64,6 +65,8 @@
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */; };
 		EB9CC18422C64D3E00F665BD /* UserCenterJournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */; };
 		EB9CC18622C64E5C00F665BD /* UserCenterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */; };
+		EBA0323922FAE6360084B92F /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0323822FAE6360084B92F /* Deviation.swift */; };
+		EBA0323B22FAEE1C0084B92F /* JSONObjectProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0323A22FAEE1C0084B92F /* JSONObjectProtocols.swift */; };
 		EBAE40E222EEE72E008425A2 /* UserCenterFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */; };
 		EBAE40E422EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE40E322EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift */; };
 		EBAE40E622EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAE40E522EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib */; };
@@ -98,6 +101,7 @@
 		EB0568692245DC6C00899DCE /* SketchShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		EB05686B2245E6AE00899DCE /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		EB05686D224616FD00899DCE /* Apple Symbols.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Symbols.ttf"; sourceTree = "<group>"; };
+		EB188A7922FA9D0300524B77 /* ObjectDictionaryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDictionaryProtocols.swift; sourceTree = "<group>"; };
 		EB1E9E2922F805F70095FDA9 /* MainBottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomTabBar.swift; sourceTree = "<group>"; };
 		EB1E9E2B22F808B20095FDA9 /* MainBottomTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainBottomTabBar.xib; path = ../UserCenterGallery/MainBottomTabBar.xib; sourceTree = "<group>"; };
 		EB1E9E2D22F80CCC0095FDA9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = ../MainTabBarController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalTableViewCell.swift; sourceTree = "<group>"; };
 		EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterJournalTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterJournalViewController.swift; sourceTree = "<group>"; };
+		EBA0323822FAE6360084B92F /* Deviation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Deviation.swift; path = /Users/Alex_Randall/Projects/Iris.iOS/Iris.iOS/ViewContollers/Deviation.swift; sourceTree = "<absolute>"; };
+		EBA0323A22FAEE1C0084B92F /* JSONObjectProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONObjectProtocols.swift; sourceTree = "<group>"; };
 		EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFollowerViewController.swift; sourceTree = "<group>"; };
 		EBAE40E322EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFollowerTableViewCell.swift; sourceTree = "<group>"; };
 		EBAE40E522EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterFollowerTableViewCell.xib; sourceTree = "<group>"; };
@@ -229,12 +235,22 @@
 			isa = PBXGroup;
 			children = (
 				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
+				EB74337122F9B491002884BB /* ImageWithColorExtension.swift */,
 				EB267C38228A9A0E004979AC /* XibUIView.swift */,
 				EB39BAB522F6A0E00022ACDB /* RequestAnalyzer.swift */,
 				EB39BAB922F6BCD60022ACDB /* DeviantArtManager.swift */,
 				EB39BABB22F6BEEE0022ACDB /* ApplicationKey.swift */,
 			);
 			path = Functions;
+			sourceTree = "<group>";
+		};
+		EB188A7B22FA9D2100524B77 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EB188A7922FA9D0300524B77 /* ObjectDictionaryProtocols.swift */,
+				EBA0323A22FAEE1C0084B92F /* JSONObjectProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		EB267C32228A8DDC004979AC /* Views */ = {
@@ -274,7 +290,6 @@
 				EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */,
 				EB48B5E222EF269E00F60F15 /* UserCenterCommentViewController.swift */,
 				EB1E9E2D22F80CCC0095FDA9 /* MainTabBarController.swift */,
-				EB74337122F9B491002884BB /* ImageWithColorExtension.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -284,6 +299,7 @@
 			children = (
 				EB39BABD22F6D5A50022ACDB /* ActiveUserInfo.swift */,
 				EB39BAB322F5D6E80022ACDB /* UserInfo.swift */,
+				EBA0323822FAE6360084B92F /* Deviation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,6 +467,7 @@
 				EB0568682245DBA900899DCE /* Functions */,
 				EB0568652244C70600899DCE /* Extensions */,
 				EB05685F224334C300899DCE /* Resource */,
+				EB188A7B22FA9D2100524B77 /* Protocols */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
 				EB488B5622431F8400AC925F /* AppDelegate.swift */,
 				EB488B5F22431F8700AC925F /* LaunchScreen.storyboard */,
@@ -646,6 +663,7 @@
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
 				EB39BABE22F6D5A50022ACDB /* ActiveUserInfo.swift in Sources */,
 				EB48B5E322EF269E00F60F15 /* UserCenterCommentViewController.swift in Sources */,
+				EBA0323922FAE6360084B92F /* Deviation.swift in Sources */,
 				EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */,
 				EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
@@ -661,10 +679,12 @@
 				EB48B5DB22EF1D3500F60F15 /* UserCenterCommentHeaderTableViewCell.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
 				EB40B34422D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift in Sources */,
+				EB188A7A22FA9D0400524B77 /* ObjectDictionaryProtocols.swift in Sources */,
 				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,
 				EB39BABA22F6BCD60022ACDB /* DeviantArtManager.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
 				EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */,
+				EBA0323B22FAEE1C0084B92F /* JSONObjectProtocols.swift in Sources */,
 				EB39BAB822F6A5460022ACDB /* AlamofireManager.swift in Sources */,
 				EB48B5E722EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift in Sources */,
 			);

@@ -48,7 +48,6 @@ class ArtListViewController: UIViewController{
                 // handle error
             }
             
-            print(navigationController?.viewControllers.count)
         }
         
         searchTextField.layer.cornerRadius = 10.0
@@ -85,6 +84,8 @@ class ArtListViewController: UIViewController{
         categorySelectorTableView.layer.masksToBounds = true
         categorySelectorTableView.separatorStyle = .none
         categorySelectorTableView.allowsMultipleSelection = false
+        
+        fetchArtList()
     }
     
 
@@ -98,6 +99,29 @@ class ArtListViewController: UIViewController{
     }
     */
 
+    func fetchArtList(){
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: searchKeyword, timeRange: "", limit: 10, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
+            response in
+            
+            print(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: self.searchKeyword, timeRange: "", limit: 10, accessToken:ActiveUserInfo.getAccesssToken()))
+            switch(response.result){
+            case .success(let json):
+                
+                if(response.response?.statusCode == 200){
+                    let dict = json as! [String:Any]
+                    
+                    print(dict["has_more"])
+                }
+                else if(response.response?.statusCode == 401){
+                    
+                }
+                
+                break
+            case .failure(_):
+                break
+            }
+        })
+    }
 }
 
 // UICollectionView

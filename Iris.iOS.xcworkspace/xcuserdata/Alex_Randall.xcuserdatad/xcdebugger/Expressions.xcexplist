@@ -19,6 +19,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in ArtListViewController.fetchArtList():ArtListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.response?.statusCode ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ArtListViewController.tableView(_:didSelectRowAt:):ArtListViewController.swift">
          <PersistentStrings>
             <PersistentString
