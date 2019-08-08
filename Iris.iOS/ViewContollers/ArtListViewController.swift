@@ -9,19 +9,28 @@
 import UIKit
 import AVFoundation
 import TwicketSegmentedControl
+import SwiftyJSON
+import NVActivityIndicatorView
 
 class ArtListViewController: UIViewController{
     
     var searchKeyword:String = ""
+    
+    var posts:[UIImage] = [UIImage]()
+    var categories:[String] = [String]()
+    
+    var artList:[Deviation] = [Deviation]()
+    var artPreviewImageList:[UIImage] = [UIImage]()
+    let dispatchGroup:DispatchGroup = DispatchGroup()
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var categorySelectorTwicketSegmentedControl: TwicketSegmentedControl!
     @IBOutlet weak var artListCollectionView: UICollectionView!
     @IBOutlet weak var toolbarView: UIView!
     @IBOutlet weak var categorySelectorTableView: UITableView!
+    @IBOutlet weak var activityIndicatorViewCenter: NVActivityIndicatorView!
     
-    var posts:[UIImage] = [UIImage]()
-    var categories:[String] = [String]()
+    var activityIndicatorViewBottom:NVActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +80,9 @@ class ArtListViewController: UIViewController{
         artListCollectionView.dataSource = self
         artListCollectionView.contentInset = UIEdgeInsets(top: 82, left: 10.0, bottom: 0, right: 10.0)
         artListCollectionView.register(UINib(nibName: "ArtListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArtListCollectionViewCell")
+
+        //artListCollectionView.refreshControl = refreshControl
+        //refreshControl.addTarget(self, action: #selector(loadMoreArt(sender:)), for: .valueChanged)
         
         let collectionViewMasonryViewLayout = CollectionViewMasonryLayout()
         collectionViewMasonryViewLayout.delegate = self
@@ -84,6 +96,14 @@ class ArtListViewController: UIViewController{
         categorySelectorTableView.layer.masksToBounds = true
         categorySelectorTableView.separatorStyle = .none
         categorySelectorTableView.allowsMultipleSelection = false
+        categorySelectorTableView.removeFromSuperview() // temp
+        
+        activityIndicatorViewCenter.type = .orbit
+        activityIndicatorViewCenter.color = UIColor(named: "text-normal-purple")!
+        
+        activityIndicatorViewBottom = NVActivityIndicatorView(frame: CGRect())
+        activityIndicatorViewBottom!.type = .orbit
+        activityIndicatorViewBottom!.color = UIColor(named: "text-normal-purple")!
         
         fetchArtList()
     }
@@ -100,17 +120,22 @@ class ArtListViewController: UIViewController{
     */
 
     func fetchArtList(){
+        activityIndicatorViewCenter.startAnimating()
+        
         AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: searchKeyword, timeRange: "", limit: 10, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
             response in
-            
+
             print(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: self.searchKeyword, timeRange: "", limit: 10, accessToken:ActiveUserInfo.getAccesssToken()))
             switch(response.result){
-            case .success(let json):
+            case .success(_):
                 
                 if(response.response?.statusCode == 200){
-                    let dict = json as! [String:Any]
-                    
-                    print(dict["has_more"])
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        self.artList = JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)
+                        self.fetchPreviewImageList()
+                    }
                 }
                 else if(response.response?.statusCode == 401){
                     
@@ -122,13 +147,64 @@ class ArtListViewController: UIViewController{
             }
         })
     }
+    
+    func fetchPreviewImageList(){
+        
+        for i in 0..<artList.count{
+            
+            dispatchGroup.enter()
+            
+            AlamofireManager.sharedSession.request(artList[i].previewSrc).response(completionHandler: {
+                response in
+                
+                defer{
+                    self.dispatchGroup.leave()
+                }
+                
+                switch(response.result){
+                    case .success(_):
+                        let previewImage = UIImage(data: response.data!)
+                        self.artPreviewImageList.insert(previewImage!, at: i)
+                        
+                        if(self.artPreviewImageList.count == self.artList.count){
+                            for j in 0..<self.artPreviewImageList.count{
+                                print(self.artPreviewImageList[j].size.width)
+                            }
+                        }
+                        
+                        break
+                    
+                    case .failure(_):
+                        break
+                }
+
+            })
+        }
+        
+        dispatchGroup.notify(queue: .main){
+            
+            self.artListCollectionView.reloadData(){
+                self.activityIndicatorViewBottom!.frame = CGRect(x: (self.artListCollectionView.contentSize.width - 30)/2.0, y: self.artListCollectionView.contentSize.height, width: 30, height: 30)
+        
+                self.activityIndicatorViewBottom!.alpha = 0
+                
+                self.artListCollectionView.addSubview(self.activityIndicatorViewBottom!)
+            }
+            self.activityIndicatorViewCenter.stopAnimating()
+            
+        }
+    }
+    
+    @objc func loadMoreArt(sender:UIRefreshControl){
+        print("load more")
+    }
 }
 
 // UICollectionView
 extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+        return artList.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -141,12 +217,22 @@ extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSou
         
         let specificCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArtListCollectionViewCell", for: indexPath) as! ArtListCollectionViewCell
         
-        specificCell.setArt(art: posts[indexPath.item])
+        specificCell.setArt(art: artPreviewImageList[indexPath.item])
         specificCell.setAuthorName(authorName: "- author\(indexPath.item)")
         
         cell = specificCell
         
         return cell!
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if(scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.height)){
+            let differ = scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.height)
+            let percentage = differ / 70.0 > 1.0 ? 1.0 : differ/70.0
+            
+            activityIndicatorViewBottom!.alpha = 1.0 / percentage
+            
+        }
     }
 }
 
@@ -154,11 +240,11 @@ extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSou
 extension ArtListViewController:CollectionViewMasonryLayoutDelegate{
     func collectionView(collectionView: UICollectionView, heightForCellAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
         
-        let post = posts[indexPath.item]
+        let image = artPreviewImageList[indexPath.item]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
-        let rect = AVMakeRect(aspectRatio: post.size, insideRect: boundingRect)
+        let rect = AVMakeRect(aspectRatio: image.size, insideRect: boundingRect)
         
-        print("\(indexPath.item): \(post.size.width) - \(post.size.height)")
+        print("\(indexPath.item): \(image.size.width) - \(image.size.height)")
         
         return rect.size.height + 29
     }

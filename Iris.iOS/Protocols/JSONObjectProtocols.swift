@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 protocol ObjectFromJSON {
-    // init(json:JSON)
+    init(json:JSON)
 }

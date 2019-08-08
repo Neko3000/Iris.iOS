@@ -6,12 +6,12 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class Deviation: ObjectFromDictionary {
+class Deviation: ObjectFromJSON {
     
     public var deviationId:String = ""
     public var title:String = ""
-    public var description:String = "" // exist?
     public var category:String = ""
     public var categoryPath:String = ""
     public var isFavourited:Bool = false
@@ -21,24 +21,24 @@ class Deviation: ObjectFromDictionary {
     
     public var isDownloadable:Bool = false
     
-    public var userName:String = ""
-    public var userAvatar:String = ""
+    public var authorName:String = ""
+    public var authorAvatar:String = ""
     
     init() {
         
     }
     
-    required init(dict: [String : Any]) {
-        self.deviationId = dict["deviationid"] as! String
-        self.title = dict["title"] as! String
-        self.category = dict["category"] as! String
-        self.category = dict["category_path"] as! String
-        self.isFavourited = dict["is_favourited"] as! Bool
-        self.previewSrc = dict["preview"]!["src"] as! String
-        self.deviationId = dict["deviationid"] as! String
-        self.deviationId = dict["deviationid"] as! String
-        self.deviationId = dict["deviationid"] as! String
-        self.deviationId = dict["deviationid"] as! String
-        
+    required init(json:JSON) {
+        self.deviationId = json["deviationid"].string!
+        self.title = json["title"].string!
+        self.category = json["category"].string!
+        self.category = json["category_path"].string!
+        self.isFavourited = json["is_favourited"].bool!
+        self.previewSrc = json["preview"]["src"].string!
+        self.contentSrc = json["content"]["src"].string!
+        self.isDownloadable = json["is_downloadable"].bool!
+        self.authorName = json["author"]["username"].string!
+        self.authorAvatar = json["author"]["usericon"].string!
+    
     }
 }
