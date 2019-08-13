@@ -19,9 +19,16 @@ class ArtListViewController: UIViewController{
     var posts:[UIImage] = [UIImage]()
     var categories:[String] = [String]()
     
+    var pageOffset:Int = 0
+    var pageLimit:Int = 20
     var artList:[Deviation] = [Deviation]()
     var artPreviewImageList:[UIImage] = [UIImage]()
     let dispatchGroup:DispatchGroup = DispatchGroup()
+    
+    var artListForSingleRequest:[Deviation] = [Deviation]()
+    var artPreviewImageListForSingleRequest:[UIImage] = [UIImage]()
+    
+    var isFetchingArtList = false
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var categorySelectorTwicketSegmentedControl: TwicketSegmentedControl!
@@ -122,7 +129,7 @@ class ArtListViewController: UIViewController{
     func fetchArtList(){
         activityIndicatorViewCenter.startAnimating()
         
-        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: searchKeyword, timeRange: "", limit: 10, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: searchKeyword, timeRange: "",offset: pageOffset, limit: pageLimit, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
             response in
 
             print(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: self.searchKeyword, timeRange: "", limit: 10, accessToken:ActiveUserInfo.getAccesssToken()))
@@ -133,7 +140,7 @@ class ArtListViewController: UIViewController{
                     if let data = response.data{
                         let json = JSON(data)
                         
-                        self.artList = JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)
+                        self.artListForSingleRequest = JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)
                         self.fetchPreviewImageList()
                     }
                 }
@@ -150,11 +157,11 @@ class ArtListViewController: UIViewController{
     
     func fetchPreviewImageList(){
         
-        for i in 0..<artList.count{
+        for i in 0..<artListForSingleRequest.count{
             
             dispatchGroup.enter()
             
-            AlamofireManager.sharedSession.request(artList[i].previewSrc).response(completionHandler: {
+            AlamofireManager.sharedSession.request(artListForSingleRequest[i].previewSrc).response(completionHandler: {
                 response in
                 
                 defer{
@@ -164,13 +171,7 @@ class ArtListViewController: UIViewController{
                 switch(response.result){
                     case .success(_):
                         let previewImage = UIImage(data: response.data!)
-                        self.artPreviewImageList.insert(previewImage!, at: i)
-                        
-                        if(self.artPreviewImageList.count == self.artList.count){
-                            for j in 0..<self.artPreviewImageList.count{
-                                print(self.artPreviewImageList[j].size.width)
-                            }
-                        }
+                        self.artPreviewImageListForSingleRequest.insert(previewImage!, at: i)
                         
                         break
                     
@@ -182,11 +183,15 @@ class ArtListViewController: UIViewController{
         }
         
         dispatchGroup.notify(queue: .main){
+            self.artList.append(contentsOf: self.artListForSingleRequest)
+            self.artPreviewImageList.append(contentsOf: self.artPreviewImageListForSingleRequest)
+            self.pageOffset += 1
             
             self.artListCollectionView.reloadData(){
-                self.activityIndicatorViewBottom!.frame = CGRect(x: (self.artListCollectionView.contentSize.width - 30)/2.0, y: self.artListCollectionView.contentSize.height, width: 30, height: 30)
+                self.activityIndicatorViewBottom!.frame = CGRect(x: (self.artListCollectionView.contentSize.width - 50)/2.0, y: self.artListCollectionView.contentSize.height, width: 50, height: 50)
         
                 self.activityIndicatorViewBottom!.alpha = 0
+                self.activityIndicatorViewBottom!.startAnimating()
                 
                 self.artListCollectionView.addSubview(self.activityIndicatorViewBottom!)
             }
@@ -195,8 +200,18 @@ class ArtListViewController: UIViewController{
         }
     }
     
-    @objc func loadMoreArt(sender:UIRefreshControl){
-        print("load more")
+    func addActivityIndicatorViewBottom(){
+        activityIndicatorViewBottom!.frame = CGRect(x: (self.artListCollectionView.contentSize.width - 50)/2.0, y: self.artListCollectionView.contentSize.height, width: 50, height: 50)
+        
+        activityIndicatorViewBottom!.alpha = 1
+        activityIndicatorViewBottom!.startAnimating()
+        
+        artListCollectionView.addSubview(self.activityIndicatorViewBottom!)
+    }
+    
+    func removeActivityIndicatorViewBottom(){
+        activityIndicatorViewBottom!.stopAnimating()
+        activityIndicatorViewBottom!.removeFromSuperview()
     }
 }
 
@@ -226,13 +241,29 @@ extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSou
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if(isFetchingArtList){
+            return
+        }
+        
         if(scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.height)){
             let differ = scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.height)
-            let percentage = differ / 70.0 > 1.0 ? 1.0 : differ/70.0
+            let percentage = differ / 180 > 1.0 ? 1.0 : differ/180.0
             
-            activityIndicatorViewBottom!.alpha = 1.0 / percentage
+            activityIndicatorViewBottom?.alpha = 1.0 * percentage
+            
+            if(percentage > 0.70){
+                
+                
+                
+            }
+            print(scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.height))
             
         }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        // if this scrolling make the percentage > 0.7 even once, trigger fetch
     }
 }
 
