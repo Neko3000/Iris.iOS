@@ -595,6 +595,9 @@ of the gods.</string>
                                             <constraint firstAttribute="width" constant="26" id="LLf-2U-uGi"/>
                                         </constraints>
                                         <state key="normal" image="icon-menu"/>
+                                        <connections>
+                                            <action selector="cateogryBtnTouchUpInside:" destination="tzA-Ui-6IC" eventType="touchUpInside" id="iHG-oZ-UjY"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cG-AS-uYf" customClass="TwicketSegmentedControl" customModule="TwicketSegmentedControl">
                                         <rect key="frame" x="53" y="48" width="269" height="26"/>
@@ -644,9 +647,9 @@ of the gods.</string>
                             <constraint firstItem="9cV-dy-ZiU" firstAttribute="trailing" secondItem="lLI-CD-ctB" secondAttribute="trailing" id="DIn-NM-Sm1"/>
                             <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerY" secondItem="HZi-kC-1fh" secondAttribute="centerY" id="abk-x0-de0"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" id="ePb-eh-U3V"/>
+                            <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="9cV-dy-ZiU" secondAttribute="bottom" constant="50" id="iNV-s3-jfj"/>
                             <constraint firstItem="Kar-YA-NAN" firstAttribute="centerX" secondItem="Me2-R6-ej0" secondAttribute="centerX" id="jss-pW-piH"/>
                             <constraint firstItem="lLI-CD-ctB" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" id="ky7-Jp-GRv"/>
-                            <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="9cV-dy-ZiU" secondAttribute="bottom" constant="50" id="lU7-u5-HGU"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="top" secondItem="9cV-dy-ZiU" secondAttribute="top" id="lh5-Hu-Bk3"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="trailing" secondItem="9cV-dy-ZiU" secondAttribute="trailing" id="uMS-BY-Ihi"/>
                             <constraint firstItem="1cG-AS-uYf" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" constant="53" id="yFw-Di-8vl"/>

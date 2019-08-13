@@ -71,7 +71,7 @@ class DeviantArtManager{
     static func generateGetArtListURL(categoryPath:String = "",q:String = "",timeRange:String = "",offset:Int? = nil,limit:Int? = nil,accessToken:String) -> URL{
         var urlComponents = URLComponents(string: getArtListURLEndPoint)
         urlComponents?.queryItems = [
-            URLQueryItem(name: "category_path", value: categoryPath),
+            //URLQueryItem(name: "category_path", value: categoryPath),
             URLQueryItem(name: "q", value: q),
             URLQueryItem(name: "timerange", value: timeRange),
             URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),

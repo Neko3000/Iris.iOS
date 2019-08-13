@@ -22,6 +22,10 @@ class CollectionViewMasonryLayout: UICollectionViewLayout {
     var cellHorizontalMargin:CGFloat = 10.0
     var cellVerticalMargin:CGFloat = 2.5
     
+    var currentColumn = 0
+    var xOffsets:[CGFloat]?
+    var yOffsets:[CGFloat]?
+    
     private var contentHeight:CGFloat = 0
     private var contentWidth:CGFloat{
         let insets = collectionView!.contentInset
@@ -31,41 +35,40 @@ class CollectionViewMasonryLayout: UICollectionViewLayout {
     private var attributesCache = [UICollectionViewLayoutAttributes]()
     
     override func prepare() {
-        if attributesCache.isEmpty{
-            let columnWidth = contentWidth/CGFloat(columnCount)
-            
-            var xOffsets = [CGFloat]()
-            for column in 0..<columnCount{
-                xOffsets.append(CGFloat(column) * columnWidth)
+        
+        let columnWidth = contentWidth / CGFloat(columnCount)
+        
+        if(attributesCache.isEmpty){
+            xOffsets = [CGFloat]()
+            for i in 0..<columnCount{
+                xOffsets!.append(CGFloat(i) * columnWidth)
             }
             
-            var column = 0
-            var yOffsets = [CGFloat](repeating: 0, count: columnCount)
+            yOffsets = [CGFloat](repeating: 0, count: columnCount)
+        }
+        
+        for item in attributesCache.count ..< collectionView!.numberOfItems(inSection: 0){
+            let indexPath = IndexPath(item: item, section: 0)
             
-            for item in 0 ..< collectionView!.numberOfItems(inSection: 0){
-                let indexPath = IndexPath(item: item, section: 0)
-                
-                let cellWidth = columnWidth - cellHorizontalMargin * 2
-                
-                // Calculate frame
-                let cellHeight:CGFloat = (delegate?.collectionView(collectionView: collectionView!, heightForCellAt: indexPath, with: cellWidth))!
-                
-                let blockHeight = cellHeight + cellVerticalMargin * 2
-                let frame = CGRect(x: xOffsets[column], y: yOffsets[column], width: columnWidth, height: blockHeight)
-                let insetFrame = frame.insetBy(dx: cellHorizontalMargin, dy: cellVerticalMargin)
-                
-                // Create cell attribute
-                let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-                attribute.frame = insetFrame
-                attributesCache.append(attribute)
-                
-                // Update
-                contentHeight = max(contentHeight,frame.maxY)
-                yOffsets[column] = yOffsets[column] + blockHeight
-                
-                column += 1
-                column = column % 2
-            }
+            let cellWidth = columnWidth - cellHorizontalMargin * 2
+            
+            // Calculate frame
+            let cellHeight:CGFloat = (delegate?.collectionView(collectionView: collectionView!, heightForCellAt: indexPath, with: cellWidth))!
+            
+            let blockHeight = cellHeight + cellVerticalMargin * 2
+            let frame = CGRect(x: xOffsets![currentColumn], y: yOffsets![currentColumn], width: columnWidth, height: blockHeight)
+            let insetFrame = frame.insetBy(dx: cellHorizontalMargin, dy: cellVerticalMargin)
+            
+            // Create cell attribute
+            let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+            attribute.frame = insetFrame
+            attributesCache.append(attribute)
+            
+            // Update
+            contentHeight = max(contentHeight,frame.maxY)
+            yOffsets![currentColumn] = yOffsets![currentColumn] + blockHeight
+            
+            currentColumn = (currentColumn + 1) % 2
         }
     }
     

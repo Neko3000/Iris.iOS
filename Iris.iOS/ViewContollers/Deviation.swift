@@ -17,7 +17,9 @@ class Deviation: ObjectFromJSON {
     public var isFavourited:Bool = false
     
     public var previewSrc:String = ""
+    public var previewImage:UIImage?
     public var contentSrc:String = ""
+    public var contentImage:UIImage?
     
     public var isDownloadable:Bool = false
     

@@ -20,7 +20,7 @@ class ArtListViewController: UIViewController{
     var categories:[String] = [String]()
     
     var pageOffset:Int = 0
-    var pageLimit:Int = 20
+    var pageLimit:Int = 24
     var artList:[Deviation] = [Deviation]()
     var artPreviewImageList:[UIImage] = [UIImage]()
     let dispatchGroup:DispatchGroup = DispatchGroup()
@@ -28,7 +28,8 @@ class ArtListViewController: UIViewController{
     var artListForSingleRequest:[Deviation] = [Deviation]()
     var artPreviewImageListForSingleRequest:[UIImage] = [UIImage]()
     
-    var isFetchingArtList = false
+    var isFirstFetch = true
+    var isFetchingArtList = true
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var categorySelectorTwicketSegmentedControl: TwicketSegmentedControl!
@@ -85,7 +86,7 @@ class ArtListViewController: UIViewController{
         
         artListCollectionView.delegate = self
         artListCollectionView.dataSource = self
-        artListCollectionView.contentInset = UIEdgeInsets(top: 82, left: 10.0, bottom: 0, right: 10.0)
+        artListCollectionView.contentInset = UIEdgeInsets(top: 82, left: 10.0, bottom: 50, right: 10.0)
         artListCollectionView.register(UINib(nibName: "ArtListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArtListCollectionViewCell")
 
         //artListCollectionView.refreshControl = refreshControl
@@ -127,12 +128,19 @@ class ArtListViewController: UIViewController{
     */
 
     func fetchArtList(){
-        activityIndicatorViewCenter.startAnimating()
         
-        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: searchKeyword, timeRange: "",offset: pageOffset, limit: pageLimit, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
+        if(isFirstFetch){
+            activityIndicatorViewCenter.startAnimating()
+        }
+        else{
+            addActivityIndicatorViewBottom()
+        }
+
+        isFetchingArtList = true
+        
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: searchKeyword, timeRange: "alltime",offset: pageOffset, limit: pageLimit, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
             response in
 
-            print(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: self.searchKeyword, timeRange: "", limit: 10, accessToken:ActiveUserInfo.getAccesssToken()))
             switch(response.result){
             case .success(_):
                 
@@ -145,7 +153,11 @@ class ArtListViewController: UIViewController{
                     }
                 }
                 else if(response.response?.statusCode == 401){
-                    
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        print(json["error"])
+                    }
                 }
                 
                 break
@@ -170,9 +182,11 @@ class ArtListViewController: UIViewController{
                 
                 switch(response.result){
                     case .success(_):
-                        let previewImage = UIImage(data: response.data!)
-                        self.artPreviewImageListForSingleRequest.insert(previewImage!, at: i)
-                        
+                        if(response.response?.statusCode == 200){
+                            let previewImage = UIImage(data: response.data!)
+                            self.artListForSingleRequest[i].previewImage = previewImage
+                        }
+
                         break
                     
                     case .failure(_):
@@ -184,19 +198,20 @@ class ArtListViewController: UIViewController{
         
         dispatchGroup.notify(queue: .main){
             self.artList.append(contentsOf: self.artListForSingleRequest)
-            self.artPreviewImageList.append(contentsOf: self.artPreviewImageListForSingleRequest)
-            self.pageOffset += 1
+            self.pageOffset += self.pageLimit
             
             self.artListCollectionView.reloadData(){
-                self.activityIndicatorViewBottom!.frame = CGRect(x: (self.artListCollectionView.contentSize.width - 50)/2.0, y: self.artListCollectionView.contentSize.height, width: 50, height: 50)
-        
-                self.activityIndicatorViewBottom!.alpha = 0
-                self.activityIndicatorViewBottom!.startAnimating()
-                
-                self.artListCollectionView.addSubview(self.activityIndicatorViewBottom!)
+                if(self.isFirstFetch){
+                    self.activityIndicatorViewCenter.stopAnimating()
+                    self.isFirstFetch = false
+                }
+                else{
+                    self.addActivityIndicatorViewBottom()
+                }
+
+                self.isFetchingArtList = false
+
             }
-            self.activityIndicatorViewCenter.stopAnimating()
-            
         }
     }
     
@@ -212,6 +227,13 @@ class ArtListViewController: UIViewController{
     func removeActivityIndicatorViewBottom(){
         activityIndicatorViewBottom!.stopAnimating()
         activityIndicatorViewBottom!.removeFromSuperview()
+    }
+    
+    
+    @IBAction func cateogryBtnTouchUpInside(_ sender: Any) {
+        
+        //artListCollectionView.reloadData()
+        //artListCollectionView.collectionViewLayout.invalidateLayout()
     }
 }
 
@@ -232,8 +254,8 @@ extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSou
         
         let specificCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArtListCollectionViewCell", for: indexPath) as! ArtListCollectionViewCell
         
-        specificCell.setArt(art: artPreviewImageList[indexPath.item])
-        specificCell.setAuthorName(authorName: "- author\(indexPath.item)")
+        specificCell.setArt(art: artList[indexPath.item].previewImage!)
+        specificCell.setAuthorName(authorName: "- \(artList[indexPath.item].authorName)")
         
         cell = specificCell
         
@@ -246,24 +268,14 @@ extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSou
             return
         }
         
-        if(scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.height)){
-            let differ = scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.height)
-            let percentage = differ / 180 > 1.0 ? 1.0 : differ/180.0
-            
-            activityIndicatorViewBottom?.alpha = 1.0 * percentage
-            
-            if(percentage > 0.70){
-                
-                
-                
-            }
-            print(scrollView.contentOffset.y - (scrollView.contentSize.height - scrollView.frame.height))
-            
+        if(scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.height)){
+
+            fetchArtList()
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        // if this scrolling make the percentage > 0.7 even once, trigger fetch
+        // When your pull operation ends
     }
 }
 
@@ -271,7 +283,7 @@ extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSou
 extension ArtListViewController:CollectionViewMasonryLayoutDelegate{
     func collectionView(collectionView: UICollectionView, heightForCellAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
         
-        let image = artPreviewImageList[indexPath.item]
+        let image = artList[indexPath.item].previewImage!
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
         let rect = AVMakeRect(aspectRatio: image.size, insideRect: boundingRect)
         
