@@ -9,7 +9,7 @@
 import UIKit
 
 class ArtListCollectionViewCell: UICollectionViewCell {
-    
+        
     // Outlets
     @IBOutlet weak var artImageView: UIImageView!
     @IBOutlet weak var authorNameLabel: UILabel!

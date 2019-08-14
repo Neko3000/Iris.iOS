@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ArtDetailViewController: UIViewController {
     
+    var deviantionContentImage:UIImage = UIImage()
+    
+    // From prepare of segue
+    var deviantionId:String = ""
+    var deviantionContentSrc:String = ""
+    var deviantionTitle:String = ""
+    var deviantionCategoryPath:String = ""
+    var authorName:String = ""
+    var authorAvatarSrc:String = ""
+    
+    @IBOutlet weak var artImageView: UIImageView!
+    @IBOutlet weak var artImageViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var artTitleLabel: UILabel!
+    @IBOutlet weak var artCategoryLabel: UILabel!
+    @IBOutlet weak var artDescriptionLabel: UILabel!
+    
     @IBOutlet weak var authorAvatarImageView: UIImageView!
+    @IBOutlet weak var authorNameLabel: UILabel!
     
     @IBOutlet weak var artDetailTableView: UITableView!
     @IBOutlet weak var artDetailTableViewHeightConstraint: NSLayoutConstraint!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +51,13 @@ class ArtDetailViewController: UIViewController {
         
         authorAvatarImageView.layer.cornerRadius = 15.0
         authorAvatarImageView.layer.masksToBounds = true
+        
+        artTitleLabel.text = deviantionTitle
+        artCategoryLabel.text = DeviantHandler.formatCategoryPath(categoryPath: deviantionCategoryPath)
+        authorNameLabel.text = authorName
+        
+        fetchArt()
+        fetchAuthorAvatar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +76,64 @@ class ArtDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func fetchArt(){
+    
+        // Content image
+        AlamofireManager.sharedSession.request(deviantionContentSrc).response(completionHandler: {
+            response in
+            
+            switch(response.result){
+            case .success(_):
+                if(response.response?.statusCode == 200){
+                    self.deviantionContentImage = UIImage(data: response.data!)!
+                    self.artImageView.image = self.deviantionContentImage
+                    
+                    self.setArtImageViewSize()
+                }
+                
+                break
+                
+            case .failure(_):
+                break
+            }
+            
+        })
+        
+    }
+    
+    func fetchAuthorAvatar(){
+        AlamofireManager.sharedSession.request(authorAvatarSrc).response(completionHandler: {
+            response in
+            
+            switch(response.result){
+            case .success(_):
+                if(response.response?.statusCode == 200){
+                    self.authorAvatarImageView.image = UIImage(data: response.data!)!
+                }
+                
+                break
+                
+            case .failure(_):
+                break
+            }
+            
+        })
+    }
+    
+    func fetchDescription(){
+        
+    }
+    
+    func setArtImageViewSize(){
+        let image = deviantionContentImage
+        
+        let boundingRect = CGRect(x: 0, y: 0, width: artImageView.frame.width, height: artImageView.frame.height)
+        let rect = AVMakeRect(aspectRatio: image.size, insideRect: boundingRect)
+        
+        artImageViewHeightConstraint.constant = rect.height
+    }
+
 
     @IBAction func likeBtnTouchUpInside(_ sender: Any) {
         print("like btn touched!")

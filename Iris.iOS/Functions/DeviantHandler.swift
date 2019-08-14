@@ -28,4 +28,16 @@ class DeviantHandler{
         
         return filteredDeviations
     }
+    
+    static func formatCategoryPath(categoryPath:String)->String{
+        
+        var categorySections:[String.SubSequence] = categoryPath.split(separator: "/")
+        var convertedCategorySections:[String] = [String]()
+        
+        for i in 0..<categorySections.count{
+            convertedCategorySections.append(String(categorySections[i].capitalized))
+        }
+        
+        return convertedCategorySections.joined(separator: " / ")
+    }
 }

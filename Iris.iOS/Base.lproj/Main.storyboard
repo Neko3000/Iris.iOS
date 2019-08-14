@@ -345,14 +345,14 @@ of the gods.</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYn-6D-bJK">
                                 <rect key="frame" x="0.0" y="70" width="375" height="1081"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="art-detail-ahri-1" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-8x-K22">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="art-detail-ahri-1" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-8x-K22">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="i6u-OC-WHj"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="i6u-OC-WHj"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qx-ON-lfG">
-                                        <rect key="frame" x="0.0" y="300" width="375" height="220"/>
+                                        <rect key="frame" x="0.0" y="500" width="375" height="220"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahri for Poster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM8-YY-Ury">
                                                 <rect key="frame" x="14" y="14" width="347" height="23.5"/>
@@ -386,8 +386,12 @@ of the gods.</string>
                                                     <action selector="downloadBtnTouchUpInside:" destination="6Bj-h5-f8J" eventType="touchUpInside" id="aeB-db-py8"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bibico-Atelier-30p" translatesAutoresizingMaskIntoConstraints="NO" id="9E4-bH-ndM">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bibico-Atelier-30p" translatesAutoresizingMaskIntoConstraints="NO" id="9E4-bH-ndM">
                                                 <rect key="frame" x="330" y="106" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="jQb-6x-uQ1"/>
+                                                    <constraint firstAttribute="height" constant="30" id="zLe-2d-FZS"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bibico-Atelier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqk-gA-J0a">
                                                 <rect key="frame" x="259" y="114" width="61" height="14"/>
@@ -425,7 +429,7 @@ of the gods.</string>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jJF-NR-2qz">
-                                        <rect key="frame" x="0.0" y="520" width="375" height="500"/>
+                                        <rect key="frame" x="0.0" y="720" width="375" height="500"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="500" id="yr4-KT-BJa"/>
@@ -446,22 +450,12 @@ of the gods.</string>
                                     <constraint firstItem="9Qx-ON-lfG" firstAttribute="leading" secondItem="eYn-6D-bJK" secondAttribute="leading" id="t3W-rj-clm"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRz-99-mof" customClass="MainTabBar" customModule="Iris_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1073" width="375" height="78"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="LW6-Wh-S8G"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="v6x-Iy-Bd7" firstAttribute="bottom" secondItem="oRz-99-mof" secondAttribute="bottom" id="4Jn-KL-kSI"/>
-                            <constraint firstItem="oRz-99-mof" firstAttribute="leading" secondItem="v6x-Iy-Bd7" secondAttribute="leading" id="6tV-sx-RHQ"/>
                             <constraint firstItem="eYn-6D-bJK" firstAttribute="leading" secondItem="v6x-Iy-Bd7" secondAttribute="leading" id="9TP-IK-PE9"/>
                             <constraint firstItem="v6x-Iy-Bd7" firstAttribute="trailing" secondItem="BDq-Xf-iXW" secondAttribute="trailing" id="EPL-Ga-vMq"/>
                             <constraint firstItem="BDq-Xf-iXW" firstAttribute="leading" secondItem="v6x-Iy-Bd7" secondAttribute="leading" id="S1X-VY-SXV"/>
-                            <constraint firstItem="v6x-Iy-Bd7" firstAttribute="trailing" secondItem="oRz-99-mof" secondAttribute="trailing" id="VTD-MZ-XKE"/>
                             <constraint firstItem="BDq-Xf-iXW" firstAttribute="top" secondItem="v6x-Iy-Bd7" secondAttribute="top" id="X2p-Yw-4n3"/>
                             <constraint firstItem="eYn-6D-bJK" firstAttribute="top" secondItem="BDq-Xf-iXW" secondAttribute="bottom" id="gUn-IS-Z7g"/>
                             <constraint firstItem="v6x-Iy-Bd7" firstAttribute="bottom" secondItem="eYn-6D-bJK" secondAttribute="bottom" id="qkq-WB-KHp"/>
@@ -471,9 +465,15 @@ of the gods.</string>
                     </view>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
+                        <outlet property="artCategoryLabel" destination="WFF-43-quz" id="Vdh-h4-ceQ"/>
+                        <outlet property="artDescriptionLabel" destination="hh4-rK-vfB" id="ERo-W7-UyV"/>
                         <outlet property="artDetailTableView" destination="jJF-NR-2qz" id="m2k-gy-OQT"/>
                         <outlet property="artDetailTableViewHeightConstraint" destination="yr4-KT-BJa" id="b39-B2-y9n"/>
+                        <outlet property="artImageView" destination="BnL-8x-K22" id="IFL-I6-nPD"/>
+                        <outlet property="artImageViewHeightConstraint" destination="i6u-OC-WHj" id="kEv-4J-VoM"/>
+                        <outlet property="artTitleLabel" destination="TM8-YY-Ury" id="O3a-iW-x79"/>
                         <outlet property="authorAvatarImageView" destination="9E4-bH-ndM" id="4gV-vY-tpk"/>
+                        <outlet property="authorNameLabel" destination="Tqk-gA-J0a" id="A6V-00-bZJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbU-yA-Miz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,7 +607,7 @@ of the gods.</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAY-VD-JTz">
-                                        <rect key="frame" x="10" y="16" width="22" height="22"/>
+                                        <rect key="frame" x="10" y="16" width="16" height="22"/>
                                         <state key="normal" image="icon-left-arrow"/>
                                         <connections>
                                             <action selector="backBtnTouchUpInside:" destination="tzA-Ui-6IC" eventType="touchUpInside" id="eZt-C2-qEY"/>
@@ -670,7 +670,7 @@ of the gods.</string>
                         <outlet property="orderSelectorTwicketSegmentedControl" destination="1cG-AS-uYf" id="GgO-pc-oj9"/>
                         <outlet property="searchTextField" destination="WEf-cj-YV1" id="s0r-oT-Qmc"/>
                         <outlet property="toolbarView" destination="lLI-CD-ctB" id="QKL-nE-26F"/>
-                        <segue destination="6Bj-h5-f8J" kind="show" id="AxH-r0-ZYd"/>
+                        <segue destination="6Bj-h5-f8J" kind="show" identifier="ArtListToArtDetail" id="AxH-r0-ZYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9J-tT-qGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1109,13 +1109,13 @@ of the gods.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have a account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKH-2h-f1a">
-                                <rect key="frame" x="95.5" y="627" width="128.5" height="15"/>
+                                <rect key="frame" x="78.5" y="623" width="162" height="19"/>
                                 <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="16"/>
                                 <color key="textColor" name="text-light-grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy2-fH-HOp">
-                                <rect key="frame" x="232" y="616" width="53" height="31"/>
+                                <rect key="frame" x="248.5" y="611" width="69" height="36"/>
                                 <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="20"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" name="text-normal-purple"/>

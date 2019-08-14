@@ -24,7 +24,7 @@ class Deviation: ObjectFromJSON {
     public var isDownloadable:Bool = false
     
     public var authorName:String = ""
-    public var authorAvatar:String = ""
+    public var authorAvatarSrc:String = ""
     
     init() {
         
@@ -46,7 +46,7 @@ class Deviation: ObjectFromJSON {
         self.contentSrc = json["content"]["src"].string ?? ""
         self.isDownloadable = json["is_downloadable"].bool!
         self.authorName = json["author"]["username"].string!
-        self.authorAvatar = json["author"]["usericon"].string!
+        self.authorAvatarSrc = json["author"]["usericon"].string!
     
     }
     

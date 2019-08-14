@@ -266,6 +266,20 @@ class ArtListViewController: UIViewController{
         isFetchingArtList = false
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ArtListToArtDetail"){
+            let destVC = segue.destination as! ArtDetailViewController
+            
+            let deviantion = sender as! Deviation
+            destVC.deviantionId = deviantion.deviationId
+            destVC.deviantionContentSrc = deviantion.contentSrc
+            destVC.deviantionTitle = deviantion.title
+            destVC.deviantionCategoryPath = deviantion.categoryPath
+            destVC.authorName = deviantion.authorName
+            destVC.authorAvatarSrc = deviantion.authorAvatarSrc
+        }
+    }
+    
     
     @IBAction func cateogryBtnTouchUpInside(_ sender: Any) {
         
@@ -362,6 +376,11 @@ extension ArtListViewController:UICollectionViewDelegate,UICollectionViewDataSou
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         // When your pull operation ends
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "ArtListToArtDetail", sender: artList[indexPath.item])
+    }
 }
 
 // UICollectionView - Delegate
@@ -371,9 +390,7 @@ extension ArtListViewController:CollectionViewMasonryLayoutDelegate{
         let image = artList[indexPath.item].previewImage!
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
         let rect = AVMakeRect(aspectRatio: image.size, insideRect: boundingRect)
-        
-        print("\(indexPath.item): \(image.size.width) - \(image.size.height)")
-        
+                
         return rect.size.height + 29
     }
     
