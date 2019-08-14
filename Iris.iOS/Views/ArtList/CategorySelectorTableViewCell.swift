@@ -11,6 +11,7 @@ import UIKit
 class CategorySelectorTableViewCell: UITableViewCell {
     
     var selectionState:Bool = false
+    var categoryPath:String = ""
 
     @IBOutlet weak var stateImageView: UIImageView!
     @IBOutlet weak var categoryNameLabel: UILabel!
@@ -40,9 +41,12 @@ class CategorySelectorTableViewCell: UITableViewCell {
     }
     
     public func setStateImageView(isSelected:Bool){
-        stateImageView.image = isSelected ? UIImage(named: "icon-dot-active"):UIImage(named: "icon-dot")
+        self.stateImageView.image = isSelected ? UIImage(named: "icon-dot-active"):UIImage(named: "icon-dot")
     }
     public func setCategoryNameLabel(categoryName:String){
-        categoryNameLabel.text = categoryName
+        self.categoryNameLabel.text = categoryName
+    }
+    public func setCategoryPath(categoryPath:String){
+        self.categoryPath = categoryPath
     }
 }

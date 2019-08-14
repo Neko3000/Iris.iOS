@@ -31,16 +31,23 @@ class Deviation: ObjectFromJSON {
     }
     
     required init(json:JSON) {
+        print(json["deviationid"].string!)
+        print(json["title"].string!)
+        print(json["author"]["username"].string!)
+        print(json["category"].string!)
+        print(json["category_path"].string!)
+        
         self.deviationId = json["deviationid"].string!
         self.title = json["title"].string!
         self.category = json["category"].string!
-        self.category = json["category_path"].string!
+        self.categoryPath = json["category_path"].string!
         self.isFavourited = json["is_favourited"].bool!
-        self.previewSrc = json["preview"]["src"].string!
-        self.contentSrc = json["content"]["src"].string!
+        self.previewSrc = json["preview"]["src"].string ?? ""
+        self.contentSrc = json["content"]["src"].string ?? ""
         self.isDownloadable = json["is_downloadable"].bool!
         self.authorName = json["author"]["username"].string!
         self.authorAvatar = json["author"]["usericon"].string!
     
     }
+    
 }

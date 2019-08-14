@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/Alex_Randall/Projects/Iris.iOS/Iris.iOS/ViewContollers/Deviation.swift">
-   </FileRef>
-   <FileRef
       location = "group:Iris.iOS.xcodeproj">
    </FileRef>
    <FileRef

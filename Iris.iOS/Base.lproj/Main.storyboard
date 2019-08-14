@@ -609,6 +609,9 @@ of the gods.</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAY-VD-JTz">
                                         <rect key="frame" x="10" y="16" width="22" height="22"/>
                                         <state key="normal" image="icon-left-arrow"/>
+                                        <connections>
+                                            <action selector="backBtnTouchUpInside:" destination="tzA-Ui-6IC" eventType="touchUpInside" id="eZt-C2-qEY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -633,7 +636,7 @@ of the gods.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BA9-ug-Vu9">
-                                <rect key="frame" x="35" y="99" width="305" height="420"/>
+                                <rect key="frame" x="35" y="134" width="305" height="420"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="420" id="L5o-d6-Mg7"/>
@@ -643,9 +646,9 @@ of the gods.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerY" secondItem="Me2-R6-ej0" secondAttribute="centerY" id="3XU-JF-5q7"/>
                             <constraint firstItem="9cV-dy-ZiU" firstAttribute="trailing" secondItem="1cG-AS-uYf" secondAttribute="trailing" constant="53" id="8dc-7p-kcR"/>
                             <constraint firstItem="9cV-dy-ZiU" firstAttribute="trailing" secondItem="lLI-CD-ctB" secondAttribute="trailing" id="DIn-NM-Sm1"/>
-                            <constraint firstItem="BA9-ug-Vu9" firstAttribute="centerY" secondItem="HZi-kC-1fh" secondAttribute="centerY" id="abk-x0-de0"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="leading" secondItem="9cV-dy-ZiU" secondAttribute="leading" id="ePb-eh-U3V"/>
                             <constraint firstItem="Me2-R6-ej0" firstAttribute="bottom" secondItem="9cV-dy-ZiU" secondAttribute="bottom" constant="50" id="iNV-s3-jfj"/>
                             <constraint firstItem="Kar-YA-NAN" firstAttribute="centerX" secondItem="Me2-R6-ej0" secondAttribute="centerX" id="jss-pW-piH"/>
@@ -662,8 +665,9 @@ of the gods.</string>
                     <connections>
                         <outlet property="activityIndicatorViewCenter" destination="Kar-YA-NAN" id="w4N-XJ-RDw"/>
                         <outlet property="artListCollectionView" destination="Me2-R6-ej0" id="UVZ-cp-grU"/>
+                        <outlet property="categorySelectorCenterYAlignmentConstraint" destination="3XU-JF-5q7" id="H4e-oT-u5F"/>
                         <outlet property="categorySelectorTableView" destination="BA9-ug-Vu9" id="Qu2-XP-hAf"/>
-                        <outlet property="categorySelectorTwicketSegmentedControl" destination="1cG-AS-uYf" id="5Gf-GZ-5OY"/>
+                        <outlet property="orderSelectorTwicketSegmentedControl" destination="1cG-AS-uYf" id="GgO-pc-oj9"/>
                         <outlet property="searchTextField" destination="WEf-cj-YV1" id="s0r-oT-Qmc"/>
                         <outlet property="toolbarView" destination="lLI-CD-ctB" id="QKL-nE-26F"/>
                         <segue destination="6Bj-h5-f8J" kind="show" id="AxH-r0-ZYd"/>

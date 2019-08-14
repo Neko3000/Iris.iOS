@@ -65,7 +65,6 @@
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */; };
 		EB9CC18422C64D3E00F665BD /* UserCenterJournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */; };
 		EB9CC18622C64E5C00F665BD /* UserCenterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */; };
-		EBA0323922FAE6360084B92F /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0323822FAE6360084B92F /* Deviation.swift */; };
 		EBA0323B22FAEE1C0084B92F /* JSONObjectProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0323A22FAEE1C0084B92F /* JSONObjectProtocols.swift */; };
 		EBA0323D22FB10490084B92F /* JSONObjectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0323C22FB10490084B92F /* JSONObjectHandler.swift */; };
 		EBAE40E222EEE72E008425A2 /* UserCenterFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */; };
@@ -86,6 +85,10 @@
 		EBB63B3C229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63B3A229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib */; };
 		EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */; };
 		EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */; };
+		EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEA2302BBF3003BC6CC /* Deviation.swift */; };
+		EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */; };
+		EBF31DEF2302F74C003BC6CC /* DeviantHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEE2302F74C003BC6CC /* DeviantHandler.swift */; };
+		EBF31DF123039F79003BC6CC /* DeviantCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DF023039F79003BC6CC /* DeviantCategory.swift */; };
 		EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */; };
 		EBF3487522CD8F60001A4793 /* UserCenterStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */; };
 		EBF3487722CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */; };
@@ -156,7 +159,6 @@
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalTableViewCell.swift; sourceTree = "<group>"; };
 		EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterJournalTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterJournalViewController.swift; sourceTree = "<group>"; };
-		EBA0323822FAE6360084B92F /* Deviation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Deviation.swift; path = /Users/Alex_Randall/Projects/Iris.iOS/Iris.iOS/ViewContollers/Deviation.swift; sourceTree = "<absolute>"; };
 		EBA0323A22FAEE1C0084B92F /* JSONObjectProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONObjectProtocols.swift; sourceTree = "<group>"; };
 		EBA0323C22FB10490084B92F /* JSONObjectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObjectHandler.swift; sourceTree = "<group>"; };
 		EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFollowerViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,10 @@
 		EBB63B3A229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterGalleryTableViewCell.xib; sourceTree = "<group>"; };
 		EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterGalleryViewController.swift; sourceTree = "<group>"; };
 		EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewReloadCallBackExtension.swift; sourceTree = "<group>"; };
+		EBF31DEA2302BBF3003BC6CC /* Deviation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deviation.swift; sourceTree = "<group>"; };
+		EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListOrderEnum.swift; sourceTree = "<group>"; };
+		EBF31DEE2302F74C003BC6CC /* DeviantHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantHandler.swift; sourceTree = "<group>"; };
+		EBF31DF023039F79003BC6CC /* DeviantCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantCategory.swift; sourceTree = "<group>"; };
 		EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusViewController.swift; sourceTree = "<group>"; };
 		EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterStatusTableViewCell.xib; sourceTree = "<group>"; };
 		EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusTableViewCell.swift; sourceTree = "<group>"; };
@@ -244,7 +250,9 @@
 				EB267C38228A9A0E004979AC /* XibUIView.swift */,
 				EB39BAB522F6A0E00022ACDB /* RequestAnalyzer.swift */,
 				EB39BAB922F6BCD60022ACDB /* DeviantArtManager.swift */,
+				EBF31DEE2302F74C003BC6CC /* DeviantHandler.swift */,
 				EB39BABB22F6BEEE0022ACDB /* ApplicationKey.swift */,
+				EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -302,10 +310,11 @@
 		EB267C34228A8DF5004979AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EBF31DEA2302BBF3003BC6CC /* Deviation.swift */,
 				EB39BABD22F6D5A50022ACDB /* ActiveUserInfo.swift */,
 				EB39BAB322F5D6E80022ACDB /* UserInfo.swift */,
-				EBA0323822FAE6360084B92F /* Deviation.swift */,
 				EBA0323C22FB10490084B92F /* JSONObjectHandler.swift */,
+				EBF31DF023039F79003BC6CC /* DeviantCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -645,6 +654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */,
+				EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */,
 				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
 				EB40B34022D5BC0400E75C9B /* UserCenterFavoriateViewController.swift in Sources */,
 				EB74337222F9B491002884BB /* ImageWithColorExtension.swift in Sources */,
@@ -664,6 +674,7 @@
 				EBA0323D22FB10490084B92F /* JSONObjectHandler.swift in Sources */,
 				EBB63B3B229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift in Sources */,
 				EBB63AEF229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift in Sources */,
+				EBF31DEF2302F74C003BC6CC /* DeviantHandler.swift in Sources */,
 				EBB63B00229D493F00F789BD /* UserCenterContentSwitchView.swift in Sources */,
 				EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */,
 				EBB63AF2229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift in Sources */,
@@ -672,8 +683,8 @@
 				EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
 				EB39BABE22F6D5A50022ACDB /* ActiveUserInfo.swift in Sources */,
+				EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */,
 				EB48B5E322EF269E00F60F15 /* UserCenterCommentViewController.swift in Sources */,
-				EBA0323922FAE6360084B92F /* Deviation.swift in Sources */,
 				EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */,
 				EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
@@ -691,6 +702,7 @@
 				EB40B34422D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift in Sources */,
 				EB188A7A22FA9D0400524B77 /* ObjectDictionaryProtocols.swift in Sources */,
 				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,
+				EBF31DF123039F79003BC6CC /* DeviantCategory.swift in Sources */,
 				EB39BABA22F6BCD60022ACDB /* DeviantArtManager.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
 				EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */,

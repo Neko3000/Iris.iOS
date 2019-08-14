@@ -15,28 +15,31 @@ import NVActivityIndicatorView
 class ArtListViewController: UIViewController{
     
     var searchKeyword:String = ""
+    var currentOrder:ArtListOrderEnum = .popular
     
-    var posts:[UIImage] = [UIImage]()
-    var categories:[String] = [String]()
+    var deviationCategories:[DeviationCategory] = [DeviationCategory]()
+    var currentCategory:String = ""
     
     var pageOffset:Int = 0
     var pageLimit:Int = 24
-    var artList:[Deviation] = [Deviation]()
-    var artPreviewImageList:[UIImage] = [UIImage]()
-    let dispatchGroup:DispatchGroup = DispatchGroup()
     
+    var artList:[Deviation] = [Deviation]()
     var artListForSingleRequest:[Deviation] = [Deviation]()
-    var artPreviewImageListForSingleRequest:[UIImage] = [UIImage]()
+    let dispatchGroup:DispatchGroup = DispatchGroup()
     
     var isFirstFetch = true
     var isFetchingArtList = true
+    
+    var isShowingCategorySelectorTableView = false
 
     @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var categorySelectorTwicketSegmentedControl: TwicketSegmentedControl!
+    @IBOutlet weak var orderSelectorTwicketSegmentedControl: TwicketSegmentedControl!
     @IBOutlet weak var artListCollectionView: UICollectionView!
     @IBOutlet weak var toolbarView: UIView!
     @IBOutlet weak var categorySelectorTableView: UITableView!
     @IBOutlet weak var activityIndicatorViewCenter: NVActivityIndicatorView!
+    
+    @IBOutlet weak var categorySelectorCenterYAlignmentConstraint: NSLayoutConstraint!
     
     var activityIndicatorViewBottom:NVActivityIndicatorView?
     
@@ -44,21 +47,15 @@ class ArtListViewController: UIViewController{
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        posts.append(UIImage(named: "art-list-ahri-1")!)
-        posts.append(UIImage(named: "art-list-ahri-2")!)
-        posts.append(UIImage(named: "art-list-ahri-3")!)
-        posts.append(UIImage(named: "art-list-ahri-4")!)
-        posts.append(UIImage(named: "art-list-ahri-5")!)
-        posts.append(UIImage(named: "art-list-ahri-6")!)
         
         if let path = Bundle.main.path(forResource: "art-categories", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 if let jsonResult = jsonResult as? Dictionary<String, AnyObject>{
-                    let categoriesNodes = jsonResult["categories"] as! [[String:Any]]
-                    for node in categoriesNodes{
-                        categories.append(node["title"] as! String)
+                    let categoryNodes = jsonResult["categories"] as! [[String:Any]]
+                    for node in categoryNodes{
+                        deviationCategories.append(DeviationCategory(categoryName: node["title"] as! String, categoryPath: node["catpath"] as! String))
                     }
                 }
             } catch {
@@ -73,16 +70,22 @@ class ArtListViewController: UIViewController{
         searchTextField.leftView = leftPadding
         searchTextField.leftViewMode = .always
         
+        searchTextField.returnKeyType = .go
+        searchTextField.delegate = self
+        
+        searchTextField.text = searchKeyword
+        
         toolbarView.backgroundColor = UIColor.white.withAlphaComponent(0.98)
         
         let titles = ["Popular", "New", "Undiscovered"]
-        categorySelectorTwicketSegmentedControl.setSegmentItems(titles)
-        categorySelectorTwicketSegmentedControl.defaultTextColor = UIColor(named: "text-normal-grey")!
-        categorySelectorTwicketSegmentedControl.backgroundColor = .clear
-        categorySelectorTwicketSegmentedControl.containerViewBackgroundColor = .clear
-        categorySelectorTwicketSegmentedControl.segmentsBackgroundColor = .clear
-        categorySelectorTwicketSegmentedControl.sliderBackgroundColor = UIColor(named: "background-normal-blue")!
-        categorySelectorTwicketSegmentedControl.isSliderShadowHidden = false
+        orderSelectorTwicketSegmentedControl.setSegmentItems(titles)
+        orderSelectorTwicketSegmentedControl.defaultTextColor = UIColor(named: "text-normal-grey")!
+        orderSelectorTwicketSegmentedControl.backgroundColor = .clear
+        orderSelectorTwicketSegmentedControl.containerViewBackgroundColor = .clear
+        orderSelectorTwicketSegmentedControl.segmentsBackgroundColor = .clear
+        orderSelectorTwicketSegmentedControl.sliderBackgroundColor = UIColor(named: "background-normal-blue")!
+        orderSelectorTwicketSegmentedControl.isSliderShadowHidden = false
+        orderSelectorTwicketSegmentedControl.delegate = self
         
         artListCollectionView.delegate = self
         artListCollectionView.dataSource = self
@@ -104,7 +107,8 @@ class ArtListViewController: UIViewController{
         categorySelectorTableView.layer.masksToBounds = true
         categorySelectorTableView.separatorStyle = .none
         categorySelectorTableView.allowsMultipleSelection = false
-        categorySelectorTableView.removeFromSuperview() // temp
+        categorySelectorCenterYAlignmentConstraint.constant = -(UIScreen.main.bounds.height + categorySelectorTableView.frame.height)/2 - 100
+        categorySelectorTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
         
         activityIndicatorViewCenter.type = .orbit
         activityIndicatorViewCenter.color = UIColor(named: "text-normal-purple")!
@@ -129,16 +133,35 @@ class ArtListViewController: UIViewController{
 
     func fetchArtList(){
         
+        // Set state
+        isFetchingArtList = true
+        
+        // Set Activity Indicator
         if(isFirstFetch){
             activityIndicatorViewCenter.startAnimating()
         }
         else{
             addActivityIndicatorViewBottom()
         }
-
-        isFetchingArtList = true
         
-        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtListURL(categoryPath: "", q: searchKeyword, timeRange: "alltime",offset: pageOffset, limit: pageLimit, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
+        // Set URL
+        var searchURL:URL?
+        
+        switch currentOrder {
+        case .popular:
+            searchURL = DeviantArtManager.generateGetPopularArtListURL(categoryPath: currentCategory, q: searchKeyword, timeRange: "alltime",offset: pageOffset, limit: pageLimit, accessToken:ActiveUserInfo.getAccesssToken())
+            break
+        case .new:
+            searchURL = DeviantArtManager.generateGetNewestArtListURL(categoryPath: currentCategory, q: searchKeyword,offset: pageOffset, limit: pageLimit, accessToken:ActiveUserInfo.getAccesssToken())
+            break
+        case .undiscovered:
+            searchURL = DeviantArtManager.generateGetUndiscoveredArtListURL(categoryPath: currentCategory, offset: pageOffset, limit: pageLimit, accessToken:ActiveUserInfo.getAccesssToken())
+            break
+        }
+        
+        print(searchURL)
+        //
+        AlamofireManager.sharedSession.request(searchURL!).responseJSON(completionHandler: {
             response in
 
             switch(response.result){
@@ -148,7 +171,7 @@ class ArtListViewController: UIViewController{
                     if let data = response.data{
                         let json = JSON(data)
                         
-                        self.artListForSingleRequest = JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)
+                        self.artListForSingleRequest = DeviantHandler.filterJournalDeviant(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)) 
                         self.fetchPreviewImageList()
                     }
                 }
@@ -229,11 +252,73 @@ class ArtListViewController: UIViewController{
         activityIndicatorViewBottom!.removeFromSuperview()
     }
     
+    func clearSearch(){
+        
+        pageOffset = 0
+        artList.removeAll()
+        artListForSingleRequest.removeAll()
+        
+        let layout = artListCollectionView.collectionViewLayout as! CollectionViewMasonryLayout
+        layout.resetLayout()
+        artListCollectionView.reloadData()
+        
+        isFirstFetch = true
+        isFetchingArtList = false
+    }
+    
     
     @IBAction func cateogryBtnTouchUpInside(_ sender: Any) {
         
-        //artListCollectionView.reloadData()
-        //artListCollectionView.collectionViewLayout.invalidateLayout()
+        if(isShowingCategorySelectorTableView){
+            self.categorySelectorCenterYAlignmentConstraint.constant = -(UIScreen.main.bounds.height + self.categorySelectorTableView.frame.height)/2 - 100
+            
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+                self.view.layoutIfNeeded()
+                
+            }, completion: {(isFinished) in
+                self.isShowingCategorySelectorTableView = false
+            })
+        }
+        else{
+            self.categorySelectorCenterYAlignmentConstraint.constant = 0
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+                self.view.layoutIfNeeded()
+                
+            }, completion: {(isFinished) in
+                self.isShowingCategorySelectorTableView = true
+            })
+        }
+
+    }
+    @IBAction func backBtnTouchUpInside(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+extension ArtListViewController:TwicketSegmentedControlDelegate{
+    func didSelect(_ segmentIndex: Int) {
+        
+        currentOrder = ArtListOrderEnum(rawValue: segmentIndex)!
+        
+        clearSearch()
+        searchKeyword = searchTextField.text!
+        fetchArtList()
+    }
+}
+
+extension ArtListViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField.returnKeyType == .go){
+            
+            if(textField.text != nil){
+                
+                clearSearch()
+                searchKeyword = textField.text!
+                fetchArtList()
+            }
+        }
+        
+        return true
     }
 }
 
@@ -297,7 +382,7 @@ extension ArtListViewController:CollectionViewMasonryLayoutDelegate{
 // UITableView
 extension ArtListViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return deviationCategories.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -309,7 +394,8 @@ extension ArtListViewController:UITableViewDelegate,UITableViewDataSource{
         
         let specificCell = tableView.dequeueReusableCell(withIdentifier: "CategorySelectorTableViewCell") as! CategorySelectorTableViewCell
         
-        specificCell.setCategoryNameLabel(categoryName: categories[indexPath.item])
+        specificCell.setCategoryNameLabel(categoryName: deviationCategories[indexPath.item].categoryName)
+        specificCell.setCategoryPath(categoryPath:deviationCategories[indexPath.item].categoryPath)
         specificCell.setStateImageView(isSelected: false)
         
         cell = specificCell
@@ -341,5 +427,11 @@ extension ArtListViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
         return 10
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CategorySelectorTableViewCell
+        currentCategory = cell.categoryPath
+
     }
 }

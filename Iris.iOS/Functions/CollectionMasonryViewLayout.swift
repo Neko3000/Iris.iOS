@@ -87,4 +87,11 @@ class CollectionViewMasonryLayout: UICollectionViewLayout {
         
         return layoutAttributes
     }
+    
+    func resetLayout(){
+        currentColumn = 0
+        contentHeight = 0
+        
+        attributesCache.removeAll()
+    }
 }
