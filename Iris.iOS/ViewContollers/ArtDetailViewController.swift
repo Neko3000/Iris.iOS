@@ -22,6 +22,9 @@ class ArtDetailViewController: UIViewController {
     var authorName:String = ""
     var authorAvatarSrc:String = ""
     
+    var commentOffset:Int = 0
+    var commentLimit:Int = 50
+    
     var deviationComments:[DeviationComment] = [DeviationComment]()
     
     @IBOutlet weak var artImageView: UIImageView!
@@ -157,7 +160,9 @@ class ArtDetailViewController: UIViewController {
     }
     
     func fetchComments(){
-        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtCommentURL(deviationId: deviantionId, offset: 0, limit: 50, accessToken: ActiveUserInfo.getAccesssToken())).response(completionHandler: {
+        
+        print(DeviantArtManager.generateGetArtCommentURL(deviationId: deviantionId, offset: commentOffset, limit: commentLimit, accessToken: ActiveUserInfo.getAccesssToken()))
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtCommentURL(deviationId: deviantionId, offset: commentOffset, limit: commentLimit, accessToken: ActiveUserInfo.getAccesssToken())).response(completionHandler: {
             response in
             
             switch(response.result){
@@ -166,7 +171,11 @@ class ArtDetailViewController: UIViewController {
                     if let data = response.data{
                         let json = JSON(data)
                         
-                        self.deviationComments = DeviantionHandler.organizeDeviationComments(deviationComments:                         JSONObjectHandler.convertToObjectArray(jsonArray: json["thread"].array!))
+                        
+                        self.deviationComments = DeviantionHandler.organizeDeviationComments(deviationComments:                         JSONObjectHandler.convertToObjectArray(jsonArray: json["thread"].arrayValue))
+                        
+                        // self.deviationComments = JSONObjectHandler.convertToObjectArray(jsonArray: json["thread"].arrayValue)
+                        
                         self.artDetailTableView.reloadData()
                     }
                 }
@@ -183,6 +192,33 @@ class ArtDetailViewController: UIViewController {
             }
             
         })
+    }
+    
+    func fetchUserAvatarImageForComments(){
+        
+        for i in 0..<deviationComments.count{
+            
+            AlamofireManager.sharedSession.request(deviationComments[i].userAvatarSrc).response(completionHandler: {
+                response in
+                
+                switch(response.result){
+                case .success(_):
+                    if(response.response?.statusCode == 200){
+                        let userAvatarImage = UIImage(data: response.data!)
+                        self.deviationComments[i].userAvatarImage = userAvatarImage
+                        
+                        self.artDetailTableView.reloadData()
+                    }
+                    
+                    break
+                    
+                case .failure(_):
+                    break
+                }
+                
+            })
+        }
+        
     }
     
     func setArtImageViewSize(){
@@ -209,15 +245,24 @@ class ArtDetailViewController: UIViewController {
 extension ArtDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return deviationComments.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return deviationComments[section].subDeviationComment!.count
+
+        return deviationComments[section].subDeviationComment!.count + 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let deviationComment = deviationComments[indexPath.item]
+        
+        var totalRow:Int = 0
+        for _ in 0..<indexPath.section{
+            let rowsInSection = tableView.numberOfRows(inSection: indexPath.section)
+            totalRow += rowsInSection
+        }
+        let currentRow = totalRow + indexPath.row
+        let deviationComment = deviationComments[currentRow]
         
         var cell:UITableViewCell?
         
@@ -225,6 +270,7 @@ extension ArtDetailViewController:UITableViewDelegate,UITableViewDataSource{
             let specificCell = tableView.dequeueReusableCell(withIdentifier: "ArtDetailTableViewCommentTableViewCell") as! ArtDetailTableViewCommentTableViewCell
             
             specificCell.usernameLabel.text = deviationComment.username
+            specificCell.userAvatarImageView.image = deviationComment.userAvatarImage
             
             specificCell.bodyLabel.text = deviationComment.body
             specificCell.postDateLabel.text = DeviantionHandler.formateDate(date: deviationComment.date)
@@ -235,24 +281,16 @@ extension ArtDetailViewController:UITableViewDelegate,UITableViewDataSource{
             let specificCell = tableView.dequeueReusableCell(withIdentifier: "ArtDetailTableViewSubCommentTableViewCell") as! ArtDetailTableViewSubCommentTableViewCell
             
             specificCell.usernameLabel.text = deviationComment.username
+            specificCell.userAvatarImageView.image = deviationComment.userAvatarImage
+            
             specificCell.bodyLabel.text = deviationComment.body
+            specificCell.postDateLabel.text = DeviantionHandler.formateDate(date: deviationComment.date)
             
             cell = specificCell
         }
         
         return cell!
     }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        var height:CGFloat?
-//
-//        if(indexPath.ro % 2 == 0){
-//            height = 100
-//        }
-//        else{
-//            height = 180
-//        }
-//        return height!
-//    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let tempView = UIView()
@@ -268,12 +306,12 @@ extension ArtDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 15
+        return 0
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
-        return 48
+        return 10
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

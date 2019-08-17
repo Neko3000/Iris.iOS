@@ -80,6 +80,9 @@ class DeviantionHandler{
                 }
                 
             }
+            else{
+                deviationComment.subDeviationComment = [DeviationComment]()
+            }
             
         }
         
@@ -111,10 +114,5 @@ class DeviantionHandler{
         }
         
         return count
-    }
-    
-    static func selectDeviationCommentByIndex(deviationComments:[DeviationComment],index:Int)->DeviationComment{
-        
-        
     }
 }
