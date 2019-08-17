@@ -159,7 +159,6 @@ class ArtListViewController: UIViewController{
             break
         }
         
-        print(searchURL)
         //
         AlamofireManager.sharedSession.request(searchURL!).responseJSON(completionHandler: {
             response in
@@ -171,7 +170,7 @@ class ArtListViewController: UIViewController{
                     if let data = response.data{
                         let json = JSON(data)
                         
-                        self.artListForSingleRequest = DeviantHandler.filterJournalDeviant(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)) 
+                        self.artListForSingleRequest = DeviantionHandler.filterJournalDeviation(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue))
                         self.fetchPreviewImageList()
                     }
                 }

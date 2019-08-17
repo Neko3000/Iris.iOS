@@ -3,10 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ArtListViewController.createTreeStructure():ArtListViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "ArtListViewController.fetchPreviewImageList():ArtListViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "artPreviewList[0].size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ArtListViewController.tableView(_:didSelectRowAt:):ArtListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.indexPathsForSelectedRows">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -27,29 +38,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in ArtListViewController.fetchArtList():ArtListViewController.swift">
+         contextName = "JSON.date.getter:JSONDateExtension.swift">
          <PersistentStrings>
             <PersistentString
-               value = "json[&quot;results&quot;].arrayValue">
+               value = "self.string">
             </PersistentString>
+            <PersistentString
+               value = "self.date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ArtListViewController.fetchArtList():ArtListViewController.swift">
+         <PersistentStrings>
             <PersistentString
                value = "json[&quot;has_more&quot;].string">
             </PersistentString>
             <PersistentString
                value = "response.response?.statusCode ">
             </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ArtListViewController.tableView(_:didSelectRowAt:):ArtListViewController.swift">
-         <PersistentStrings>
             <PersistentString
-               value = "tableView.indexPathsForSelectedRows">
+               value = "json[&quot;results&quot;].arrayValue">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ArtListViewController.createTreeStructure():ArtListViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

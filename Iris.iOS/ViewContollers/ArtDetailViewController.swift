@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SwiftyJSON
 
 class ArtDetailViewController: UIViewController {
     
@@ -20,6 +21,8 @@ class ArtDetailViewController: UIViewController {
     var deviantionCategoryPath:String = ""
     var authorName:String = ""
     var authorAvatarSrc:String = ""
+    
+    var deviationComments:[DeviationComment] = [DeviationComment]()
     
     @IBOutlet weak var artImageView: UIImageView!
     @IBOutlet weak var artImageViewHeightConstraint: NSLayoutConstraint!
@@ -40,8 +43,8 @@ class ArtDetailViewController: UIViewController {
         
         artDetailTableView.delegate = self
         artDetailTableView.dataSource = self
-        artDetailTableView.register(UINib(nibName: "ArtDetailCommentTableViewTableViewCell", bundle: nil), forCellReuseIdentifier: "ArtDetailCommentTableViewTableViewCell")
-        artDetailTableView.register(UINib(nibName: "ArtDetailSubCommentTableViewTableViewCell", bundle: nil), forCellReuseIdentifier: "ArtDetailSubCommentTableViewTableViewCell")
+        artDetailTableView.register(UINib(nibName: "ArtDetailTableViewCommentTableViewCell", bundle: nil), forCellReuseIdentifier: "ArtDetailTableViewCommentTableViewCell")
+        artDetailTableView.register(UINib(nibName: "ArtDetailTableViewSubCommentTableViewCell", bundle: nil), forCellReuseIdentifier: "ArtDetailTableViewSubCommentTableViewCell")
         
         artDetailTableView.allowsSelection = false
         artDetailTableView.separatorStyle = .none
@@ -53,11 +56,13 @@ class ArtDetailViewController: UIViewController {
         authorAvatarImageView.layer.masksToBounds = true
         
         artTitleLabel.text = deviantionTitle
-        artCategoryLabel.text = DeviantHandler.formatCategoryPath(categoryPath: deviantionCategoryPath)
+        artCategoryLabel.text = DeviantionHandler.formatCategoryPath(categoryPath: deviantionCategoryPath)
         authorNameLabel.text = authorName
         
         fetchArt()
         fetchAuthorAvatar()
+        fetchDescription()
+        fetchComments()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -122,7 +127,62 @@ class ArtDetailViewController: UIViewController {
     }
     
     func fetchDescription(){
-        
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtMetaDataURL(deviationIds: deviantionId, accessToken:ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
+            response in
+            
+            switch(response.result){
+            case .success(_):
+                
+                if(response.response?.statusCode == 200){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        self.artDescriptionLabel.text = json["metadata"][0]["description"].string!
+                    }
+                }
+                else if(response.response?.statusCode == 401){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        print(json["error"])
+                    }
+                }
+                
+                break
+            case .failure(_):
+                break
+            }
+        })
+
+    }
+    
+    func fetchComments(){
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtCommentURL(deviationId: deviantionId, offset: 0, limit: 50, accessToken: ActiveUserInfo.getAccesssToken())).response(completionHandler: {
+            response in
+            
+            switch(response.result){
+            case .success(_):
+                if(response.response?.statusCode == 200){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        self.deviationComments = DeviantionHandler.organizeDeviationComments(deviationComments:                         JSONObjectHandler.convertToObjectArray(jsonArray: json["thread"].array!))
+                        self.artDetailTableView.reloadData()
+                    }
+                }
+                else if(response.response?.statusCode == 401){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        print(json["error"])
+                    }
+                }
+                
+            case .failure(_):
+                break
+            }
+            
+        })
     }
     
     func setArtImageViewSize(){
@@ -141,29 +201,44 @@ class ArtDetailViewController: UIViewController {
     @IBAction func downloadBtnTouchUpInside(_ sender: Any) {
         print("download btn touched!")
     }
+    @IBAction func backBtnTouchUpInside(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ArtDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return deviationComments.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return deviationComments[section].subDeviationComment!.count
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let deviationComment = deviationComments[indexPath.item]
+        
         var cell:UITableViewCell?
         
-        var specificCell:UITableViewCell?
         if(indexPath.row == 0){
-            specificCell = tableView.dequeueReusableCell(withIdentifier: "ArtDetailCommentTableViewTableViewCell") as! ArtDetailCommentTableViewTableViewCell
+            let specificCell = tableView.dequeueReusableCell(withIdentifier: "ArtDetailTableViewCommentTableViewCell") as! ArtDetailTableViewCommentTableViewCell
+            
+            specificCell.usernameLabel.text = deviationComment.username
+            
+            specificCell.bodyLabel.text = deviationComment.body
+            specificCell.postDateLabel.text = DeviantionHandler.formateDate(date: deviationComment.date)
+            
+            cell = specificCell
         }
         else{
-            specificCell = tableView.dequeueReusableCell(withIdentifier: "ArtDetailSubCommentTableViewTableViewCell") as! ArtDetailSubCommentTableViewTableViewCell
+            let specificCell = tableView.dequeueReusableCell(withIdentifier: "ArtDetailTableViewSubCommentTableViewCell") as! ArtDetailTableViewSubCommentTableViewCell
+            
+            specificCell.usernameLabel.text = deviationComment.username
+            specificCell.bodyLabel.text = deviationComment.body
+            
+            cell = specificCell
         }
-        cell = specificCell
         
         return cell!
     }

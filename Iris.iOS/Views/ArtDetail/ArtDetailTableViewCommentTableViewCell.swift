@@ -8,9 +8,14 @@
 
 import UIKit
 
-class ArtDetailCommentTableViewTableViewCell: UITableViewCell {
+class ArtDetailTableViewCommentTableViewCell: UITableViewCell {
+        
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var userAvatarImageView: UIImageView!
     
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var postDateLabel: UILabel!
+    
     @IBOutlet weak var dialogBackgroundView: UIView!
     
     var isInitialized:Bool = false
@@ -19,8 +24,8 @@ class ArtDetailCommentTableViewTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
-            avatarImageView.layer.cornerRadius = 15.0
-            avatarImageView.layer.masksToBounds = true
+            userAvatarImageView.layer.cornerRadius = 15.0
+            userAvatarImageView.layer.masksToBounds = true
             
             dialogBackgroundView.layer.cornerRadius = 8.0
             dialogBackgroundView.layer.masksToBounds = true

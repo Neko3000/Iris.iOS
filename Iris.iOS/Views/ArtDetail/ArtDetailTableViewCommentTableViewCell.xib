@@ -13,41 +13,41 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtDetailSubCommentTableViewTableViewCell" rowHeight="250" id="KGk-i7-Jjw" customClass="ArtDetailSubCommentTableViewTableViewCell" customModule="Iris_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="372" height="250"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtDetailTableViewCommentTableViewCell" rowHeight="163" id="KGk-i7-Jjw" customClass="ArtDetailTableViewCommentTableViewCell" customModule="Iris_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="163"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="372" height="249.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="367" height="162.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bibico-Atelier-30p" translatesAutoresizingMaskIntoConstraints="NO" id="SFM-IJ-1w5">
-                        <rect key="frame" x="30" y="5" width="30" height="30"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShieldLiger-30p" translatesAutoresizingMaskIntoConstraints="NO" id="SFM-IJ-1w5">
+                        <rect key="frame" x="15" y="5" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="2uP-Qv-mCo"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bibico-Atelier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-iP-15g">
-                        <rect key="frame" x="30" y="39" width="30" height="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShieldLiger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-iP-15g">
+                        <rect key="frame" x="15" y="39" width="30" height="14"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
                         <color key="textColor" name="text-normal-grey"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCQ-ZR-b5p">
-                        <rect key="frame" x="80" y="0.0" width="277" height="239.5"/>
+                        <rect key="frame" x="65" y="0.0" width="287" height="152.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ple-VQ-PFK">
-                                <rect key="frame" x="12" y="12" width="253" height="186.5"/>
-                                <string key="text">Hi,Thank you for your comment.:)
-I don't know for sure,
-Maybe,I plan on attending the Comic Market Saturday, August 13, 2016.
-When details are decided,I uploaded the catalog of my artbook for DiviantArt.
-If you come to Japan, Let's meet at the C90!</string>
+                                <rect key="frame" x="12" y="12" width="263" height="99.5"/>
+                                <string key="text">Nice!
+
+Good thing I'm already planing to go to Japan :)
+
+Now, where is that Comic Market you speak of?</string>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
                                 <color key="textColor" name="text-heavy-grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 13, 2016 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQU-4Q-26a">
-                                <rect key="frame" x="204" y="213.5" width="61" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 6, 2016 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQU-4Q-26a">
+                                <rect key="frame" x="220" y="126.5" width="55" height="14"/>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="10"/>
                                 <color key="textColor" name="text-heavy-grey"/>
                                 <nil key="highlightedColor"/>
@@ -63,38 +63,41 @@ If you come to Japan, Let's meet at the C90!</string>
                             <constraint firstItem="Ple-VQ-PFK" firstAttribute="leading" secondItem="QCQ-ZR-b5p" secondAttribute="leading" constant="12" id="xlf-7w-1jI"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog-tail-2" translatesAutoresizingMaskIntoConstraints="NO" id="hLq-0J-e0v">
-                        <rect key="frame" x="70" y="12" width="10" height="12"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialog-tail-2" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-r5-RVU">
+                        <rect key="frame" x="55" y="12" width="10" height="12"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="12" id="Hah-Cl-Rz5"/>
-                            <constraint firstAttribute="width" constant="10" id="u9i-Hl-Chg"/>
+                            <constraint firstAttribute="width" constant="10" id="bZ3-dd-4zw"/>
+                            <constraint firstAttribute="height" constant="12" id="eho-7y-YsY"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HC0-iP-15g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="489-c3-zdb"/>
+                    <constraint firstItem="HC0-iP-15g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="489-c3-zdb"/>
                     <constraint firstItem="HC0-iP-15g" firstAttribute="top" secondItem="SFM-IJ-1w5" secondAttribute="bottom" constant="4" id="5E0-90-pb6"/>
-                    <constraint firstItem="hLq-0J-e0v" firstAttribute="top" secondItem="QCQ-ZR-b5p" secondAttribute="top" constant="12" id="CTZ-eq-ilV"/>
                     <constraint firstItem="QCQ-ZR-b5p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Kmi-0l-1nv"/>
+                    <constraint firstItem="hUH-r5-RVU" firstAttribute="top" secondItem="QCQ-ZR-b5p" secondAttribute="top" constant="12" id="OI1-hX-iaK"/>
                     <constraint firstAttribute="bottom" secondItem="QCQ-ZR-b5p" secondAttribute="bottom" constant="10" id="Vjg-Hd-s5C"/>
+                    <constraint firstItem="QCQ-ZR-b5p" firstAttribute="leading" secondItem="hUH-r5-RVU" secondAttribute="trailing" id="aUf-FO-lpU"/>
                     <constraint firstItem="HC0-iP-15g" firstAttribute="width" secondItem="SFM-IJ-1w5" secondAttribute="width" id="bZB-Xi-uhS"/>
-                    <constraint firstItem="QCQ-ZR-b5p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="fnb-Wx-dII"/>
+                    <constraint firstItem="QCQ-ZR-b5p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="65" id="fnb-Wx-dII"/>
                     <constraint firstItem="SFM-IJ-1w5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="fu9-Ew-rbD"/>
-                    <constraint firstItem="SFM-IJ-1w5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="rQa-dw-vS7"/>
-                    <constraint firstItem="QCQ-ZR-b5p" firstAttribute="leading" secondItem="hLq-0J-e0v" secondAttribute="trailing" id="rhS-i8-XEr"/>
+                    <constraint firstItem="SFM-IJ-1w5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rQa-dw-vS7"/>
                     <constraint firstAttribute="trailing" secondItem="QCQ-ZR-b5p" secondAttribute="trailing" constant="15" id="ub9-im-tT0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="avatarImageView" destination="SFM-IJ-1w5" id="Yil-yZ-2Pn"/>
-                <outlet property="dialogBackgroundView" destination="QCQ-ZR-b5p" id="Nag-wM-GOz"/>
+                <outlet property="bodyLabel" destination="Ple-VQ-PFK" id="Hah-tT-hC4"/>
+                <outlet property="dialogBackgroundView" destination="QCQ-ZR-b5p" id="kCz-bG-VNZ"/>
+                <outlet property="postDateLabel" destination="CQU-4Q-26a" id="vsJ-Qm-lwm"/>
+                <outlet property="userAvatarImageView" destination="SFM-IJ-1w5" id="CZy-Dw-pok"/>
+                <outlet property="usernameLabel" destination="HC0-iP-15g" id="A2V-Eq-yvN"/>
             </connections>
-            <point key="canvasLocation" x="175.36231884057972" y="182.14285714285714"/>
+            <point key="canvasLocation" x="171.73913043478262" y="153.01339285714286"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bibico-Atelier-30p" width="30" height="30"/>
+        <image name="ShieldLiger-30p" width="30" height="30"/>
         <image name="dialog-tail-2" width="10" height="12"/>
         <namedColor name="background-light-grey">
             <color red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -70,10 +70,10 @@
 		EBAE40E222EEE72E008425A2 /* UserCenterFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */; };
 		EBAE40E422EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE40E322EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift */; };
 		EBAE40E622EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAE40E522EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib */; };
-		EBB63AEF229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */; };
-		EBB63AF0229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */; };
-		EBB63AF2229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */; };
-		EBB63AF4229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AF3229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib */; };
+		EBB63AEF229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AED229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.swift */; };
+		EBB63AF0229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AEE229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.xib */; };
+		EBB63AF2229A5A5900F789BD /* ArtDetailTableViewSubCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF1229A5A5900F789BD /* ArtDetailTableViewSubCommentTableViewCell.swift */; };
+		EBB63AF4229A5A6600F789BD /* ArtDetailTableViewSubCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AF3229A5A6600F789BD /* ArtDetailTableViewSubCommentTableViewCell.xib */; };
 		EBB63AF6229A5ED200F789BD /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF5229A5ED200F789BD /* ArtDetailViewController.swift */; };
 		EBB63AF8229D1C1F00F789BD /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63AF7229D1C1F00F789BD /* UserInfoView.xib */; };
 		EBB63AFA229D43E700F789BD /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63AF9229D43E700F789BD /* UserInfoView.swift */; };
@@ -84,6 +84,8 @@
 		EBB63B3B229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63B39229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift */; };
 		EBB63B3C229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB63B3A229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib */; };
 		EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */; };
+		EBBA85712307C4A3009E0A7D /* DeviationComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA85702307C4A3009E0A7D /* DeviationComment.swift */; };
+		EBBA85732307CD31009E0A7D /* JSONDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA85722307CD31009E0A7D /* JSONDateExtension.swift */; };
 		EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */; };
 		EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEA2302BBF3003BC6CC /* Deviation.swift */; };
 		EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */; };
@@ -164,10 +166,10 @@
 		EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFollowerViewController.swift; sourceTree = "<group>"; };
 		EBAE40E322EEE7A7008425A2 /* UserCenterFollowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFollowerTableViewCell.swift; sourceTree = "<group>"; };
 		EBAE40E522EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterFollowerTableViewCell.xib; sourceTree = "<group>"; };
-		EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailCommentTableViewTableViewCell.swift; sourceTree = "<group>"; };
-		EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtDetailCommentTableViewTableViewCell.xib; sourceTree = "<group>"; };
-		EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtDetailSubCommentTableViewTableViewCell.swift; sourceTree = "<group>"; };
-		EBB63AF3229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtDetailSubCommentTableViewTableViewCell.xib; sourceTree = "<group>"; };
+		EBB63AED229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailTableViewCommentTableViewCell.swift; sourceTree = "<group>"; };
+		EBB63AEE229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtDetailTableViewCommentTableViewCell.xib; sourceTree = "<group>"; };
+		EBB63AF1229A5A5900F789BD /* ArtDetailTableViewSubCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtDetailTableViewSubCommentTableViewCell.swift; sourceTree = "<group>"; };
+		EBB63AF3229A5A6600F789BD /* ArtDetailTableViewSubCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtDetailTableViewSubCommentTableViewCell.xib; sourceTree = "<group>"; };
 		EBB63AF5229A5ED200F789BD /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
 		EBB63AF7229D1C1F00F789BD /* UserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
 		EBB63AF9229D43E700F789BD /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,8 @@
 		EBB63B39229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterGalleryTableViewCell.swift; sourceTree = "<group>"; };
 		EBB63B3A229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterGalleryTableViewCell.xib; sourceTree = "<group>"; };
 		EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterGalleryViewController.swift; sourceTree = "<group>"; };
+		EBBA85702307C4A3009E0A7D /* DeviationComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviationComment.swift; sourceTree = "<group>"; };
+		EBBA85722307CD31009E0A7D /* JSONDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDateExtension.swift; sourceTree = "<group>"; };
 		EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewReloadCallBackExtension.swift; sourceTree = "<group>"; };
 		EBF31DEA2302BBF3003BC6CC /* Deviation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deviation.swift; sourceTree = "<group>"; };
 		EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListOrderEnum.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 		EB0568652244C70600899DCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EBBA85722307CD31009E0A7D /* JSONDateExtension.swift */,
 				EB0568692245DC6C00899DCE /* SketchShadow.swift */,
 				EB0568662244C78700899DCE /* GradientBorder.swift */,
 				EB05686B2245E6AE00899DCE /* GradientBackground.swift */,
@@ -244,6 +249,8 @@
 		EB0568682245DBA900899DCE /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				EBA0323C22FB10490084B92F /* JSONObjectHandler.swift */,
+				EB39BAB722F6A5460022ACDB /* AlamofireManager.swift */,
 				EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */,
 				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
 				EB74337122F9B491002884BB /* ImageWithColorExtension.swift */,
@@ -290,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				EB488B5822431F8400AC925F /* LoginViewController.swift */,
-				EB39BAB722F6A5460022ACDB /* AlamofireManager.swift */,
 				EB267C3A228AA092004979AC /* DailyViewController.swift */,
 				EB267C41228BEB06004979AC /* ExploreViewController.swift */,
 				EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */,
@@ -310,11 +316,11 @@
 		EB267C34228A8DF5004979AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EBF31DEA2302BBF3003BC6CC /* Deviation.swift */,
 				EB39BABD22F6D5A50022ACDB /* ActiveUserInfo.swift */,
 				EB39BAB322F5D6E80022ACDB /* UserInfo.swift */,
-				EBA0323C22FB10490084B92F /* JSONObjectHandler.swift */,
+				EBF31DEA2302BBF3003BC6CC /* Deviation.swift */,
 				EBF31DF023039F79003BC6CC /* DeviantCategory.swift */,
+				EBBA85702307C4A3009E0A7D /* DeviationComment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,10 +375,10 @@
 		EB39BAAB22F5C99D0022ACDB /* ArtDetail */ = {
 			isa = PBXGroup;
 			children = (
-				EBB63AED229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift */,
-				EBB63AEE229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib */,
-				EBB63AF1229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift */,
-				EBB63AF3229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib */,
+				EBB63AED229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.swift */,
+				EBB63AEE229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.xib */,
+				EBB63AF1229A5A5900F789BD /* ArtDetailTableViewSubCommentTableViewCell.swift */,
+				EBB63AF3229A5A6600F789BD /* ArtDetailTableViewSubCommentTableViewCell.xib */,
 			);
 			path = ArtDetail;
 			sourceTree = "<group>";
@@ -561,7 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB63B3C229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib in Resources */,
-				EBB63AF4229A5A6600F789BD /* ArtDetailSubCommentTableViewTableViewCell.xib in Resources */,
+				EBB63AF4229A5A6600F789BD /* ArtDetailTableViewSubCommentTableViewCell.xib in Resources */,
 				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
 				EB40B34222D5BD9400E75C9B /* UserCenterFavoriteTableViewCell.xib in Resources */,
 				EB2A98292296E09200977FC8 /* ActivityTableViewCommentCell.xib in Resources */,
@@ -588,7 +594,7 @@
 				EB48B5DF22EF20B100F60F15 /* UserCenterCommentHeaderStackViewSubview.xib in Resources */,
 				EBB63AF8229D1C1F00F789BD /* UserInfoView.xib in Resources */,
 				EBAE40E622EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib in Resources */,
-				EBB63AF0229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.xib in Resources */,
+				EBB63AF0229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.xib in Resources */,
 				EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,11 +679,11 @@
 				EB1E9E2E22F80CCC0095FDA9 /* MainTabBarController.swift in Sources */,
 				EBA0323D22FB10490084B92F /* JSONObjectHandler.swift in Sources */,
 				EBB63B3B229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift in Sources */,
-				EBB63AEF229921C600F789BD /* ArtDetailCommentTableViewTableViewCell.swift in Sources */,
+				EBB63AEF229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.swift in Sources */,
 				EBF31DEF2302F74C003BC6CC /* DeviantHandler.swift in Sources */,
 				EBB63B00229D493F00F789BD /* UserCenterContentSwitchView.swift in Sources */,
 				EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */,
-				EBB63AF2229A5A5900F789BD /* ArtDetailSubCommentTableViewTableViewCell.swift in Sources */,
+				EBB63AF2229A5A5900F789BD /* ArtDetailTableViewSubCommentTableViewCell.swift in Sources */,
 				EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */,
 				EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */,
 				EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */,
@@ -698,7 +704,9 @@
 				EBF3488122CDC562001A4793 /* UserCenterStatusHeaderView.swift in Sources */,
 				EBF3487722CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift in Sources */,
 				EB48B5DB22EF1D3500F60F15 /* UserCenterCommentHeaderTableViewCell.swift in Sources */,
+				EBBA85712307C4A3009E0A7D /* DeviationComment.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
+				EBBA85732307CD31009E0A7D /* JSONDateExtension.swift in Sources */,
 				EB40B34422D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift in Sources */,
 				EB188A7A22FA9D0400524B77 /* ObjectDictionaryProtocols.swift in Sources */,
 				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,

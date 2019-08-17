@@ -20,6 +20,8 @@ class DeviantArtManager{
     static let getPopularArtListURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/browse/popular"
     static let getNewestArtListURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/browse/newest"
     static let getUndiscoveredArtListURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/browse/undiscovered"
+    static let getArtMetaDataURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/deviation/metadata"
+    static let getArtCommentURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/comments/deviation"
     
     // Login
     static func generateAuthorizationCodeURL(responseType:String,clientId:String,redirectUrl:String,scope:String,state:String) -> URL{
@@ -103,6 +105,33 @@ class DeviantArtManager{
         var urlComponents = URLComponents(string: getUndiscoveredArtListURLEndPoint)
         urlComponents?.queryItems = [
             URLQueryItem(name: "category_path", value: categoryPath),
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetArtMetaDataURL(deviationIds:String,extSubmission:String = "",extCamera:String = "",extStats:String = "",extCollection:String = "",accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getArtMetaDataURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "deviationids", value: deviationIds),
+            URLQueryItem(name: "ext_submission", value: extSubmission),
+            URLQueryItem(name: "ext_camera", value: extCamera),
+            URLQueryItem(name: "ext_stats", value: extStats),
+            URLQueryItem(name: "ext_collection", value: extCollection),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetArtCommentURL(deviationId:String, commentId:String = "", maxDepth:String = "", offset:Int?, limit:Int?,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getArtCommentURLEndPoint + "/" + deviationId)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "commentid", value: commentId),
+            URLQueryItem(name: "maxdepth", value: maxDepth),
             URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
             URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
             URLQueryItem(name: "access_token", value: accessToken)

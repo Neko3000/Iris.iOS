@@ -327,6 +327,9 @@ of the gods.</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTX-ah-DKK">
                                         <rect key="frame" x="16" y="14" width="22" height="22"/>
                                         <state key="normal" image="icon-left-arrow"/>
+                                        <connections>
+                                            <action selector="backBtnTouchUpInside:" destination="6Bj-h5-f8J" eventType="touchUpInside" id="i04-ja-mZ7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bai-fq-dso">
                                         <rect key="frame" x="330" y="12.5" width="25" height="25"/>

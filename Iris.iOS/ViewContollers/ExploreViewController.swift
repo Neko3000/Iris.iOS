@@ -34,7 +34,6 @@ class ExploreViewController: UIViewController {
         searchTextField.returnKeyType = .go
         searchTextField.delegate = self
         
-        print("view did load")
     }
     
     override func loadView() {

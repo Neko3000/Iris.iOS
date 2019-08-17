@@ -31,11 +31,6 @@ class Deviation: ObjectFromJSON {
     }
     
     required init(json:JSON) {
-        print(json["deviationid"].string!)
-        print(json["title"].string!)
-        print(json["author"]["username"].string!)
-        print(json["category"].string!)
-        print(json["category_path"].string!)
         
         self.deviationId = json["deviationid"].string!
         self.title = json["title"].string!
