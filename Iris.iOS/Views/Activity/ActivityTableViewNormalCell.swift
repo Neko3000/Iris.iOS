@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ActivityTableViewSubmitCell: UITableViewCell {
+class ActivityTableViewNormalCell: UITableViewCell {
 
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var deviationTitleLabel: UILabel!
+    
+    @IBOutlet weak var userAvatarImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var notificationTypeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backgroundContainerView: UIView!
     
@@ -20,8 +27,8 @@ class ActivityTableViewSubmitCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
-            avatarImageView.layer.cornerRadius = 15.0
-            avatarImageView.layer.masksToBounds = true
+            userAvatarImageView.layer.cornerRadius = 15.0
+            userAvatarImageView.layer.masksToBounds = true
             
             backgroundContainerView.layer.cornerRadius = 8.0
             backgroundContainerView.layer.masksToBounds = true

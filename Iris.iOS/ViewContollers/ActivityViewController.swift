@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ActivityViewController: UIViewController {
+    
+    var deviantArtNotifications:[DeviantArtNotification] = [DeviantArtNotification]()
         
     @IBOutlet weak var activityTableView: UITableView!
     
@@ -19,12 +22,105 @@ class ActivityViewController: UIViewController {
         
         activityTableView.delegate = self
         activityTableView.dataSource = self
-        activityTableView.register(UINib(nibName: "ActivityTableViewSubmitCell", bundle: nil), forCellReuseIdentifier: "ActivityTableViewSubmitCell")
+        activityTableView.register(UINib(nibName: "ActivityTableViewNormalCell", bundle: nil), forCellReuseIdentifier: "ActivityTableViewNormalCell")
         activityTableView.register(UINib(nibName: "ActivityTableViewCommentCell", bundle: nil), forCellReuseIdentifier: "ActivityTableViewCommentCell")
         
-        activityTableView.allowsSelection = false        
+        activityTableView.separatorStyle = .none
+        activityTableView.allowsSelection = false
+        
+        fetchNotifications()
+        
+        print(DeviantArtManager.generateGetNotificationURL(cursor:"abcdef",accessToken: ActiveUserInfo.getAccesssToken()))
     }
     
+    func fetchNotifications(){
+    
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetNotificationURL(accessToken: ActiveUserInfo.getAccesssToken())).response(completionHandler: {
+            response in
+            
+            switch(response.result){
+            case .success(_):
+                if(response.response?.statusCode == 200){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        self.deviantArtNotifications = JSONObjectHandler.convertToObjectArray(jsonArray: json["items"].arrayValue)
+                        
+                        self.activityTableView.reloadData()
+                        
+                        self.fetchUserAvatar()
+                        self.fetchBackgroundImage()
+                    }
+                }
+                else if(response.response?.statusCode == 401){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        print(json["error"])
+                    }
+                }
+                
+            case .failure(_):
+                break
+            }
+            
+        })
+
+    }
+    
+    func fetchUserAvatar(){
+        for i in 0..<deviantArtNotifications.count{
+            AlamofireManager.sharedSession.request(deviantArtNotifications[i].userAvatarSrc).response(completionHandler: {
+                response in
+                
+                switch(response.result){
+                case .success(_):
+                    if(response.response?.statusCode == 200){
+                        
+                        let userAvatarImage = UIImage(data: response.data!)
+                        self.deviantArtNotifications[i].userAvatarImage = userAvatarImage
+                        
+                        self.activityTableView.reloadData()
+                    }
+                    
+                    break
+                    
+                case .failure(_):
+                    break
+                }
+                
+            })
+        }
+    }
+    
+    func fetchBackgroundImage(){
+        
+        for i in 0..<deviantArtNotifications.count{
+            
+            if(deviantArtNotifications[i].deviationContentSrc != ""){
+            AlamofireManager.sharedSession.request(deviantArtNotifications[i].deviationContentSrc).response(completionHandler: {
+                response in
+                
+                switch(response.result){
+                case .success(_):
+                    if(response.response?.statusCode == 200){
+                        
+                        let backgroundImage = UIImage(data: response.data!)
+                        self.deviantArtNotifications[i].deviationContentImage = backgroundImage
+                        
+                        self.activityTableView.reloadData()
+                    }
+                    
+                    break
+                    
+                case .failure(_):
+                    break
+                }
+                
+            })
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -48,33 +144,72 @@ extension ActivityViewController:UITableViewDelegate,UITableViewDataSource{
         return 1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return deviantArtNotifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM, hh:mm"
+        
+        let deviantArtNotification = deviantArtNotifications[indexPath.section]
+        
         var cell:UITableViewCell?
         
-        var specificCell:UITableViewCell?
-        if(indexPath.section % 2 == 0){
-            specificCell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewSubmitCell") as! ActivityTableViewSubmitCell
+        if(deviantArtNotification.notificationType == .favourite || deviantArtNotification.notificationType == .replay || deviantArtNotification.notificationType == .watch){
+            let specificCell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewNormalCell") as! ActivityTableViewNormalCell
+            
+            // Clear
+            specificCell.deviationTitleLabel.text = ""
+            
+            // Set
+            specificCell.userAvatarImageView.image = deviantArtNotification.userAvatarImage
+            specificCell.usernameLabel.text = deviantArtNotification.username
+            
+            specificCell.notificationTypeLabel.text = deviantArtNotification.notificationTypeString
+            specificCell.dateLabel.text = "in \(dateFormatter.string(from: deviantArtNotification.date))"
+            
+            specificCell.backgroundImageView.image = deviantArtNotification.deviationContentImage
+            
+            cell = specificCell
+            
         }
         else{
-            specificCell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewCommentCell") as! ActivityTableViewCommentCell            
+            let specificCell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewCommentCell") as! ActivityTableViewCommentCell
+            
+            // Clear
+            specificCell.deviationTitleLabel.text = ""
+            
+            // Set
+            specificCell.userAvatarImageView.image = deviantArtNotification.userAvatarImage
+            specificCell.usernameLabel.text = deviantArtNotification.username
+            
+            specificCell.bodyLabel.text = deviantArtNotification.commentBody
+            
+            specificCell.notificationTypeLabel.text = deviantArtNotification.notificationTypeString
+            specificCell.dateLabel.text = "in \(dateFormatter.string(from: deviantArtNotification.date))"
+            
+            specificCell.backgroundImageView.image = deviantArtNotification.deviationContentImage
+            specificCell.dialogTailImageView.image = deviantArtNotification.deviationContentImage
+            
+            cell = specificCell
         }
-        cell = specificCell
         
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        var height:CGFloat?
+        var height:CGFloat = 0
         
-        if(indexPath.section % 2 == 0){
+        let deviantArtNotification = deviantArtNotifications[indexPath.section]
+        
+        if(deviantArtNotification.notificationType == .favourite || deviantArtNotification.notificationType == .replay || deviantArtNotification.notificationType == .watch){
             height = 100
         }
         else{
             height = 180
         }
-        return height!
+        
+        return height
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

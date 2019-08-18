@@ -10,12 +10,21 @@ import UIKit
 
 class ActivityTableViewCommentCell: UITableViewCell {
 
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var deviationTitleLabel: UILabel!
+    
+    @IBOutlet weak var userAvatarImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    @IBOutlet weak var notificationTypeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backgroundContainerView: UIView!
     
-    @IBOutlet weak var dialogTailContainerView: UIView!
     @IBOutlet weak var dialogTailImageView: UIImageView!
+    @IBOutlet weak var dialogTailContainerView: UIView!
     
     var isInitialized:Bool = false
     
@@ -23,8 +32,8 @@ class ActivityTableViewCommentCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
-            avatarImageView.layer.cornerRadius = 15.0
-            avatarImageView.layer.masksToBounds = true
+            userAvatarImageView.layer.cornerRadius = 15.0
+            userAvatarImageView.layer.masksToBounds = true
             
             isInitialized = true
         }

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityTableViewSubmitCell" rowHeight="153" id="5Ok-ps-aAB" customClass="ActivityTableViewSubmitCell" customModule="Iris_iOS" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityTableViewNormalCell" rowHeight="153" id="5Ok-ps-aAB" customClass="ActivityTableViewNormalCell" customModule="Iris_iOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="295" height="153"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ok-ps-aAB" id="DrQ-tV-5gb">
@@ -105,9 +105,13 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="avatarImageView" destination="QN0-Ui-RNj" id="Gwn-7X-aGS"/>
                 <outlet property="backgroundContainerView" destination="U2I-40-wwd" id="pL7-AR-ppQ"/>
                 <outlet property="backgroundImageView" destination="tS7-3k-3hf" id="zYQ-gn-YHE"/>
+                <outlet property="dateLabel" destination="Z1f-km-oMH" id="iuh-sd-oi3"/>
+                <outlet property="deviationTitleLabel" destination="m1P-L8-iVD" id="x7P-pP-hmM"/>
+                <outlet property="notificationTypeLabel" destination="kJX-Xd-foF" id="qz5-Ef-g9U"/>
+                <outlet property="userAvatarImageView" destination="QN0-Ui-RNj" id="Ibd-Ct-tTk"/>
+                <outlet property="usernameLabel" destination="a1M-ai-S7T" id="1rc-31-svo"/>
             </connections>
             <point key="canvasLocation" x="-48.550724637681164" y="-31.808035714285712"/>
         </tableViewCell>

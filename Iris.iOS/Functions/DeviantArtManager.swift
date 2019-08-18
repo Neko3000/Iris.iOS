@@ -26,6 +26,9 @@ class DeviantArtManager{
     // Daily
     static let getDailyDeviationURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/browse/dailydeviations"
     
+    // Activity
+    static let getNotificationURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/feed/notifications"
+    
     // Login
     static func generateAuthorizationCodeURL(responseType:String,clientId:String,redirectUrl:String,scope:String,state:String) -> URL{
         
@@ -148,6 +151,17 @@ class DeviantArtManager{
         var urlComponents = URLComponents(string: getDailyDeviationURLEndPoint)
         urlComponents?.queryItems = [
             URLQueryItem(name: "date", value: date),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    // Activity
+    static func generateGetNotificationURL(cursor:String = "",accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getNotificationURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "cursor", value: cursor),
             URLQueryItem(name: "access_token", value: accessToken)
         ]
         

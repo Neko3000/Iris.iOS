@@ -58,8 +58,8 @@
 		EB6642AE229285E200FE71B6 /* art-categories.json in Resources */ = {isa = PBXBuildFile; fileRef = EB6642AD229285E200FE71B6 /* art-categories.json */; };
 		EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */; };
 		EB6642B222929B8F00FE71B6 /* CategorySelectorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */; };
-		EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */; };
-		EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */; };
+		EB6642B62293BFBD00FE71B6 /* ActivityTableViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B42293BFBD00FE71B6 /* ActivityTableViewNormalCell.swift */; };
+		EB6642B72293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B52293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib */; };
 		EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */; };
 		EB74337222F9B491002884BB /* ImageWithColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74337122F9B491002884BB /* ImageWithColorExtension.swift */; };
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */; };
@@ -93,12 +93,14 @@
 		EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEA2302BBF3003BC6CC /* Deviation.swift */; };
 		EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */; };
 		EBF31DEF2302F74C003BC6CC /* DeviationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */; };
-		EBF31DF123039F79003BC6CC /* DeviantCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DF023039F79003BC6CC /* DeviantCategory.swift */; };
+		EBF31DF123039F79003BC6CC /* DeviationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DF023039F79003BC6CC /* DeviationCategory.swift */; };
 		EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */; };
 		EBF3487522CD8F60001A4793 /* UserCenterStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */; };
 		EBF3487722CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */; };
 		EBF3488122CDC562001A4793 /* UserCenterStatusHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */; };
 		EBF3488322CDC579001A4793 /* UserCenterStatusHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF3488222CDC579001A4793 /* UserCenterStatusHeaderView.xib */; };
+		EBFF775D2309A5BB00FC6012 /* NotificationTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF775C2309A5BB00FC6012 /* NotificationTypeEnum.swift */; };
+		EBFF77602309AA2800FC6012 /* DeviantArtNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF775F2309AA2800FC6012 /* DeviantArtNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,8 +159,8 @@
 		EB6642AD229285E200FE71B6 /* art-categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "art-categories.json"; sourceTree = "<group>"; };
 		EB6642AF22929B8F00FE71B6 /* CategorySelectorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorTableViewCell.swift; sourceTree = "<group>"; };
 		EB6642B022929B8F00FE71B6 /* CategorySelectorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectorTableViewCell.xib; sourceTree = "<group>"; };
-		EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewSubmitCell.swift; sourceTree = "<group>"; };
-		EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewSubmitCell.xib; sourceTree = "<group>"; };
+		EB6642B42293BFBD00FE71B6 /* ActivityTableViewNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewNormalCell.swift; sourceTree = "<group>"; };
+		EB6642B52293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewNormalCell.xib; sourceTree = "<group>"; };
 		EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		EB74337122F9B491002884BB /* ImageWithColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithColorExtension.swift; sourceTree = "<group>"; };
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalTableViewCell.swift; sourceTree = "<group>"; };
@@ -192,12 +194,14 @@
 		EBF31DEA2302BBF3003BC6CC /* Deviation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deviation.swift; sourceTree = "<group>"; };
 		EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListOrderEnum.swift; sourceTree = "<group>"; };
 		EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviationHandler.swift; sourceTree = "<group>"; };
-		EBF31DF023039F79003BC6CC /* DeviantCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantCategory.swift; sourceTree = "<group>"; };
+		EBF31DF023039F79003BC6CC /* DeviationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviationCategory.swift; sourceTree = "<group>"; };
 		EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusViewController.swift; sourceTree = "<group>"; };
 		EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterStatusTableViewCell.xib; sourceTree = "<group>"; };
 		EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusTableViewCell.swift; sourceTree = "<group>"; };
 		EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterStatusHeaderView.swift; sourceTree = "<group>"; };
 		EBF3488222CDC579001A4793 /* UserCenterStatusHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterStatusHeaderView.xib; sourceTree = "<group>"; };
+		EBFF775C2309A5BB00FC6012 /* NotificationTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypeEnum.swift; sourceTree = "<group>"; };
+		EBFF775F2309AA2800FC6012 /* DeviantArtNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantArtNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,7 @@
 		EB0568652244C70600899DCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EB74337122F9B491002884BB /* ImageWithColorExtension.swift */,
 				EBBA85722307CD31009E0A7D /* JSONDateExtension.swift */,
 				EB0568692245DC6C00899DCE /* SketchShadow.swift */,
 				EB0568662244C78700899DCE /* GradientBorder.swift */,
@@ -259,13 +264,11 @@
 				EB39BAB722F6A5460022ACDB /* AlamofireManager.swift */,
 				EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */,
 				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
-				EB74337122F9B491002884BB /* ImageWithColorExtension.swift */,
-				EB267C38228A9A0E004979AC /* XibUIView.swift */,
 				EB39BAB522F6A0E00022ACDB /* RequestAnalyzer.swift */,
 				EB39BAB922F6BCD60022ACDB /* DeviantArtManager.swift */,
 				EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */,
 				EB39BABB22F6BEEE0022ACDB /* ApplicationKey.swift */,
-				EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */,
+				EB267C38228A9A0E004979AC /* XibUIView.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -325,9 +328,10 @@
 				EB39BABD22F6D5A50022ACDB /* ActiveUserInfo.swift */,
 				EB39BAB322F5D6E80022ACDB /* UserInfo.swift */,
 				EBF31DEA2302BBF3003BC6CC /* Deviation.swift */,
-				EBF31DF023039F79003BC6CC /* DeviantCategory.swift */,
+				EBF31DF023039F79003BC6CC /* DeviationCategory.swift */,
 				EBBA85702307C4A3009E0A7D /* DeviationComment.swift */,
 				EBBA857E23093C32009E0A7D /* DailyDeviation.swift */,
+				EBFF775F2309AA2800FC6012 /* DeviantArtNotification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,8 +379,8 @@
 				EB1E9E2B22F808B20095FDA9 /* MainBottomTabBar.xib */,
 				EB2A98262296E08000977FC8 /* ActivityTableViewCommentCell.swift */,
 				EB2A98282296E09200977FC8 /* ActivityTableViewCommentCell.xib */,
-				EB6642B42293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift */,
-				EB6642B52293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib */,
+				EB6642B42293BFBD00FE71B6 /* ActivityTableViewNormalCell.swift */,
+				EB6642B52293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -491,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				EB66429B228FC76B00FE71B6 /* Assets.xcassets */,
+				EBFF775E2309A78900FC6012 /* Enums */,
 				EB267C34228A8DF5004979AC /* Models */,
 				EB267C33228A8DEB004979AC /* ViewContollers */,
 				EB267C32228A8DDC004979AC /* Views */,
@@ -504,6 +509,15 @@
 				EB488B6222431F8700AC925F /* Info.plist */,
 			);
 			path = Iris.iOS;
+			sourceTree = "<group>";
+		};
+		EBFF775E2309A78900FC6012 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */,
+				EBFF775C2309A5BB00FC6012 /* NotificationTypeEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		FAC5FAC4AE30CBFB2DE8E880 /* Frameworks */ = {
@@ -605,7 +619,7 @@
 				EBB63AF8229D1C1F00F789BD /* UserInfoView.xib in Resources */,
 				EBAE40E622EEE7B5008425A2 /* UserCenterFollowerTableViewCell.xib in Resources */,
 				EBB63AF0229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.xib in Resources */,
-				EB6642B72293BFBD00FE71B6 /* ActivityTableViewSubmitCell.xib in Resources */,
+				EB6642B72293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +686,7 @@
 				EB267C3E228AA7CF004979AC /* DailyTableViewPostTableViewCell.swift in Sources */,
 				EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */,
 				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
+				EBFF775D2309A5BB00FC6012 /* NotificationTypeEnum.swift in Sources */,
 				EB40B34022D5BC0400E75C9B /* UserCenterFavoriateViewController.swift in Sources */,
 				EB74337222F9B491002884BB /* ImageWithColorExtension.swift in Sources */,
 				EBB63AF6229A5ED200F789BD /* ArtDetailViewController.swift in Sources */,
@@ -704,6 +719,7 @@
 				EB48B5E322EF269E00F60F15 /* UserCenterCommentViewController.swift in Sources */,
 				EBBA857F23093C32009E0A7D /* DailyDeviation.swift in Sources */,
 				EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */,
+				EBFF77602309AA2800FC6012 /* DeviantArtNotification.swift in Sources */,
 				EB6642B122929B8F00FE71B6 /* CategorySelectorTableViewCell.swift in Sources */,
 				EB05686C2245E6AE00899DCE /* GradientBackground.swift in Sources */,
 				EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */,
@@ -721,8 +737,8 @@
 				EBBA85732307CD31009E0A7D /* JSONDateExtension.swift in Sources */,
 				EB40B34422D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift in Sources */,
 				EB188A7A22FA9D0400524B77 /* ObjectDictionaryProtocols.swift in Sources */,
-				EB6642B62293BFBD00FE71B6 /* ActivityTableViewSubmitCell.swift in Sources */,
-				EBF31DF123039F79003BC6CC /* DeviantCategory.swift in Sources */,
+				EB6642B62293BFBD00FE71B6 /* ActivityTableViewNormalCell.swift in Sources */,
+				EBF31DF123039F79003BC6CC /* DeviationCategory.swift in Sources */,
 				EB39BABA22F6BCD60022ACDB /* DeviantArtManager.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
 				EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */,

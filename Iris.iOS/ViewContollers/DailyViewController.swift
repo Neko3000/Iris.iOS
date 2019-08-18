@@ -53,9 +53,7 @@ class DailyViewController: UIViewController{
         self.isFetchingDailyDeviations = true
         
         currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!
-        
-        print(DeviantArtManager.generateGetDailyDeviationURL(date: getDateString(date: currentDate), accessToken: ActiveUserInfo.getAccesssToken()))
-        
+                
         AlamofireManager.sharedSession.request(DeviantArtManager.generateGetDailyDeviationURL(date: getDateString(date: currentDate), accessToken: ActiveUserInfo.getAccesssToken())).response(completionHandler: {
             response in
             
@@ -259,7 +257,6 @@ extension DailyViewController:UITableViewDelegate,UITableViewDataSource{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if(isFetchingDailyDeviations){
-            print(isFetchingDailyDeviations)
             return
         }
         

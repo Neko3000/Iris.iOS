@@ -143,11 +143,16 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="avatarImageView" destination="QN0-Ui-RNj" id="Gwn-7X-aGS"/>
                 <outlet property="backgroundContainerView" destination="JnW-h2-EbU" id="MAJ-Ef-H0C"/>
                 <outlet property="backgroundImageView" destination="tS7-3k-3hf" id="ueP-i5-8Vf"/>
+                <outlet property="bodyLabel" destination="Oqz-m6-x06" id="e9g-r4-iDU"/>
+                <outlet property="dateLabel" destination="Z1f-km-oMH" id="XlW-Zo-iLV"/>
+                <outlet property="deviationTitleLabel" destination="m1P-L8-iVD" id="DKT-S2-nmY"/>
                 <outlet property="dialogTailContainerView" destination="Ic6-df-EuK" id="dJD-Oy-Ha7"/>
                 <outlet property="dialogTailImageView" destination="Gov-Bu-rGw" id="jQR-YB-S0h"/>
+                <outlet property="notificationTypeLabel" destination="kJX-Xd-foF" id="V6u-LM-SBB"/>
+                <outlet property="userAvatarImageView" destination="QN0-Ui-RNj" id="y5t-i4-5vc"/>
+                <outlet property="usernameLabel" destination="a1M-ai-S7T" id="Q9c-6X-VNO"/>
             </connections>
             <point key="canvasLocation" x="-39.855072463768117" y="-7.3660714285714279"/>
         </tableViewCell>
