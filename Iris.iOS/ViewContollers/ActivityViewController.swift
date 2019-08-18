@@ -105,8 +105,8 @@ class ActivityViewController: UIViewController {
                 case .success(_):
                     if(response.response?.statusCode == 200){
                         
-                        let backgroundImage = UIImage(data: response.data!)
-                        self.deviantArtNotifications[i].deviationContentImage = backgroundImage
+                        let contentImage = UIImage(data: response.data!)
+                        self.deviantArtNotifications[i].deviationContentImage = contentImage
                         
                         self.activityTableView.reloadData()
                     }
@@ -159,10 +159,9 @@ extension ActivityViewController:UITableViewDelegate,UITableViewDataSource{
         if(deviantArtNotification.notificationType == .favourite || deviantArtNotification.notificationType == .replay || deviantArtNotification.notificationType == .watch){
             let specificCell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewNormalCell") as! ActivityTableViewNormalCell
             
-            // Clear
-            specificCell.deviationTitleLabel.text = ""
-            
             // Set
+            specificCell.deviationTitleLabel.text = deviantArtNotification.deviationTitle
+            
             specificCell.userAvatarImageView.image = deviantArtNotification.userAvatarImage
             specificCell.usernameLabel.text = deviantArtNotification.username
             
@@ -177,10 +176,9 @@ extension ActivityViewController:UITableViewDelegate,UITableViewDataSource{
         else{
             let specificCell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewCommentCell") as! ActivityTableViewCommentCell
             
-            // Clear
-            specificCell.deviationTitleLabel.text = ""
-            
             // Set
+            specificCell.deviationTitleLabel.text = deviantArtNotification.deviationTitle
+
             specificCell.userAvatarImageView.image = deviantArtNotification.userAvatarImage
             specificCell.usernameLabel.text = deviantArtNotification.username
             

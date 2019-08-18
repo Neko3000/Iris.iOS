@@ -170,7 +170,6 @@ class ArtDetailViewController: UIViewController {
                     if let data = response.data{
                         let json = JSON(data)
                         
-                        
                         self.deviationComments = DeviantionHandler.organizeDeviationComments(deviationComments:                         JSONObjectHandler.convertToObjectArray(jsonArray: json["thread"].arrayValue))
                         
                         self.artDetailTableView.reloadData()
