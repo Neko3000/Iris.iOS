@@ -37,6 +37,10 @@ class DailyTableViewPostTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
+            authorAvatarImageView.layer.cornerRadius = 17
+            authorAvatarImageView.layer.masksToBounds = true
+            
+            selectionStyle = .none
             
             isInitialized = true
         }

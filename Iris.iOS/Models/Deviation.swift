@@ -25,6 +25,10 @@ class Deviation: ObjectFromJSON {
     
     public var authorName:String = ""
     public var authorAvatarSrc:String = ""
+    public var authorAvatarImage:UIImage?
+    
+    public var commentCount:Int = 0
+    public var favouriteCount:Int = 0
     
     init() {
         
@@ -42,7 +46,8 @@ class Deviation: ObjectFromJSON {
         self.isDownloadable = json["is_downloadable"].bool!
         self.authorName = json["author"]["username"].string!
         self.authorAvatarSrc = json["author"]["usericon"].string!
-    
+        self.commentCount =  json["stats"]["comments"].int!
+        self.favouriteCount = json["stats"]["favourites"].int!
     }
     
 }

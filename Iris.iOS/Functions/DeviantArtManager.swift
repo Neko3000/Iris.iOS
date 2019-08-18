@@ -23,6 +23,9 @@ class DeviantArtManager{
     static let getArtMetaDataURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/deviation/metadata"
     static let getArtCommentURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/comments/deviation"
     
+    // Daily
+    static let getDailyDeviationURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/browse/dailydeviations"
+    
     // Login
     static func generateAuthorizationCodeURL(responseType:String,clientId:String,redirectUrl:String,scope:String,state:String) -> URL{
         
@@ -134,6 +137,17 @@ class DeviantArtManager{
             URLQueryItem(name: "maxdepth", value: maxDepth),
             URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
             URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    // Daily
+    static func generateGetDailyDeviationURL(date:String,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getDailyDeviationURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "date", value: date),
             URLQueryItem(name: "access_token", value: accessToken)
         ]
         

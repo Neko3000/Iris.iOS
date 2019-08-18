@@ -160,8 +160,7 @@ class ArtDetailViewController: UIViewController {
     }
     
     func fetchComments(){
-        
-        print(DeviantArtManager.generateGetArtCommentURL(deviationId: deviantionId, offset: commentOffset, limit: commentLimit, accessToken: ActiveUserInfo.getAccesssToken()))
+
         AlamofireManager.sharedSession.request(DeviantArtManager.generateGetArtCommentURL(deviationId: deviantionId, offset: commentOffset, limit: commentLimit, accessToken: ActiveUserInfo.getAccesssToken())).response(completionHandler: {
             response in
             

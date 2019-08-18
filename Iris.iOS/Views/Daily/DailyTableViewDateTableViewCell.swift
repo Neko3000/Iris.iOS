@@ -18,6 +18,7 @@ class DailyTableViewDateTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
+            selectionStyle = .none
             
             isInitialized = true
         }
