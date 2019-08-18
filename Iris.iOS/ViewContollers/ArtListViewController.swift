@@ -117,6 +117,25 @@ class ArtListViewController: UIViewController{
         activityIndicatorViewBottom!.type = .orbit
         activityIndicatorViewBottom!.color = UIColor(named: "text-normal-purple")!
         
+        // DispatchGroup
+        dispatchGroup.notify(queue: .main){
+            self.artList.append(contentsOf: self.artListForSingleRequest)
+            self.pageOffset += self.pageLimit
+            
+            self.artListCollectionView.reloadData(){
+                if(self.isFirstFetch){
+                    self.activityIndicatorViewCenter.stopAnimating()
+                    self.isFirstFetch = false
+                }
+                else{
+                    self.addActivityIndicatorViewBottom()
+                }
+                
+                self.isFetchingArtList = false
+                
+            }
+        }
+        
         fetchArtList()
     }
     
@@ -216,24 +235,6 @@ class ArtListViewController: UIViewController{
                 }
 
             })
-        }
-        
-        dispatchGroup.notify(queue: .main){
-            self.artList.append(contentsOf: self.artListForSingleRequest)
-            self.pageOffset += self.pageLimit
-            
-            self.artListCollectionView.reloadData(){
-                if(self.isFirstFetch){
-                    self.activityIndicatorViewCenter.stopAnimating()
-                    self.isFirstFetch = false
-                }
-                else{
-                    self.addActivityIndicatorViewBottom()
-                }
-
-                self.isFetchingArtList = false
-
-            }
         }
     }
     

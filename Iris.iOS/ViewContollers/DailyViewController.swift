@@ -50,6 +50,8 @@ class DailyViewController: UIViewController{
     
     func fetchDailyDeviations(){
         
+        self.isFetchingDailyDeviations = true
+        
         currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!
         
         print(DeviantArtManager.generateGetDailyDeviationURL(date: getDateString(date: currentDate), accessToken: ActiveUserInfo.getAccesssToken()))
@@ -92,13 +94,19 @@ class DailyViewController: UIViewController{
         
         for i in 0..<deviationsForSingleRequest.count{
             
+            dispatchGroup.enter()
+            
             AlamofireManager.sharedSession.request(deviationsForSingleRequest[i].previewSrc).response(completionHandler: {
                 response in
                 
+                defer{
+                    self.dispatchGroup.leave()
+                }
                 
                 switch(response.result){
                 case .success(_):
                     if(response.response?.statusCode == 200){
+                        
                         let previewImage = UIImage(data: response.data!)
                         self.deviationsForSingleRequest[i].previewImage = previewImage
                         
@@ -113,6 +121,14 @@ class DailyViewController: UIViewController{
                 
             })
         }
+        
+        // DispatchGroup
+        // NOTE!: It can't be put on ViewDidLoad, maybe should make it enter() at least one time before this code block
+        dispatchGroup.notify(queue: .main){
+            
+            self.isFetchingDailyDeviations = false
+        }
+
     }
 
     
@@ -120,12 +136,19 @@ class DailyViewController: UIViewController{
         
         for i in 0..<deviationsForSingleRequest.count{
             
+            dispatchGroup.enter()
+            
             AlamofireManager.sharedSession.request(deviationsForSingleRequest[i].authorAvatarSrc).response(completionHandler: {
                 response in
+                
+                defer{
+                    self.dispatchGroup.leave()
+                }
                 
                 switch(response.result){
                 case .success(_):
                     if(response.response?.statusCode == 200){
+                        
                         let authorAvatarImage = UIImage(data: response.data!)
                         self.deviationsForSingleRequest[i].authorAvatarImage = authorAvatarImage
                         
@@ -230,12 +253,13 @@ extension DailyViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
-        return 10
+        return 50
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if(isFetchingDailyDeviations){
+            print(isFetchingDailyDeviations)
             return
         }
         
