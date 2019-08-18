@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailyTableViewCell: UITableViewCell {
+class DailyTableViewPostTableViewCell: UITableViewCell {
     
     // Outlets
     @IBOutlet weak var artImageView: UIImageView!
@@ -37,8 +37,6 @@ class DailyTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
-            containerView.layer.cornerRadius = 12.0
-            containerView.layer.masksToBounds = true
             
             isInitialized = true
         }

@@ -22,8 +22,8 @@
 		EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C36228A99E8004979AC /* MainTabBar.swift */; };
 		EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C38228A9A0E004979AC /* XibUIView.swift */; };
 		EB267C3B228AA092004979AC /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C3A228AA092004979AC /* DailyViewController.swift */; };
-		EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */; };
-		EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */; };
+		EB267C3E228AA7CF004979AC /* DailyTableViewPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C3C228AA7CF004979AC /* DailyTableViewPostTableViewCell.swift */; };
+		EB267C40228AD9F5004979AC /* DailyTableViewPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB267C3D228AA7CF004979AC /* DailyTableViewPostTableViewCell.xib */; };
 		EB267C42228BEB06004979AC /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB267C41228BEB06004979AC /* ExploreViewController.swift */; };
 		EB267C44228C020F004979AC /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB267C43228C020F004979AC /* Lora-Regular.ttf */; };
 		EB2A98272296E08000977FC8 /* ActivityTableViewCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A98262296E08000977FC8 /* ActivityTableViewCommentCell.swift */; };
@@ -86,6 +86,8 @@
 		EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */; };
 		EBBA85712307C4A3009E0A7D /* DeviationComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA85702307C4A3009E0A7D /* DeviationComment.swift */; };
 		EBBA85732307CD31009E0A7D /* JSONDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA85722307CD31009E0A7D /* JSONDateExtension.swift */; };
+		EBBA857C230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA857A230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift */; };
+		EBBA857D230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBA857B230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib */; };
 		EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */; };
 		EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEA2302BBF3003BC6CC /* Deviation.swift */; };
 		EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */; };
@@ -116,8 +118,8 @@
 		EB267C36228A99E8004979AC /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		EB267C38228A9A0E004979AC /* XibUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibUIView.swift; sourceTree = "<group>"; };
 		EB267C3A228AA092004979AC /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
-		EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
-		EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyTableViewCell.xib; sourceTree = "<group>"; };
+		EB267C3C228AA7CF004979AC /* DailyTableViewPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewPostTableViewCell.swift; sourceTree = "<group>"; };
+		EB267C3D228AA7CF004979AC /* DailyTableViewPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyTableViewPostTableViewCell.xib; sourceTree = "<group>"; };
 		EB267C41228BEB06004979AC /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		EB267C43228C020F004979AC /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		EB2A98262296E08000977FC8 /* ActivityTableViewCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCommentCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,8 @@
 		EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterGalleryViewController.swift; sourceTree = "<group>"; };
 		EBBA85702307C4A3009E0A7D /* DeviationComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviationComment.swift; sourceTree = "<group>"; };
 		EBBA85722307CD31009E0A7D /* JSONDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDateExtension.swift; sourceTree = "<group>"; };
+		EBBA857A230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DailyTableViewDateTableViewCell.swift; path = Iris.iOS/Views/Daily/DailyTableViewDateTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		EBBA857B230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DailyTableViewDateTableViewCell.xib; path = Iris.iOS/Views/Daily/DailyTableViewDateTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewReloadCallBackExtension.swift; sourceTree = "<group>"; };
 		EBF31DEA2302BBF3003BC6CC /* Deviation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deviation.swift; sourceTree = "<group>"; };
 		EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListOrderEnum.swift; sourceTree = "<group>"; };
@@ -300,8 +304,8 @@
 				EB267C3A228AA092004979AC /* DailyViewController.swift */,
 				EB267C41228BEB06004979AC /* ExploreViewController.swift */,
 				EB66429F228FD1BB00FE71B6 /* ArtListViewController.swift */,
-				EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */,
 				EBB63AF5229A5ED200F789BD /* ArtDetailViewController.swift */,
+				EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */,
 				EBB63B3D229EB92500F789BD /* UserCenterGalleryViewController.swift */,
 				EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */,
 				EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */,
@@ -335,8 +339,10 @@
 		EB39BAA722F5C96D0022ACDB /* Daily */ = {
 			isa = PBXGroup;
 			children = (
-				EB267C3C228AA7CF004979AC /* DailyTableViewCell.swift */,
-				EB267C3D228AA7CF004979AC /* DailyTableViewCell.xib */,
+				EBBA857A230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift */,
+				EBBA857B230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib */,
+				EB267C3C228AA7CF004979AC /* DailyTableViewPostTableViewCell.swift */,
+				EB267C3D228AA7CF004979AC /* DailyTableViewPostTableViewCell.xib */,
 			);
 			path = Daily;
 			sourceTree = "<group>";
@@ -568,7 +574,8 @@
 			files = (
 				EBB63B3C229EB3D200F789BD /* UserCenterGalleryTableViewCell.xib in Resources */,
 				EBB63AF4229A5A6600F789BD /* ArtDetailTableViewSubCommentTableViewCell.xib in Resources */,
-				EB267C40228AD9F5004979AC /* DailyTableViewCell.xib in Resources */,
+				EB267C40228AD9F5004979AC /* DailyTableViewPostTableViewCell.xib in Resources */,
+				EBBA857D230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib in Resources */,
 				EB40B34222D5BD9400E75C9B /* UserCenterFavoriteTableViewCell.xib in Resources */,
 				EB2A98292296E09200977FC8 /* ActivityTableViewCommentCell.xib in Resources */,
 				EB488B5C22431F8400AC925F /* Main.storyboard in Resources */,
@@ -659,7 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB267C3E228AA7CF004979AC /* DailyTableViewCell.swift in Sources */,
+				EB267C3E228AA7CF004979AC /* DailyTableViewPostTableViewCell.swift in Sources */,
 				EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */,
 				EB267C37228A99E8004979AC /* MainTabBar.swift in Sources */,
 				EB40B34022D5BC0400E75C9B /* UserCenterFavoriateViewController.swift in Sources */,
@@ -671,6 +678,7 @@
 				EBAE40E222EEE72E008425A2 /* UserCenterFollowerViewController.swift in Sources */,
 				EB488B5922431F8400AC925F /* LoginViewController.swift in Sources */,
 				EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */,
+				EBBA857C230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift in Sources */,
 				EB6642AA229280F000FE71B6 /* TreeStructureView.swift in Sources */,
 				EB05686A2245DC6C00899DCE /* SketchShadow.swift in Sources */,
 				EBB63AFA229D43E700F789BD /* UserInfoView.swift in Sources */,

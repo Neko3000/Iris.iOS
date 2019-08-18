@@ -126,16 +126,16 @@ of the gods.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-g1-qi4">
-                                <rect key="frame" x="20" y="20" width="335" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fFf-g1-qi4" firstAttribute="top" secondItem="Vhq-uw-XE6" secondAttribute="top" id="IDY-de-vJ3"/>
-                            <constraint firstItem="Vhq-uw-XE6" firstAttribute="trailing" secondItem="fFf-g1-qi4" secondAttribute="trailing" constant="20" id="n0w-Hz-Cvr"/>
+                            <constraint firstItem="Vhq-uw-XE6" firstAttribute="trailing" secondItem="fFf-g1-qi4" secondAttribute="trailing" id="n0w-Hz-Cvr"/>
                             <constraint firstAttribute="bottom" secondItem="fFf-g1-qi4" secondAttribute="bottom" id="oe7-YZ-hwP"/>
-                            <constraint firstItem="fFf-g1-qi4" firstAttribute="leading" secondItem="Vhq-uw-XE6" secondAttribute="leading" constant="20" id="zYh-ky-Iut"/>
+                            <constraint firstItem="fFf-g1-qi4" firstAttribute="leading" secondItem="Vhq-uw-XE6" secondAttribute="leading" id="zYh-ky-Iut"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vhq-uw-XE6"/>
                     </view>
@@ -610,7 +610,7 @@ of the gods.</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAY-VD-JTz">
-                                        <rect key="frame" x="10" y="16" width="22" height="22"/>
+                                        <rect key="frame" x="10" y="16" width="16" height="22"/>
                                         <state key="normal" image="icon-left-arrow"/>
                                         <connections>
                                             <action selector="backBtnTouchUpInside:" destination="tzA-Ui-6IC" eventType="touchUpInside" id="eZt-C2-qEY"/>
