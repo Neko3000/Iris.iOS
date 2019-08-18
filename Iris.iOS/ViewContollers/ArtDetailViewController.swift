@@ -174,9 +174,9 @@ class ArtDetailViewController: UIViewController {
                         
                         self.deviationComments = DeviantionHandler.organizeDeviationComments(deviationComments:                         JSONObjectHandler.convertToObjectArray(jsonArray: json["thread"].arrayValue))
                         
-                        // self.deviationComments = JSONObjectHandler.convertToObjectArray(jsonArray: json["thread"].arrayValue)
-                        
                         self.artDetailTableView.reloadData()
+                        
+                        self.fetchUserAvatarImageForComments()
                     }
                 }
                 else if(response.response?.statusCode == 401){
@@ -251,7 +251,7 @@ extension ArtDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return deviationComments[section].subDeviationComment!.count + 1
+        return deviationComments[section].subDeviationComments!.count + 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

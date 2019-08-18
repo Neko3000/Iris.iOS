@@ -24,6 +24,7 @@
                         <rect key="frame" x="30" y="5" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="2uP-Qv-mCo"/>
+                            <constraint firstAttribute="height" constant="30" id="mpa-n5-BHF"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bibico-Atelier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-iP-15g">
@@ -90,7 +91,7 @@ If you come to Japan, Let's meet at the C90!</string>
                 <outlet property="bodyLabel" destination="Ple-VQ-PFK" id="nEX-ww-ali"/>
                 <outlet property="dialogBackgroundView" destination="QCQ-ZR-b5p" id="Nag-wM-GOz"/>
                 <outlet property="postDateLabel" destination="CQU-4Q-26a" id="wwR-81-Hj4"/>
-                <outlet property="userAvatarImageView" destination="SFM-IJ-1w5" id="RjL-8H-hhh"/>
+                <outlet property="userAvatarImageView" destination="SFM-IJ-1w5" id="68W-t8-lJT"/>
                 <outlet property="usernameLabel" destination="HC0-iP-15g" id="E7h-7r-Tsu"/>
             </connections>
             <point key="canvasLocation" x="175.36231884057972" y="182.14285714285714"/>

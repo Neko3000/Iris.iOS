@@ -23,7 +23,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShieldLiger-30p" translatesAutoresizingMaskIntoConstraints="NO" id="SFM-IJ-1w5">
                         <rect key="frame" x="15" y="5" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="2uP-Qv-mCo"/>
+                            <constraint firstAttribute="height" constant="30" id="5Gj-vG-ndD"/>
+                            <constraint firstAttribute="width" constant="30" id="6hp-W5-LtD"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShieldLiger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-iP-15g">
@@ -90,7 +91,7 @@ Now, where is that Comic Market you speak of?</string>
                 <outlet property="bodyLabel" destination="Ple-VQ-PFK" id="Hah-tT-hC4"/>
                 <outlet property="dialogBackgroundView" destination="QCQ-ZR-b5p" id="kCz-bG-VNZ"/>
                 <outlet property="postDateLabel" destination="CQU-4Q-26a" id="vsJ-Qm-lwm"/>
-                <outlet property="userAvatarImageView" destination="SFM-IJ-1w5" id="CZy-Dw-pok"/>
+                <outlet property="userAvatarImageView" destination="SFM-IJ-1w5" id="3sV-Ya-wCS"/>
                 <outlet property="usernameLabel" destination="HC0-iP-15g" id="A2V-Eq-yvN"/>
             </connections>
             <point key="canvasLocation" x="171.73913043478262" y="153.01339285714286"/>

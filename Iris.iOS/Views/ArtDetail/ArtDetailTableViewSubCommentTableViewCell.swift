@@ -14,7 +14,6 @@ class ArtDetailTableViewSubCommentTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var userAvatarImageView: UIImageView!
     
-    
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
     

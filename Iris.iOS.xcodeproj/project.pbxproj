@@ -89,7 +89,7 @@
 		EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */; };
 		EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEA2302BBF3003BC6CC /* Deviation.swift */; };
 		EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */; };
-		EBF31DEF2302F74C003BC6CC /* DeviantHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEE2302F74C003BC6CC /* DeviantHandler.swift */; };
+		EBF31DEF2302F74C003BC6CC /* DeviationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */; };
 		EBF31DF123039F79003BC6CC /* DeviantCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DF023039F79003BC6CC /* DeviantCategory.swift */; };
 		EBF3487322CD8ECB001A4793 /* UserCenterStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */; };
 		EBF3487522CD8F60001A4793 /* UserCenterStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */; };
@@ -185,7 +185,7 @@
 		EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewReloadCallBackExtension.swift; sourceTree = "<group>"; };
 		EBF31DEA2302BBF3003BC6CC /* Deviation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deviation.swift; sourceTree = "<group>"; };
 		EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListOrderEnum.swift; sourceTree = "<group>"; };
-		EBF31DEE2302F74C003BC6CC /* DeviantHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantHandler.swift; sourceTree = "<group>"; };
+		EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviationHandler.swift; sourceTree = "<group>"; };
 		EBF31DF023039F79003BC6CC /* DeviantCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantCategory.swift; sourceTree = "<group>"; };
 		EBF3487222CD8ECB001A4793 /* UserCenterStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusViewController.swift; sourceTree = "<group>"; };
 		EBF3487422CD8F60001A4793 /* UserCenterStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterStatusTableViewCell.xib; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 				EB267C38228A9A0E004979AC /* XibUIView.swift */,
 				EB39BAB522F6A0E00022ACDB /* RequestAnalyzer.swift */,
 				EB39BAB922F6BCD60022ACDB /* DeviantArtManager.swift */,
-				EBF31DEE2302F74C003BC6CC /* DeviantHandler.swift */,
+				EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */,
 				EB39BABB22F6BEEE0022ACDB /* ApplicationKey.swift */,
 				EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */,
 			);
@@ -680,7 +680,7 @@
 				EBA0323D22FB10490084B92F /* JSONObjectHandler.swift in Sources */,
 				EBB63B3B229EB3D200F789BD /* UserCenterGalleryTableViewCell.swift in Sources */,
 				EBB63AEF229921C600F789BD /* ArtDetailTableViewCommentTableViewCell.swift in Sources */,
-				EBF31DEF2302F74C003BC6CC /* DeviantHandler.swift in Sources */,
+				EBF31DEF2302F74C003BC6CC /* DeviationHandler.swift in Sources */,
 				EBB63B00229D493F00F789BD /* UserCenterContentSwitchView.swift in Sources */,
 				EB6642A4228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift in Sources */,
 				EBB63AF2229A5A5900F789BD /* ArtDetailTableViewSubCommentTableViewCell.swift in Sources */,

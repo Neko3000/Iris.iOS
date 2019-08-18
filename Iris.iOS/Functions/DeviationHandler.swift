@@ -72,16 +72,16 @@ class DeviantionHandler{
                     deviationComment.parentDeviationCommentId = ""
                 }
                 else{
-                    if(parentDeviationComment!.subDeviationComment == nil){
-                        parentDeviationComment!.subDeviationComment = [DeviationComment]()
+                    if(parentDeviationComment!.subDeviationComments == nil){
+                        parentDeviationComment!.subDeviationComments = [DeviationComment]()
                     }
                     
-                    parentDeviationComment!.subDeviationComment!.append(deviationComment)
+                    parentDeviationComment!.subDeviationComments!.append(deviationComment)
                 }
                 
             }
             else{
-                deviationComment.subDeviationComment = [DeviationComment]()
+                deviationComment.subDeviationComments = [DeviationComment]()
             }
             
         }
@@ -97,22 +97,5 @@ class DeviantionHandler{
         }
         
         return organziedDeviationComments
-    }
-    
-    static func getOrganizedDeviationCommentsCount(deviationComments:[DeviationComment])->Int{
-        
-        var count = 0
-        
-        for i in 0..<deviationComments.count{
-            let deviationComment = deviationComments[i]
-            
-            count += 1
-            
-            if deviationComment.subDeviationComment != nil{
-                count += deviationComment.subDeviationComment!.count
-            }
-        }
-        
-        return count
     }
 }

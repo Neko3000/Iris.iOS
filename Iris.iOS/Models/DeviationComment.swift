@@ -20,7 +20,7 @@ class DeviationComment: ObjectFromJSON {
     public var body:String = ""
     public var date:Date = Date()
     
-    public var subDeviationComment:[DeviationComment]?
+    public var subDeviationComments:[DeviationComment]?
     
     init() {
         
