@@ -5,7 +5,7 @@
 ![Version: v0.90](https://img.shields.io/badge/version-v0.90-lightgrey)
 
 Iris is a model mobile application based on iOS.</br>
-It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/), Daily Arts, Notifications, Deviation Collections...</br>
+It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/) and check Daily Arts, Notifications, Deviation Collections...</br>
 </br>
 All contents are delivered by [DeviantArt API](https://www.deviantart.com/developers/).</br>
 
@@ -32,8 +32,6 @@ Done!
 <img src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/starrytarget-s4.png" width="200" alt="">
 </p>
 
-## Design
-
 ## Features
 - [x] Sign IN / Sign UP
 - [x] Daily Art
@@ -48,9 +46,13 @@ Done!
 - [x] Profile Comment
 - [x] More...
 
+## Interface Design
+We fully customized its interface considering proper UX before we developed it on Xcode.</br>
+And we decided to provide its Sketch file, you could find it here.
 
 ## Dependencies
-[Realm](https://realm.io) and [RxSwift](https://github.com/ReactiveX/RxSwift/) were used in this project,
+For handling Network requests, we used famouse [Alamofire](https://github.com/Alamofire/Alamofire) and [SwfityJSON](https://github.com/SwiftyJSON/SwiftyJSON) in this project.</br>
+And we also used some fantastic UI controls, likes [TwicketSegmentedControl](https://github.com/twicketapp/TwicketSegmentedControl), [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)...
 
 Pods have been included:
 
@@ -61,7 +63,7 @@ pod 'RealmSwift'
 ```
 
 ## Development
-You could use [Realm Studio](https://realm.io/products/realm-studio/) to manage the database.
+You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of DeviantArt API](https://www.deviantart.com/developers/apps) to check the authentication details.
 
 Here's the path:
 ```
@@ -72,6 +74,8 @@ print(Realm.Configuration.defaultConfiguration.fileURL!)
 ## Contact To Me
 E-mail: sheran_chen@outlook.com </br>
 Weibo: @妖绀
+
+## Contributers
 
 ## License
 Distributed under the MIT license. See LICENSE for more information.
