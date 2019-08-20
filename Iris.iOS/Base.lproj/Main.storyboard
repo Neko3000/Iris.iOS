@@ -165,7 +165,7 @@ of the gods.</string>
                         <segue destination="djQ-H1-13j" kind="relationship" relationship="viewControllers" id="pvM-4Q-Ucm"/>
                         <segue destination="8mF-Z1-8EZ" kind="relationship" relationship="viewControllers" id="6t9-VG-jPX"/>
                         <segue destination="joN-y5-0JI" kind="relationship" relationship="viewControllers" id="p8y-de-GAb"/>
-                        <segue destination="jau-Rs-CPO" kind="relationship" relationship="viewControllers" id="duh-Ks-iYT"/>
+                        <segue destination="zZ0-DD-iHV" kind="relationship" relationship="viewControllers" id="6Lx-KW-2Ba"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTU-j3-Syz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,6 +285,7 @@ of the gods.</string>
         <!--Activity View Controller-->
         <scene sceneID="ez4-nm-mTf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctx-C8-uqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="joN-y5-0JI" customClass="ActivityViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fP5-Jt-IZY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
@@ -309,7 +310,6 @@ of the gods.</string>
                         <outlet property="activityTableView" destination="twU-4b-21F" id="l7W-cE-fQw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ctx-C8-uqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2140" y="2010"/>
         </scene>
@@ -483,6 +483,29 @@ of the gods.</string>
             </objects>
             <point key="canvasLocation" x="4532" y="1506"/>
         </scene>
+        <!--User Cetner Tar Bar Controller-->
+        <scene sceneID="Cj7-M3-gQd">
+            <objects>
+                <tabBarController id="zZ0-DD-iHV" customClass="UserCetnerTarBarController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="KkI-M7-Gtv"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kp3-Jg-Slf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jau-Rs-CPO" kind="relationship" relationship="viewControllers" id="pj0-nR-deA"/>
+                        <segue destination="5tl-69-nsM" kind="relationship" relationship="viewControllers" id="Rtb-Xn-QoU"/>
+                        <segue destination="sI0-Zv-Lzy" kind="relationship" relationship="viewControllers" id="AzO-gw-k0i"/>
+                        <segue destination="oJ2-K0-SNh" kind="relationship" relationship="viewControllers" id="WdU-v1-vLQ"/>
+                        <segue destination="QBm-lx-G8b" kind="relationship" relationship="viewControllers" id="BbI-rd-YXn"/>
+                        <segue destination="Ol6-ts-zJG" kind="relationship" relationship="viewControllers" id="Ndh-xZ-rIW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ty-4w-RwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2140" y="2748"/>
+        </scene>
         <!--User Center Gallery View Controller-->
         <scene sceneID="1bt-La-eNM">
             <objects>
@@ -492,7 +515,7 @@ of the gods.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpT-RA-Um1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Dr-Gu-aj2" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
@@ -501,38 +524,28 @@ of the gods.</string>
                                             <constraint firstAttribute="height" constant="295" id="9bq-1Y-4IT"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHc-M2-bD8" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="Yu8-eX-ZTR"/>
-                                        </constraints>
-                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bcR-w5-UmG">
-                                        <rect key="frame" x="20" y="420" width="335" height="200"/>
+                                        <rect key="frame" x="20" y="423" width="335" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="qYY-z8-nN7"/>
                                         </constraints>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-2G-bdz">
-                                        <rect key="frame" x="20" y="384" width="68.5" height="21"/>
+                                        <rect key="frame" x="20" y="387" width="68.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="text-normal-grey-3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="CHc-M2-bD8" firstAttribute="top" secondItem="8Dr-Gu-aj2" secondAttribute="bottom" constant="27" id="4kp-Um-jnc"/>
-                                    <constraint firstItem="qXM-2G-bdz" firstAttribute="top" secondItem="CHc-M2-bD8" secondAttribute="bottom" constant="27" id="Bhh-vh-K4E"/>
                                     <constraint firstItem="bcR-w5-UmG" firstAttribute="top" secondItem="qXM-2G-bdz" secondAttribute="bottom" constant="15" id="MR2-hY-5L5"/>
                                     <constraint firstItem="qXM-2G-bdz" firstAttribute="leading" secondItem="GpT-RA-Um1" secondAttribute="leading" constant="20" id="XBH-ge-l6W"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qXM-2G-bdz" secondAttribute="trailing" constant="20" id="Xi0-4U-M9g"/>
+                                    <constraint firstItem="qXM-2G-bdz" firstAttribute="top" secondItem="8Dr-Gu-aj2" secondAttribute="bottom" constant="92" id="bEA-Cs-VC8"/>
                                     <constraint firstAttribute="bottom" secondItem="bcR-w5-UmG" secondAttribute="bottom" id="c7v-9V-9ZC"/>
                                     <constraint firstAttribute="trailing" secondItem="bcR-w5-UmG" secondAttribute="trailing" constant="20" id="ehE-ot-0uP"/>
-                                    <constraint firstItem="CHc-M2-bD8" firstAttribute="leading" secondItem="GpT-RA-Um1" secondAttribute="leading" id="gJs-UK-iIf"/>
                                     <constraint firstItem="8Dr-Gu-aj2" firstAttribute="leading" secondItem="GpT-RA-Um1" secondAttribute="leading" id="pWi-dV-jTS"/>
-                                    <constraint firstAttribute="trailing" secondItem="CHc-M2-bD8" secondAttribute="trailing" id="tNd-EX-m4Q"/>
                                     <constraint firstItem="bcR-w5-UmG" firstAttribute="leading" secondItem="GpT-RA-Um1" secondAttribute="leading" constant="20" id="tdR-p4-Eyk"/>
                                     <constraint firstAttribute="trailing" secondItem="8Dr-Gu-aj2" secondAttribute="trailing" id="uYW-EP-iNa"/>
                                     <constraint firstItem="8Dr-Gu-aj2" firstAttribute="top" secondItem="GpT-RA-Um1" secondAttribute="top" id="xzY-SM-TNa"/>
@@ -557,7 +570,7 @@ of the gods.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwE-Lu-l8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="2748"/>
+            <point key="canvasLocation" x="3110" y="2748"/>
         </scene>
         <!--Art List View Controller-->
         <scene sceneID="MJ6-Lf-CEt">
@@ -610,7 +623,7 @@ of the gods.</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAY-VD-JTz">
-                                        <rect key="frame" x="10" y="16" width="16" height="22"/>
+                                        <rect key="frame" x="10" y="16" width="22" height="22"/>
                                         <state key="normal" image="icon-left-arrow"/>
                                         <connections>
                                             <action selector="backBtnTouchUpInside:" destination="tzA-Ui-6IC" eventType="touchUpInside" id="eZt-C2-qEY"/>
@@ -685,11 +698,11 @@ of the gods.</string>
             <objects>
                 <viewController id="5tl-69-nsM" customClass="UserCenterJournalViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ydm-Jc-DCq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lua-ge-PwT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHV-17-SZ5" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
@@ -698,22 +711,15 @@ of the gods.</string>
                                             <constraint firstAttribute="height" constant="295" id="Ng4-vd-nb9"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f13-f9-z3X" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="xg8-iI-hju"/>
-                                        </constraints>
-                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rJF-ZP-3Qy">
-                                        <rect key="frame" x="20" y="420" width="335" height="200"/>
+                                        <rect key="frame" x="20" y="423" width="335" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="aE9-jG-k9A"/>
                                         </constraints>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyp-IO-dGm">
-                                        <rect key="frame" x="20" y="384" width="65.5" height="21"/>
+                                        <rect key="frame" x="20" y="387" width="65.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="text-normal-grey-3"/>
                                         <nil key="highlightedColor"/>
@@ -722,17 +728,14 @@ of the gods.</string>
                                 <constraints>
                                     <constraint firstItem="rJF-ZP-3Qy" firstAttribute="top" secondItem="eyp-IO-dGm" secondAttribute="bottom" constant="15" id="0hD-yo-YYm"/>
                                     <constraint firstAttribute="bottom" secondItem="rJF-ZP-3Qy" secondAttribute="bottom" id="2GE-qf-K8B"/>
+                                    <constraint firstItem="eyp-IO-dGm" firstAttribute="top" secondItem="qHV-17-SZ5" secondAttribute="bottom" constant="92" id="2zD-bw-HLR"/>
                                     <constraint firstItem="rJF-ZP-3Qy" firstAttribute="leading" secondItem="Lua-ge-PwT" secondAttribute="leading" constant="20" id="8VY-1y-5j7"/>
-                                    <constraint firstItem="eyp-IO-dGm" firstAttribute="top" secondItem="f13-f9-z3X" secondAttribute="bottom" constant="27" id="LHP-em-LFn"/>
-                                    <constraint firstItem="f13-f9-z3X" firstAttribute="top" secondItem="qHV-17-SZ5" secondAttribute="bottom" constant="27" id="VHV-kW-6cq"/>
                                     <constraint firstItem="qHV-17-SZ5" firstAttribute="leading" secondItem="Lua-ge-PwT" secondAttribute="leading" id="Wqg-FW-S5v"/>
                                     <constraint firstAttribute="trailing" secondItem="rJF-ZP-3Qy" secondAttribute="trailing" constant="20" id="fYc-Sd-3QY"/>
-                                    <constraint firstAttribute="trailing" secondItem="f13-f9-z3X" secondAttribute="trailing" id="jhk-lt-nS3"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eyp-IO-dGm" secondAttribute="trailing" constant="20" id="mf6-LX-5WX"/>
                                     <constraint firstAttribute="trailing" secondItem="qHV-17-SZ5" secondAttribute="trailing" id="n0G-Y4-QcQ"/>
                                     <constraint firstItem="qHV-17-SZ5" firstAttribute="top" secondItem="Lua-ge-PwT" secondAttribute="top" id="reQ-5e-OH5"/>
                                     <constraint firstItem="eyp-IO-dGm" firstAttribute="leading" secondItem="Lua-ge-PwT" secondAttribute="leading" constant="20" id="v5t-Ix-Ey0"/>
-                                    <constraint firstItem="f13-f9-z3X" firstAttribute="leading" secondItem="Lua-ge-PwT" secondAttribute="leading" id="znk-XV-k4Q"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -746,6 +749,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TiU-s3-67D"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="R8O-1Z-rlI"/>
                     <connections>
                         <outlet property="journalTableView" destination="rJF-ZP-3Qy" id="haZ-LH-BJV"/>
                         <outlet property="journalTableViewHeightConstraint" destination="aE9-jG-k9A" id="9dL-sX-Sd4"/>
@@ -753,18 +757,18 @@ of the gods.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zd-hD-xsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833" y="2748"/>
+            <point key="canvasLocation" x="3110" y="3421"/>
         </scene>
         <!--User Center Status View Controller-->
         <scene sceneID="Dbd-uY-bD1">
             <objects>
                 <viewController id="sI0-Zv-Lzy" customClass="UserCenterStatusViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KNf-gg-8ud">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZL-ZL-o77">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9S-Wf-D8E" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
@@ -773,22 +777,15 @@ of the gods.</string>
                                             <constraint firstAttribute="height" constant="295" id="10E-ou-53e"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaR-iF-McK" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="F0D-g8-jd8"/>
-                                        </constraints>
-                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fpp-if-Zvw">
-                                        <rect key="frame" x="20" y="420" width="335" height="200"/>
+                                        <rect key="frame" x="20" y="423" width="335" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="uQc-dS-GlX"/>
                                         </constraints>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-GA-f1o">
-                                        <rect key="frame" x="20" y="384" width="65.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-GA-f1o">
+                                        <rect key="frame" x="20" y="387" width="49.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="text-normal-grey-3"/>
                                         <nil key="highlightedColor"/>
@@ -797,16 +794,13 @@ of the gods.</string>
                                 <constraints>
                                     <constraint firstItem="fpp-if-Zvw" firstAttribute="top" secondItem="VD3-GA-f1o" secondAttribute="bottom" constant="15" id="40I-Hg-grC"/>
                                     <constraint firstItem="VD3-GA-f1o" firstAttribute="leading" secondItem="mZL-ZL-o77" secondAttribute="leading" constant="20" id="8sU-Mv-6XY"/>
-                                    <constraint firstItem="BaR-iF-McK" firstAttribute="top" secondItem="V9S-Wf-D8E" secondAttribute="bottom" constant="27" id="Hgs-en-emA"/>
+                                    <constraint firstItem="VD3-GA-f1o" firstAttribute="top" secondItem="V9S-Wf-D8E" secondAttribute="bottom" constant="92" id="FZh-tR-uNu"/>
                                     <constraint firstItem="V9S-Wf-D8E" firstAttribute="top" secondItem="mZL-ZL-o77" secondAttribute="top" id="KcZ-bz-dOz"/>
                                     <constraint firstItem="fpp-if-Zvw" firstAttribute="leading" secondItem="mZL-ZL-o77" secondAttribute="leading" constant="20" id="WRw-L5-VDk"/>
                                     <constraint firstItem="V9S-Wf-D8E" firstAttribute="leading" secondItem="mZL-ZL-o77" secondAttribute="leading" id="Wh9-bY-jI1"/>
                                     <constraint firstAttribute="trailing" secondItem="fpp-if-Zvw" secondAttribute="trailing" constant="20" id="ZOm-30-11V"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VD3-GA-f1o" secondAttribute="trailing" constant="20" id="aEZ-TT-6GJ"/>
                                     <constraint firstAttribute="bottom" secondItem="fpp-if-Zvw" secondAttribute="bottom" id="bII-Fu-Es6"/>
-                                    <constraint firstItem="BaR-iF-McK" firstAttribute="leading" secondItem="mZL-ZL-o77" secondAttribute="leading" id="fBB-R3-npu"/>
-                                    <constraint firstAttribute="trailing" secondItem="BaR-iF-McK" secondAttribute="trailing" id="jPa-lH-xYQ"/>
-                                    <constraint firstItem="VD3-GA-f1o" firstAttribute="top" secondItem="BaR-iF-McK" secondAttribute="bottom" constant="27" id="klp-2p-bSm"/>
                                     <constraint firstAttribute="trailing" secondItem="V9S-Wf-D8E" secondAttribute="trailing" id="zof-1q-Znh"/>
                                 </constraints>
                             </scrollView>
@@ -821,6 +815,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dp6-0G-ccf"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="ZYu-7C-RLv"/>
                     <connections>
                         <outlet property="statusTableView" destination="fpp-if-Zvw" id="95K-Ro-kki"/>
                         <outlet property="statusTableViewHeightConstraint" destination="uQc-dS-GlX" id="8zC-Aw-5T1"/>
@@ -828,18 +823,18 @@ of the gods.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYo-Zl-DXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3524" y="2748"/>
+            <point key="canvasLocation" x="3110" y="4097"/>
         </scene>
         <!--User Center Favorite View Controller-->
         <scene sceneID="eH4-IX-5Tk">
             <objects>
                 <viewController id="oJ2-K0-SNh" customClass="UserCenterFavoriteViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S8k-Fb-50J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00A-0y-zcm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHn-XF-Sng" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
@@ -848,22 +843,15 @@ of the gods.</string>
                                             <constraint firstAttribute="height" constant="295" id="Jbt-vH-exU"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfw-Nd-eUD" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="cDB-DT-ZwL"/>
-                                        </constraints>
-                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J4N-VB-mrT">
-                                        <rect key="frame" x="20" y="420" width="335" height="200"/>
+                                        <rect key="frame" x="20" y="423" width="335" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="gj8-YK-3yp"/>
                                         </constraints>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXZ-YW-hKG">
-                                        <rect key="frame" x="20" y="384" width="69" height="21"/>
+                                        <rect key="frame" x="20" y="387" width="69" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="text-normal-grey-3"/>
                                         <nil key="highlightedColor"/>
@@ -871,16 +859,13 @@ of the gods.</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="EXZ-YW-hKG" firstAttribute="leading" secondItem="00A-0y-zcm" secondAttribute="leading" constant="20" id="6ZL-e8-z0g"/>
-                                    <constraint firstAttribute="trailing" secondItem="dfw-Nd-eUD" secondAttribute="trailing" id="Dst-y8-ARn"/>
                                     <constraint firstItem="hHn-XF-Sng" firstAttribute="top" secondItem="00A-0y-zcm" secondAttribute="top" id="LBZ-Ap-vg0"/>
-                                    <constraint firstItem="dfw-Nd-eUD" firstAttribute="top" secondItem="hHn-XF-Sng" secondAttribute="bottom" constant="27" id="Ne4-sX-raM"/>
                                     <constraint firstItem="J4N-VB-mrT" firstAttribute="top" secondItem="EXZ-YW-hKG" secondAttribute="bottom" constant="15" id="OEF-Cd-ZiG"/>
                                     <constraint firstAttribute="trailing" secondItem="hHn-XF-Sng" secondAttribute="trailing" id="Suo-TH-Jc2"/>
+                                    <constraint firstItem="EXZ-YW-hKG" firstAttribute="top" secondItem="hHn-XF-Sng" secondAttribute="bottom" constant="92" id="b0d-J5-U1G"/>
                                     <constraint firstItem="hHn-XF-Sng" firstAttribute="leading" secondItem="00A-0y-zcm" secondAttribute="leading" id="cy1-nc-Bc7"/>
                                     <constraint firstItem="J4N-VB-mrT" firstAttribute="leading" secondItem="00A-0y-zcm" secondAttribute="leading" constant="20" id="h4P-Tt-jyo"/>
                                     <constraint firstAttribute="trailing" secondItem="J4N-VB-mrT" secondAttribute="trailing" constant="20" id="oTy-ET-hVa"/>
-                                    <constraint firstItem="dfw-Nd-eUD" firstAttribute="leading" secondItem="00A-0y-zcm" secondAttribute="leading" id="pQA-TF-mda"/>
-                                    <constraint firstItem="EXZ-YW-hKG" firstAttribute="top" secondItem="dfw-Nd-eUD" secondAttribute="bottom" constant="27" id="uQw-kd-Tg5"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EXZ-YW-hKG" secondAttribute="trailing" constant="20" id="w2I-hD-lNg"/>
                                     <constraint firstAttribute="bottom" secondItem="J4N-VB-mrT" secondAttribute="bottom" id="xLo-vD-IGD"/>
                                 </constraints>
@@ -896,6 +881,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GM5-bV-6to"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="yH0-yD-CFJ"/>
                     <connections>
                         <outlet property="favoriteTableView" destination="J4N-VB-mrT" id="dtU-Vx-nZi"/>
                         <outlet property="favoriteTableViewHeightConstraint" destination="gj8-YK-3yp" id="FdY-EC-ISg"/>
@@ -903,18 +889,18 @@ of the gods.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKY-hx-yQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4231" y="2748"/>
+            <point key="canvasLocation" x="3110" y="4780"/>
         </scene>
         <!--User Center Follower View Controller-->
         <scene sceneID="RJ9-oV-nxd">
             <objects>
                 <viewController id="QBm-lx-G8b" customClass="UserCenterFollowerViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EE3-qk-flR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKD-BL-pPD">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0m-QQ-IU0" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
@@ -923,15 +909,8 @@ of the gods.</string>
                                             <constraint firstAttribute="height" constant="295" id="NmA-O3-RjB"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sny-to-UnG" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="JHi-ff-Rd9"/>
-                                        </constraints>
-                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qbl-RN-qPa">
-                                        <rect key="frame" x="20" y="367" width="335" height="200"/>
+                                        <rect key="frame" x="20" y="370" width="335" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="bn8-lT-nSm"/>
@@ -939,12 +918,9 @@ of the gods.</string>
                                     </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Sny-to-UnG" firstAttribute="leading" secondItem="eKD-BL-pPD" secondAttribute="leading" id="4b7-TC-zE9"/>
-                                    <constraint firstItem="Sny-to-UnG" firstAttribute="top" secondItem="f0m-QQ-IU0" secondAttribute="bottom" constant="27" id="8e5-CK-K5U"/>
-                                    <constraint firstAttribute="trailing" secondItem="Sny-to-UnG" secondAttribute="trailing" id="KdZ-0o-7rr"/>
+                                    <constraint firstItem="Qbl-RN-qPa" firstAttribute="top" secondItem="f0m-QQ-IU0" secondAttribute="bottom" constant="75" id="0SH-pt-GRH"/>
                                     <constraint firstAttribute="trailing" secondItem="f0m-QQ-IU0" secondAttribute="trailing" id="MhU-mm-G4E"/>
                                     <constraint firstItem="Qbl-RN-qPa" firstAttribute="leading" secondItem="eKD-BL-pPD" secondAttribute="leading" constant="20" id="gxl-Ub-Tt6"/>
-                                    <constraint firstItem="Qbl-RN-qPa" firstAttribute="top" secondItem="Sny-to-UnG" secondAttribute="bottom" constant="10" id="k13-Nn-9UZ"/>
                                     <constraint firstItem="f0m-QQ-IU0" firstAttribute="top" secondItem="eKD-BL-pPD" secondAttribute="top" id="ktP-3E-4vl"/>
                                     <constraint firstAttribute="bottom" secondItem="Qbl-RN-qPa" secondAttribute="bottom" id="peg-br-gn2"/>
                                     <constraint firstAttribute="trailing" secondItem="Qbl-RN-qPa" secondAttribute="trailing" constant="20" id="uQV-O8-iyE"/>
@@ -962,6 +938,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qfM-lI-1F8"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="eC5-Yr-9A7"/>
                     <connections>
                         <outlet property="followerTableView" destination="Qbl-RN-qPa" id="QgH-pb-Eeb"/>
                         <outlet property="followerTableViewHeightConstraint" destination="bn8-lT-nSm" id="RTj-VP-UVI"/>
@@ -969,31 +946,24 @@ of the gods.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hks-CX-EpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4959" y="2748"/>
+            <point key="canvasLocation" x="3110" y="5463"/>
         </scene>
         <!--User Center Comment View Controller-->
         <scene sceneID="Uhv-1m-Rt9">
             <objects>
                 <viewController id="Ol6-ts-zJG" customClass="UserCenterCommentViewController" customModule="Iris_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="obQ-fM-3kP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDr-6B-cI4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIw-X9-V59" customClass="UserInfoView" customModule="Iris_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="295" id="tFe-Me-gUc"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iA0-ZC-sOH" customClass="UserCenterContentSwitchView" customModule="Iris_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="322" width="375" height="35"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="8c7-F7-BnB"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QNH-IN-r0p">
@@ -1005,14 +975,11 @@ of the gods.</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OIw-X9-V59" secondAttribute="trailing" id="12L-nX-Pyn"/>
-                                    <constraint firstItem="QNH-IN-r0p" firstAttribute="top" secondItem="iA0-ZC-sOH" secondAttribute="bottom" constant="30" id="BrC-4G-6or"/>
-                                    <constraint firstAttribute="trailing" secondItem="iA0-ZC-sOH" secondAttribute="trailing" id="Cis-mk-niM"/>
-                                    <constraint firstItem="iA0-ZC-sOH" firstAttribute="top" secondItem="OIw-X9-V59" secondAttribute="bottom" constant="27" id="ECJ-y0-KYx"/>
+                                    <constraint firstItem="QNH-IN-r0p" firstAttribute="top" secondItem="OIw-X9-V59" secondAttribute="bottom" constant="92" id="CKt-gr-ZU2"/>
                                     <constraint firstItem="QNH-IN-r0p" firstAttribute="leading" secondItem="HDr-6B-cI4" secondAttribute="leading" constant="20" id="F2o-Sa-pUv"/>
                                     <constraint firstItem="OIw-X9-V59" firstAttribute="leading" secondItem="HDr-6B-cI4" secondAttribute="leading" id="L2c-0h-zOY"/>
                                     <constraint firstAttribute="bottom" secondItem="QNH-IN-r0p" secondAttribute="bottom" constant="10" id="eHm-rh-9QC"/>
                                     <constraint firstItem="OIw-X9-V59" firstAttribute="top" secondItem="HDr-6B-cI4" secondAttribute="top" id="nYb-qp-mvJ"/>
-                                    <constraint firstItem="iA0-ZC-sOH" firstAttribute="leading" secondItem="HDr-6B-cI4" secondAttribute="leading" id="rpT-fg-uam"/>
                                     <constraint firstAttribute="trailing" secondItem="QNH-IN-r0p" secondAttribute="trailing" constant="20" id="s5u-9X-DIX"/>
                                 </constraints>
                             </scrollView>
@@ -1027,6 +994,7 @@ of the gods.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XJZ-jb-3WM"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="Vvt-HD-qGj"/>
                     <connections>
                         <outlet property="commentStackView" destination="QNH-IN-r0p" id="76M-g5-tto"/>
                         <outlet property="commentStackViewHeightConstraint" destination="che-wc-CfI" id="wpp-Ho-wqt"/>
@@ -1034,7 +1002,7 @@ of the gods.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9P-dB-Ff1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5698" y="2748"/>
+            <point key="canvasLocation" x="3110" y="6147"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3j0-0q-CJ4">

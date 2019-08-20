@@ -9,7 +9,7 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +23,7 @@ class MainTabBarController: UITabBarController {
         tabBar.items![0].image = UIImage(named: "icon-news")!.withRenderingMode(.alwaysOriginal)
         tabBar.items![0].selectedImage = UIImage(named: "icon-news-active")!.withRenderingMode(.alwaysOriginal)
         tabBar.items![0].imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
-
+        
         tabBar.items![1].image = UIImage(named: "icon-discover")!.withRenderingMode(.alwaysOriginal)
         tabBar.items![1].selectedImage = UIImage(named: "icon-discover-active")!.withRenderingMode(.alwaysOriginal)
         tabBar.items![1].imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
@@ -35,11 +35,12 @@ class MainTabBarController: UITabBarController {
         tabBar.items![3].image = UIImage(named: "icon-user-center")!.withRenderingMode(.alwaysOriginal)
         tabBar.items![3].selectedImage = UIImage(named: "icon-user-center-active")!.withRenderingMode(.alwaysOriginal)
         tabBar.items![3].imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
-
+        
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        
     }
     
 
@@ -53,4 +54,19 @@ class MainTabBarController: UITabBarController {
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ToUserCenter"){
+            print("Move to User Center")
+        }
+    }
+}
+
+extension MainTabBarController: UITabBarControllerDelegate{
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if(item.tag == 3){
+            print("User Center")
+            
+            // performSegue(withIdentifier: "ToUserCenter", sender: nil)
+        }
+    }
 }

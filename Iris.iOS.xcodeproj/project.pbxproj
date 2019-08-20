@@ -89,6 +89,7 @@
 		EBBA857C230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA857A230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift */; };
 		EBBA857D230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBA857B230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib */; };
 		EBBA857F23093C32009E0A7D /* DailyDeviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA857E23093C32009E0A7D /* DailyDeviation.swift */; };
+		EBCB4077230BBDD500CD3430 /* UserCetnerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCB4076230BBDD500CD3430 /* UserCetnerTabBarController.swift */; };
 		EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */; };
 		EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEA2302BBF3003BC6CC /* Deviation.swift */; };
 		EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */; };
@@ -190,6 +191,7 @@
 		EBBA857A230920B0009E0A7D /* DailyTableViewDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DailyTableViewDateTableViewCell.swift; path = Iris.iOS/Views/Daily/DailyTableViewDateTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		EBBA857B230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DailyTableViewDateTableViewCell.xib; path = Iris.iOS/Views/Daily/DailyTableViewDateTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		EBBA857E23093C32009E0A7D /* DailyDeviation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DailyDeviation.swift; path = ../ViewContollers/DailyDeviation.swift; sourceTree = "<group>"; };
+		EBCB4076230BBDD500CD3430 /* UserCetnerTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCetnerTabBarController.swift; path = Iris.iOS/UserCetnerTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewReloadCallBackExtension.swift; sourceTree = "<group>"; };
 		EBF31DEA2302BBF3003BC6CC /* Deviation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deviation.swift; sourceTree = "<group>"; };
 		EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListOrderEnum.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				EBAE40E122EEE72E008425A2 /* UserCenterFollowerViewController.swift */,
 				EB48B5E222EF269E00F60F15 /* UserCenterCommentViewController.swift */,
 				EB1E9E2D22F80CCC0095FDA9 /* MainTabBarController.swift */,
+				EBCB4076230BBDD500CD3430 /* UserCetnerTabBarController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */,
 				EBA0323B22FAEE1C0084B92F /* JSONObjectProtocols.swift in Sources */,
 				EB39BAB822F6A5460022ACDB /* AlamofireManager.swift in Sources */,
+				EBCB4077230BBDD500CD3430 /* UserCetnerTabBarController.swift in Sources */,
 				EB48B5E722EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
