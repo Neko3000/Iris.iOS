@@ -12,8 +12,6 @@ class UserCenterFollowerViewController: UIViewController {
 
     @IBOutlet weak var followerTableView: UITableView!
     
-    @IBOutlet weak var followerTableViewHeightConstraint: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +21,6 @@ class UserCenterFollowerViewController: UIViewController {
         followerTableView.register(UINib(nibName: "UserCenterFollowerTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterFollowerTableViewCell")
         
         followerTableView.separatorStyle = .none
-        followerTableView.isScrollEnabled = false
-        
         followerTableView.allowsSelection =  false
     
     }
@@ -32,7 +28,6 @@ class UserCenterFollowerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        followerTableViewHeightConstraint.constant = 5 * ( 60 + 15 ) + 15
     }
 
     /*

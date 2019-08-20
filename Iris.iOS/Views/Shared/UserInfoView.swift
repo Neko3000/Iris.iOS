@@ -12,6 +12,7 @@ import UIKit
 class UserInfoView: XibUIView {
 
     @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var moreBtn: UIButton!
     
     private var isInitialized:Bool = false
     /*
@@ -29,6 +30,8 @@ class UserInfoView: XibUIView {
             
             avatarImageView.layer.cornerRadius = 60
             avatarImageView.layer.masksToBounds = true
+            
+            moreBtn.removeFromSuperview()
             
             isInitialized = true
         }

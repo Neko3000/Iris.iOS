@@ -12,8 +12,6 @@ class UserCenterFavoriteViewController: UIViewController {
 
     @IBOutlet weak var favoriteTableView: UITableView!
     
-    @IBOutlet weak var favoriteTableViewHeightConstraint: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +21,6 @@ class UserCenterFavoriteViewController: UIViewController {
         favoriteTableView.register(UINib(nibName: "UserCenterFavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterFavoriteTableViewCell")
         
         favoriteTableView.separatorStyle = .none
-        favoriteTableView.isScrollEnabled = false
-        
         favoriteTableView.allowsSelection =  false
     
     }
@@ -32,7 +28,6 @@ class UserCenterFavoriteViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        favoriteTableViewHeightConstraint.constant = 5 * ( 150 + 8 ) + 20
     }
 
     /*

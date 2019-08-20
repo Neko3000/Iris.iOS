@@ -50,7 +50,7 @@ class UserCetnerTarBarController: UITabBarController {
         super.viewWillLayoutSubviews()
         
         if(!isTabBarInitialized){
-            tabBar.frame = CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height + 310.0, width: tabBar.frame.size.width, height: 60)
+            tabBar.frame = CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height + 270.0 + 15.0, width: tabBar.frame.size.width, height: 60)
             
             isTabBarInitialized = true
         }

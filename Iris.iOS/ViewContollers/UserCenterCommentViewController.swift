@@ -12,7 +12,6 @@ class UserCenterCommentViewController: UIViewController {
 
     @IBOutlet weak var commentStackView: UIStackView!
     
-    
     @IBOutlet weak var commentStackViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -22,7 +21,6 @@ class UserCenterCommentViewController: UIViewController {
         
         commentStackView.spacing = 10.0
         commentStackView.distribution = .equalSpacing
-        
 
         let tempView = UserCenterCommentHeaderStackViewSubview()
         let tempView2 = UserCenterCommentHeaderStackViewSubview()

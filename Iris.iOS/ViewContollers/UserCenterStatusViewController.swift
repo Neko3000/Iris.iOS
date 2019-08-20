@@ -12,8 +12,6 @@ class UserCenterStatusViewController: UIViewController {
 
     @IBOutlet weak var statusTableView: UITableView!
     
-    @IBOutlet weak var statusTableViewHeightConstraint: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,9 +20,7 @@ class UserCenterStatusViewController: UIViewController {
         statusTableView.dataSource = self
         statusTableView.register(UINib(nibName: "UserCenterStatusTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterStatusTableViewCell")
         
-        statusTableView.separatorStyle = .none
-        statusTableView.isScrollEnabled = false
-        
+        statusTableView.separatorStyle = .none        
         statusTableView.allowsSelection =  false
     
     }
@@ -32,7 +28,6 @@ class UserCenterStatusViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        statusTableViewHeightConstraint.constant = 2 * ( 16 + 3 * 85 ) + 20
     }
 
     /*

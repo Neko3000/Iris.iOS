@@ -12,8 +12,6 @@ class UserCenterJournalViewController: UIViewController {
 
     @IBOutlet weak var journalTableView: UITableView!
     
-    @IBOutlet weak var journalTableViewHeightConstraint: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,16 +20,13 @@ class UserCenterJournalViewController: UIViewController {
         journalTableView.dataSource = self
         journalTableView.register(UINib(nibName: "UserCenterJournalTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterJournalTableViewCell")
         
-        journalTableView.separatorStyle = .none
-        journalTableView.isScrollEnabled = false
-        
+        journalTableView.separatorStyle = .none        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        journalTableViewHeightConstraint.constant = 10 * (147 + 20)
     }
     
 

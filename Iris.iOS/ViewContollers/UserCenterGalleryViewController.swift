@@ -12,8 +12,6 @@ class UserCenterGalleryViewController: UIViewController {
 
     @IBOutlet weak var galleryTableView: UITableView!
     
-    @IBOutlet weak var galleryTableViewHeightConstraint: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,15 +21,12 @@ class UserCenterGalleryViewController: UIViewController {
         galleryTableView.register(UINib(nibName: "UserCenterGalleryTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterGalleryTableViewCell")
         
         galleryTableView.separatorStyle = .none
-        galleryTableView.isScrollEnabled = false
-        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        galleryTableViewHeightConstraint.constant = 10 * (60 + 20)
     }
     
 
