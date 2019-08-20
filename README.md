@@ -5,7 +5,7 @@
 ![Version: v0.90](https://img.shields.io/badge/version-v0.90-lightgrey)
 
 Iris is a model mobile application based on iOS.</br>
-It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/), Daily Arts, Notifications, Deviation Collections...</br>
+It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/) and check Daily Arts, Notifications, Deviation Collections...</br>
 </br>
 All contents are delivered by [DeviantArt API](https://www.deviantart.com/developers/).</br>
 
@@ -50,7 +50,8 @@ Done!
 
 
 ## Dependencies
-[Realm](https://realm.io) and [RxSwift](https://github.com/ReactiveX/RxSwift/) were used in this project,
+[Alamofire](https://github.com/Alamofire/Alamofire) and [SwfityJSON](https://github.com/SwiftyJSON/SwiftyJSON) are used to handle Network requests.
+And we also used some fantastic UI controls in this project, likes [TwicketSegmentedControl](https://github.com/twicketapp/TwicketSegmentedControl), [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)...
 
 Pods have been included:
 
@@ -61,7 +62,7 @@ pod 'RealmSwift'
 ```
 
 ## Development
-You could use [Realm Studio](https://realm.io/products/realm-studio/) to manage the database.
+You should use your own Applications Keys(client_id & client_secret), plz refer to [Doc of Deviant Art API](https://www.deviantart.com/developers/apps),
 
 Here's the path:
 ```
