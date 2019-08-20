@@ -32,10 +32,6 @@ Done!
 <img src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/starrytarget-s4.png" width="200" alt="">
 </p>
 
-## Design and UX
-We fully customized its interface considering proper UX before we developed it on Xcode.</br>
-And we decided to provide its Sketch file, you could find it here.
-
 ## Features
 - [x] Sign IN / Sign UP
 - [x] Daily Art
@@ -50,6 +46,9 @@ And we decided to provide its Sketch file, you could find it here.
 - [x] Profile Comment
 - [x] More...
 
+## Interface Design
+We fully customized its interface considering proper UX before we developed it on Xcode.</br>
+And we decided to provide its Sketch file, you could find it here.
 
 ## Dependencies
 For handling Network requests, we used famouse [Alamofire](https://github.com/Alamofire/Alamofire) and [SwfityJSON](https://github.com/SwiftyJSON/SwiftyJSON) in this project.</br>
@@ -64,7 +63,7 @@ pod 'RealmSwift'
 ```
 
 ## Development
-You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of DeviantArt API](https://www.deviantart.com/developers/apps) to check the authentication details,
+You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of DeviantArt API](https://www.deviantart.com/developers/apps) to check the authentication details.
 
 Here's the path:
 ```
