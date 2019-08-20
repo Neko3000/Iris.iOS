@@ -32,7 +32,9 @@ Done!
 <img src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/starrytarget-s4.png" width="200" alt="">
 </p>
 
-## Design
+## Design and UX
+We fully customized its interface considering proper UX before we developed it on Xcode.</br>
+And we decided to provide its Sketch file, you could find it here.
 
 ## Features
 - [x] Sign IN / Sign UP
@@ -62,7 +64,7 @@ pod 'RealmSwift'
 ```
 
 ## Development
-You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of Deviant Art API](https://www.deviantart.com/developers/apps) to check the authentication details,
+You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of DeviantArt API](https://www.deviantart.com/developers/apps) to check the authentication details,
 
 Here's the path:
 ```
@@ -73,6 +75,8 @@ print(Realm.Configuration.defaultConfiguration.fileURL!)
 ## Contact To Me
 E-mail: sheran_chen@outlook.com </br>
 Weibo: @妖绀
+
+## Contributers
 
 ## License
 Distributed under the MIT license. See LICENSE for more information.
