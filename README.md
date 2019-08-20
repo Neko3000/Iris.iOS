@@ -50,8 +50,8 @@ Done!
 
 
 ## Dependencies
-[Alamofire](https://github.com/Alamofire/Alamofire) and [SwfityJSON](https://github.com/SwiftyJSON/SwiftyJSON) are used to handle Network requests.
-And we also used some fantastic UI controls in this project, likes [TwicketSegmentedControl](https://github.com/twicketapp/TwicketSegmentedControl), [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)...
+For handling Network requests, we used famouse [Alamofire](https://github.com/Alamofire/Alamofire) and [SwfityJSON](https://github.com/SwiftyJSON/SwiftyJSON) in this project.</br>
+And we also used some fantastic UI controls, likes [TwicketSegmentedControl](https://github.com/twicketapp/TwicketSegmentedControl), [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)...
 
 Pods have been included:
 
@@ -62,7 +62,7 @@ pod 'RealmSwift'
 ```
 
 ## Development
-You should use your own Applications Keys(client_id & client_secret), plz refer to [Doc of Deviant Art API](https://www.deviantart.com/developers/apps),
+You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of Deviant Art API](https://www.deviantart.com/developers/apps) to check the authentication details,
 
 Here's the path:
 ```
