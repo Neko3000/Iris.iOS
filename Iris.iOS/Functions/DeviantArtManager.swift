@@ -29,6 +29,15 @@ class DeviantArtManager{
     // Activity
     static let getNotificationURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/feed/notifications"
     
+    // UserCenter
+    static let getGalleryURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/gallery/all"
+    static let getJournalURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/browse/user/journals"
+    static let getStatusURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/user/statuses"
+    static let getCollectionFolderURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/collections/folders"
+    static let getCollectionURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/collections"
+    static let getWatcherURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/user/watchers"
+    static let getProfileCommentURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/comments/profile"
+    
     // Login
     static func generateAuthorizationCodeURL(responseType:String,clientId:String,redirectUrl:String,scope:String,state:String) -> URL{
         
@@ -162,6 +171,94 @@ class DeviantArtManager{
         var urlComponents = URLComponents(string: getNotificationURLEndPoint)
         urlComponents?.queryItems = [
             URLQueryItem(name: "cursor", value: cursor),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    // UserCenter
+    static func generateGetGalleryURL(username:String = "",offset:Int? = nil,limit:Int? = nil,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getGalleryURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "username", value: username),
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetJournalURL(username:String,featured:Bool = false,offset:Int? = nil, limit:Int? = nil,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getJournalURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "username", value: username),
+            URLQueryItem(name: "featured", value: String(featured)),
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetStatusURL(username:String,offset:Int? = nil, limit:Int? = nil,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getStatusURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "username", value: username),
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetCollectionFolderURL(username:String, calculateSize:Bool = true, extPreload:Bool = true,offset:Int? = nil, limit:Int? = nil, accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getCollectionFolderURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "username", value: username),
+            URLQueryItem(name: "calculate_size", value: String(calculateSize)),
+            URLQueryItem(name: "ext_preload", value: String(extPreload)),
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetCollectionURL(folderId:String, username:String, offset:Int? = nil, limit:Int? = nil,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getCollectionURLEndPoint + "/" + folderId)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "username", value: username),
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetWatcherURL(username:String, offset:Int? = nil, limit:Int? = nil,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getWatcherURLEndPoint + "/" + username)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetProfileCommentURL(username:String, commentId:String = "", maxDeptch:Int? = nil, offset:Int? = nil, limit:Int? = nil,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getProfileCommentURLEndPoint + "/" + username)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "commentid", value: commentId),
+            URLQueryItem(name: "maxdepth", value: maxDeptch == nil ? "":String(maxDeptch!)),
+            URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
+            URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
             URLQueryItem(name: "access_token", value: accessToken)
         ]
         

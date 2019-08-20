@@ -90,7 +90,7 @@
 		EBBA857D230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBA857B230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib */; };
 		EBBA857F23093C32009E0A7D /* DailyDeviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA857E23093C32009E0A7D /* DailyDeviation.swift */; };
 		EBCB4077230BBDD500CD3430 /* UserCetnerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCB4076230BBDD500CD3430 /* UserCetnerTabBarController.swift */; };
-		EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */; };
+		EBD688C122FBFF9F0001D711 /* UICollectionViewReloadDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD688C022FBFF9F0001D711 /* UICollectionViewReloadDataExtension.swift */; };
 		EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEA2302BBF3003BC6CC /* Deviation.swift */; };
 		EBF31DED2302E827003BC6CC /* ArtListOrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */; };
 		EBF31DEF2302F74C003BC6CC /* DeviationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */; };
@@ -192,7 +192,7 @@
 		EBBA857B230920B0009E0A7D /* DailyTableViewDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DailyTableViewDateTableViewCell.xib; path = Iris.iOS/Views/Daily/DailyTableViewDateTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		EBBA857E23093C32009E0A7D /* DailyDeviation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DailyDeviation.swift; path = ../ViewContollers/DailyDeviation.swift; sourceTree = "<group>"; };
 		EBCB4076230BBDD500CD3430 /* UserCetnerTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCetnerTabBarController.swift; path = Iris.iOS/UserCetnerTabBarController.swift; sourceTree = SOURCE_ROOT; };
-		EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewReloadCallBackExtension.swift; sourceTree = "<group>"; };
+		EBD688C022FBFF9F0001D711 /* UICollectionViewReloadDataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewReloadDataExtension.swift; sourceTree = "<group>"; };
 		EBF31DEA2302BBF3003BC6CC /* Deviation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deviation.swift; sourceTree = "<group>"; };
 		EBF31DEC2302E827003BC6CC /* ArtListOrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListOrderEnum.swift; sourceTree = "<group>"; };
 		EBF31DEE2302F74C003BC6CC /* DeviationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviationHandler.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			children = (
 				EBA0323C22FB10490084B92F /* JSONObjectHandler.swift */,
 				EB39BAB722F6A5460022ACDB /* AlamofireManager.swift */,
-				EBD688C022FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift */,
+				EBD688C022FBFF9F0001D711 /* UICollectionViewReloadDataExtension.swift */,
 				EB6642A3228FF39F00FE71B6 /* CollectionMasonryViewLayout.swift */,
 				EB39BAB522F6A0E00022ACDB /* RequestAnalyzer.swift */,
 				EB39BAB922F6BCD60022ACDB /* DeviantArtManager.swift */,
@@ -502,9 +502,9 @@
 				EB267C34228A8DF5004979AC /* Models */,
 				EB267C33228A8DEB004979AC /* ViewContollers */,
 				EB267C32228A8DDC004979AC /* Views */,
+				EB05685F224334C300899DCE /* Resource */,
 				EB0568682245DBA900899DCE /* Functions */,
 				EB0568652244C70600899DCE /* Extensions */,
-				EB05685F224334C300899DCE /* Resource */,
 				EB188A7B22FA9D2100524B77 /* Protocols */,
 				EB488B5A22431F8400AC925F /* Main.storyboard */,
 				EB488B5622431F8400AC925F /* AppDelegate.swift */,
@@ -715,7 +715,7 @@
 				EBB63AF2229A5A5900F789BD /* ArtDetailTableViewSubCommentTableViewCell.swift in Sources */,
 				EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */,
 				EB6642A0228FD1BB00FE71B6 /* ArtListViewController.swift in Sources */,
-				EBD688C122FBFF9F0001D711 /* UICollectionViewReloadCallBackExtension.swift in Sources */,
+				EBD688C122FBFF9F0001D711 /* UICollectionViewReloadDataExtension.swift in Sources */,
 				EB488B5722431F8400AC925F /* AppDelegate.swift in Sources */,
 				EB39BABE22F6D5A50022ACDB /* ActiveUserInfo.swift in Sources */,
 				EBF31DEB2302BBF3003BC6CC /* Deviation.swift in Sources */,
