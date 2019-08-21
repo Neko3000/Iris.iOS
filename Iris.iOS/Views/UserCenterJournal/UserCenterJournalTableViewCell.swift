@@ -10,7 +10,16 @@ import UIKit
 
 class UserCenterJournalTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var editorAvatarImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
+    
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    @IBOutlet weak var authorAvatarImageView: UIImageView!
     
     private var isInitialized:Bool = false
     
@@ -18,8 +27,8 @@ class UserCenterJournalTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         if(!isInitialized){
-            editorAvatarImageView.layer.cornerRadius = 13.0
-            editorAvatarImageView.layer.masksToBounds = true
+            authorAvatarImageView.layer.cornerRadius = 13.0
+            authorAvatarImageView.layer.masksToBounds = true
             
             isInitialized = true
         }

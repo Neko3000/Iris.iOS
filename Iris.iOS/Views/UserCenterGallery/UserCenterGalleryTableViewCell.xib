@@ -78,6 +78,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="artImageView" destination="bzg-hT-xSG" id="d7Z-sb-73Y"/>
+                <outlet property="categoryLabel" destination="W2f-o2-KBZ" id="RKO-JW-LtL"/>
+                <outlet property="commentCountLabel" destination="yOa-cS-iJM" id="gAJ-f9-H8O"/>
+                <outlet property="likeCountLabel" destination="bNy-lO-hve" id="ZBS-Tg-3OJ"/>
+                <outlet property="titleLabel" destination="FWc-HS-H4T" id="O7t-aB-r1M"/>
             </connections>
             <point key="canvasLocation" x="121.0144927536232" y="133.25892857142856"/>
         </tableViewCell>

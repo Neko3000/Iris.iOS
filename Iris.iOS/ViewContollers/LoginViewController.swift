@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import Alamofire
 import NVActivityIndicatorView
+import SwiftyJSON
 
 class LoginViewController: UIViewController{
     
@@ -50,6 +51,7 @@ class LoginViewController: UIViewController{
                     
                     if(response.response?.statusCode == 200){
                         
+                        ActiveUserInfo.setUsername(username: loadedUserInfo.username)
                         ActiveUserInfo.setAcesssToken(accessToken: loadedUserInfo.accessToken)
                         ActiveUserInfo.setRefreshToken(refreshToken: loadedUserInfo.refreshToken)
                         
@@ -72,9 +74,7 @@ class LoginViewController: UIViewController{
                                     let accessToken = dict["access_token"] as! String
                                     let refreshToken  = dict["refresh_token"] as! String
                                     
-                                    ActiveUserInfo.setAcesssToken(accessToken: loadedUserInfo.accessToken)
-                                    ActiveUserInfo.setRefreshToken(refreshToken: loadedUserInfo.refreshToken)
-                                    
+                                    ActiveUserInfo.setUsername(username: loadedUserInfo.username)
                                     ActiveUserInfo.setAcesssToken(accessToken: accessToken)
                                     ActiveUserInfo.setRefreshToken(refreshToken: refreshToken)
                                     
@@ -132,15 +132,49 @@ class LoginViewController: UIViewController{
                     let dict = json as! [String:Any]
                     let accessToken = dict["access_token"] as! String
                     let refreshToken  = dict["refresh_token"] as! String
+                    
+                    print(accessToken)
+                    
+                    // Get self info
+                    AlamofireManager.sharedSession.request(DeviantArtManager.generateSelfInfoURL(accessToken: accessToken)).responseJSON(completionHandler: {
+                        (response) in
+                        
+                        switch(response.result){
+                            case .success(_):
+                                
+                                if(response.response?.statusCode == 200){
+                                    if let data = response.data{
+                                        let json = JSON(data)
                                         
-                    ActiveUserInfo.setAcesssToken(accessToken: accessToken)
-                    ActiveUserInfo.setRefreshToken(refreshToken: refreshToken)
-                    
-                    let userInfo = UserInfo(accessToken: accessToken, refreshToken: refreshToken)
-                    UserInfo.saveUserInfo(userInfoObject: userInfo)
-                    
-                    // segue to explore
-                    self.performSegue(withIdentifier: "LoginToExplore", sender: nil)
+                                        let username = json["username"].string!
+                                        
+                                        ActiveUserInfo.setUsername(username: username)
+                                        ActiveUserInfo.setAcesssToken(accessToken: accessToken)
+                                        ActiveUserInfo.setRefreshToken(refreshToken: refreshToken)
+                                        
+                                        let userInfo = UserInfo(username:username, accessToken: accessToken, refreshToken: refreshToken)
+                                        UserInfo.saveUserInfo(userInfoObject: userInfo)
+                                        
+                                        // segue to explore
+                                        self.performSegue(withIdentifier: "LoginToExplore", sender: nil)
+                                    }
+                                }
+                                else if(response.response?.statusCode == 401){
+                                    if let data = response.data{
+                                        let json = JSON(data)
+                                        
+                                        print(json["error"])
+                                    }
+                                }
+                            break
+                            
+                            case .failure(_):
+                                
+                            break
+                        }
+                        
+                    })
+
                 }
                 else if(response.response?.statusCode == 401){
                     
@@ -170,7 +204,7 @@ class LoginViewController: UIViewController{
     @IBAction func loginBtnTouchUpInside(_ sender: Any) {
         view.addSubview(loginWKWebView!)
         
-        let request = URLRequest(url: DeviantArtManager.generateAuthorizationCodeURL(responseType: "code", clientId: ApplicationKey.clientKey, redirectUrl: "https://www.roseandcage.com", scope: "basic browse feed", state: "bingo"))
+        let request = URLRequest(url: DeviantArtManager.generateAuthorizationCodeURL(responseType: "code", clientId: ApplicationKey.clientKey, redirectUrl: "https://www.roseandcage.com", scope: "basic browse feed user", state: "bingo"))
         
         loginWKWebView?.load(request)
     }

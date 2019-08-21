@@ -15,6 +15,8 @@ class DeviantArtManager{
     static let accessTokenURLEndPoint = "https://www.deviantart.com/oauth2/token"
     static let checkTokenURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/placebo"
     static let refreshTokenURLEndPoint = "https://www.deviantart.com/oauth2/token"
+    static let getSelfInfoURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/user/whoami"
+
     
     // Explore
     static let getPopularArtListURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/browse/popular"
@@ -83,6 +85,15 @@ class DeviantArtManager{
             URLQueryItem(name: "client_secret", value: clientSecret),
             URLQueryItem(name: "grant_type", value: grantType),
             URLQueryItem(name: "refresh_token", value: refreshToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateSelfInfoURL(accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getSelfInfoURLEndPoint)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "access_token", value: accessToken)
         ]
         
         return urlComponents!.url!

@@ -66,6 +66,10 @@
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-center-gallery-ahri-1-25p" translatesAutoresizingMaskIntoConstraints="NO" id="920-50-4wZ">
                         <rect key="frame" x="297" y="148.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="u0M-eI-u15"/>
+                            <constraint firstAttribute="height" constant="25" id="uWL-Wp-pb4"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -92,7 +96,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="editorAvatarImageView" destination="920-50-4wZ" id="Aic-NV-NUR"/>
+                <outlet property="authorAvatarImageView" destination="920-50-4wZ" id="wYT-ab-G0E"/>
+                <outlet property="bodyLabel" destination="HXv-U6-XaH" id="dXe-Pv-51C"/>
+                <outlet property="commentCountLabel" destination="CXN-dN-NLt" id="Dh7-Mf-npa"/>
+                <outlet property="dateLabel" destination="5Cm-7w-tKo" id="buz-5E-CS3"/>
+                <outlet property="likeCountLabel" destination="sKm-Oh-BEW" id="ecq-dp-kKJ"/>
+                <outlet property="titleLabel" destination="DfJ-cu-F6L" id="AjB-A1-9Gf"/>
             </connections>
             <point key="canvasLocation" x="148.55072463768118" y="184.15178571428569"/>
         </tableViewCell>

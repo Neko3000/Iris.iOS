@@ -11,6 +11,11 @@ import UIKit
 class UserCenterGalleryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var artImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
     
     private var isInitialized:Bool = false
     

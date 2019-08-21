@@ -16,12 +16,17 @@ class Deviation: ObjectFromJSON {
     public var categoryPath:String = ""
     public var isFavourited:Bool = false
     
+    //
+    public var publishedTime:String = ""
+    
     public var previewSrc:String = ""
     public var previewImage:UIImage?
     public var contentSrc:String = ""
     public var contentImage:UIImage?
     
     public var isDownloadable:Bool = false
+    
+    public var excerpt:String = ""
     
     public var authorName:String = ""
     public var authorAvatarSrc:String = ""
@@ -41,11 +46,17 @@ class Deviation: ObjectFromJSON {
         self.category = json["category"].string!
         self.categoryPath = json["category_path"].string!
         self.isFavourited = json["is_favourited"].bool!
+        
         self.previewSrc = json["preview"]["src"].string ?? ""
         self.contentSrc = json["content"]["src"].string ?? ""
+        
         self.isDownloadable = json["is_downloadable"].bool!
+        
+        self.excerpt = json["excerpt"].string ?? ""
+        
         self.authorName = json["author"]["username"].string!
         self.authorAvatarSrc = json["author"]["usericon"].string!
+        
         self.commentCount =  json["stats"]["comments"].int!
         self.favouriteCount = json["stats"]["favourites"].int!
     }

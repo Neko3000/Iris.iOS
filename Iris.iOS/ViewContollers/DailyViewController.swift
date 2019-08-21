@@ -63,12 +63,11 @@ class DailyViewController: UIViewController{
                     if let data = response.data{
                         let json = JSON(data)
                         
-                        let dailyDeviation = DailyDeviation(date: self.currentDate, deviations: DeviantionHandler.filterJournalDeviation(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)))
-                        self.dailyDeviations.append(dailyDeviation)
+                        let deviationsForSingleRequest = DailyDeviation(date: self.currentDate, deviations: DeviantionHandler.filterJournalDeviation(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)))
+                        self.dailyDeviations.append(deviationsForSingleRequest)
                         
                         self.dailyTableView.reloadData()
                         
-                        self.deviationsForSingleRequest = dailyDeviation.deviations
                         self.fetchPreviewImage()
                         self.fetchAuthorAvatar()
                     }
@@ -135,7 +134,6 @@ class DailyViewController: UIViewController{
         for i in 0..<deviationsForSingleRequest.count{
             
             dispatchGroup.enter()
-            
             AlamofireManager.sharedSession.request(deviationsForSingleRequest[i].authorAvatarSrc).response(completionHandler: {
                 response in
                 
