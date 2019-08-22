@@ -38,6 +38,7 @@ class DeviantArtManager{
     static let getCollectionFolderURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/collections/folders"
     static let getCollectionURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/collections"
     static let getWatcherURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/user/watchers"
+    static let getUserProfileEndPoint = "https://www.deviantart.com/api/v1/oauth2/user/profile"
     static let getProfileCommentURLEndPoint = "https://www.deviantart.com/api/v1/oauth2/comments/profile"
     
     // Login
@@ -252,11 +253,22 @@ class DeviantArtManager{
         return urlComponents!.url!
     }
     
-    static func generateGetWatcherURL(username:String, offset:Int? = nil, limit:Int? = nil,accessToken:String) -> URL{
+    static func generateGetWatcherURL(username:String = "", offset:Int? = nil, limit:Int? = nil,accessToken:String) -> URL{
         var urlComponents = URLComponents(string: getWatcherURLEndPoint + "/" + username)
         urlComponents?.queryItems = [
             URLQueryItem(name: "offset", value: offset == nil ? "":String(offset!)),
             URLQueryItem(name: "limit", value: limit == nil ? "":String(limit!)),
+            URLQueryItem(name: "access_token", value: accessToken)
+        ]
+        
+        return urlComponents!.url!
+    }
+    
+    static func generateGetUserProfileURL(username:String = "", extCollections:Bool = true, extGalleries:Bool = true,accessToken:String) -> URL{
+        var urlComponents = URLComponents(string: getUserProfileEndPoint + "/" + username)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "ext_collections", value: String(extCollections)),
+            URLQueryItem(name: "ext_galleries", value: String(extGalleries)),
             URLQueryItem(name: "access_token", value: accessToken)
         ]
         

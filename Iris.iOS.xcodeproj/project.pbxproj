@@ -64,6 +64,7 @@
 		EB74337222F9B491002884BB /* ImageWithColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74337122F9B491002884BB /* ImageWithColorExtension.swift */; };
 		EB7D98BD230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D98BC230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift */; };
 		EB7D98BF230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7D98BE230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib */; };
+		EB7D98C1230F23710092C4EE /* DeviantArtUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D98C0230F23710092C4EE /* DeviantArtUser.swift */; };
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */; };
 		EB9CC18422C64D3E00F665BD /* UserCenterJournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */; };
 		EB9CC18622C64E5C00F665BD /* UserCenterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */; };
@@ -171,6 +172,7 @@
 		EB74337122F9B491002884BB /* ImageWithColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithColorExtension.swift; sourceTree = "<group>"; };
 		EB7D98BC230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFavoriteHeaderView.swift; sourceTree = "<group>"; };
 		EB7D98BE230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterFavoriteHeaderView.xib; sourceTree = "<group>"; };
+		EB7D98C0230F23710092C4EE /* DeviantArtUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantArtUser.swift; sourceTree = "<group>"; };
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalTableViewCell.swift; sourceTree = "<group>"; };
 		EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterJournalTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterJournalViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				EBF8E8F3230E484C008C3337 /* Status.swift */,
 				EBF8E8F5230E48DB008C3337 /* StatusForSingleMonth.swift */,
 				EBF8E8F7230E6C06008C3337 /* DeviationCollectionFolder.swift */,
+				EB7D98C0230F23710092C4EE /* DeviantArtUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,
 				EBB63B3E229EB92500F789BD /* UserCenterGalleryViewController.swift in Sources */,
 				EBA0323B22FAEE1C0084B92F /* JSONObjectProtocols.swift in Sources */,
+				EB7D98C1230F23710092C4EE /* DeviantArtUser.swift in Sources */,
 				EB39BAB822F6A5460022ACDB /* AlamofireManager.swift in Sources */,
 				EBCB4077230BBDD500CD3430 /* UserCetnerTabBarController.swift in Sources */,
 				EB48B5E722EF662E00F60F15 /* UserCenterCommentReplyStackViewSubview.swift in Sources */,
