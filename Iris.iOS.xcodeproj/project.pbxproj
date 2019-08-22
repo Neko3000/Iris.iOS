@@ -100,6 +100,9 @@
 		EBF3487722CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */; };
 		EBF3488122CDC562001A4793 /* UserCenterStatusHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */; };
 		EBF3488322CDC579001A4793 /* UserCenterStatusHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF3488222CDC579001A4793 /* UserCenterStatusHeaderView.xib */; };
+		EBF8E8F4230E484C008C3337 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8E8F3230E484C008C3337 /* Status.swift */; };
+		EBF8E8F6230E48DB008C3337 /* StatusForSingleMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8E8F5230E48DB008C3337 /* StatusForSingleMonth.swift */; };
+		EBF8E8F8230E6C06008C3337 /* DeviationCollectionFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8E8F7230E6C06008C3337 /* DeviationCollectionFolder.swift */; };
 		EBFF775D2309A5BB00FC6012 /* NotificationTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF775C2309A5BB00FC6012 /* NotificationTypeEnum.swift */; };
 		EBFF77602309AA2800FC6012 /* DeviantArtNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF775F2309AA2800FC6012 /* DeviantArtNotification.swift */; };
 /* End PBXBuildFile section */
@@ -202,6 +205,9 @@
 		EBF3487622CD8F6F001A4793 /* UserCenterStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterStatusTableViewCell.swift; sourceTree = "<group>"; };
 		EBF3488022CDC562001A4793 /* UserCenterStatusHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterStatusHeaderView.swift; sourceTree = "<group>"; };
 		EBF3488222CDC579001A4793 /* UserCenterStatusHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterStatusHeaderView.xib; sourceTree = "<group>"; };
+		EBF8E8F3230E484C008C3337 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		EBF8E8F5230E48DB008C3337 /* StatusForSingleMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusForSingleMonth.swift; sourceTree = "<group>"; };
+		EBF8E8F7230E6C06008C3337 /* DeviationCollectionFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviationCollectionFolder.swift; path = Iris.iOS/Models/DeviationCollectionFolder.swift; sourceTree = SOURCE_ROOT; };
 		EBFF775C2309A5BB00FC6012 /* NotificationTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypeEnum.swift; sourceTree = "<group>"; };
 		EBFF775F2309AA2800FC6012 /* DeviantArtNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviantArtNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,6 +341,9 @@
 				EBBA85702307C4A3009E0A7D /* DeviationComment.swift */,
 				EBBA857E23093C32009E0A7D /* DailyDeviation.swift */,
 				EBFF775F2309AA2800FC6012 /* DeviantArtNotification.swift */,
+				EBF8E8F3230E484C008C3337 /* Status.swift */,
+				EBF8E8F5230E48DB008C3337 /* StatusForSingleMonth.swift */,
+				EBF8E8F7230E6C06008C3337 /* DeviationCollectionFolder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -729,6 +738,7 @@
 				EB1E9E2A22F805F70095FDA9 /* MainBottomTabBar.swift in Sources */,
 				EB39BABC22F6BEEE0022ACDB /* ApplicationKey.swift in Sources */,
 				EB9CC18622C64E5C00F665BD /* UserCenterJournalViewController.swift in Sources */,
+				EBF8E8F4230E484C008C3337 /* Status.swift in Sources */,
 				EB39BAB422F5D6E80022ACDB /* UserInfo.swift in Sources */,
 				EB48B5E122EF20D900F60F15 /* UserCenterCommentHeaderStackViewSubview.swift in Sources */,
 				EBB63AFE229D48CA00F789BD /* UserCenterNavigationView.swift in Sources */,
@@ -740,7 +750,9 @@
 				EBBA85732307CD31009E0A7D /* JSONDateExtension.swift in Sources */,
 				EB40B34422D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift in Sources */,
 				EB188A7A22FA9D0400524B77 /* ObjectDictionaryProtocols.swift in Sources */,
+				EBF8E8F8230E6C06008C3337 /* DeviationCollectionFolder.swift in Sources */,
 				EB6642B62293BFBD00FE71B6 /* ActivityTableViewNormalCell.swift in Sources */,
+				EBF8E8F6230E48DB008C3337 /* StatusForSingleMonth.swift in Sources */,
 				EBF31DF123039F79003BC6CC /* DeviationCategory.swift in Sources */,
 				EB39BABA22F6BCD60022ACDB /* DeviantArtManager.swift in Sources */,
 				EB6642A7228FF8A000FE71B6 /* ArtListCollectionViewCell.swift in Sources */,

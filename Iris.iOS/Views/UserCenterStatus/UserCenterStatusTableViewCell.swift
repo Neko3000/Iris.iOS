@@ -10,6 +10,9 @@ import UIKit
 
 class UserCenterStatusTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     private var isInitialized:Bool = false
     
     override func layoutSubviews() {

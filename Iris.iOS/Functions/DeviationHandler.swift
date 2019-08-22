@@ -48,6 +48,13 @@ class DeviantionHandler{
         return dateFormatter.string(from: date)
     }
     
+    static func getMonth(date:Date)->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM"
+        
+        return dateFormatter.string(from: date)
+    }
+    
     // DeviationComment and DeviationSubComment
     static func organizeDeviationComments(deviationComments:[DeviationComment])->[DeviationComment]{
         
@@ -97,5 +104,36 @@ class DeviantionHandler{
         }
         
         return organziedDeviationComments
+    }
+    
+    // Status
+    static func sortStatusByMonth(statuses:[Status])->[StatusForSingleMonth]{
+        
+        var statusForSingleMonthCollection:[StatusForSingleMonth] = [StatusForSingleMonth]()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM"
+        
+        for i in 0..<statuses.count{
+            let status = statuses[i]
+            
+            let yearWithMonthStatus = dateFormatter.string(from: status.date)
+            
+            let selectedStatusForSingleMonth = statusForSingleMonthCollection.first(where:{ sfs in
+                let yearWithMonthStatusSingleMonth = dateFormatter.string(from: sfs.date)
+                
+                return yearWithMonthStatus == yearWithMonthStatusSingleMonth
+
+            })
+            
+            if(selectedStatusForSingleMonth != nil){
+                selectedStatusForSingleMonth!.statuses.append(status)
+            }
+            else{
+                statusForSingleMonthCollection.append(StatusForSingleMonth(date: status.date, statuses: [status]))
+            }
+        }
+        
+        return statusForSingleMonthCollection
     }
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 class UserCenterFavoriteViewController: UIViewController {
+    
+    var deviationCollectionFolders:[DeviationCollectionFolder]?
 
     @IBOutlet weak var favoriteTableView: UITableView!
     

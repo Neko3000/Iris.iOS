@@ -31,7 +31,7 @@ class LoginViewController: UIViewController{
         loginWKWebView!.navigationDelegate = self
         loginWKWebView!.frame = view.bounds
         
-        // UserInfo.clearStoredUserInfo()
+        UserInfo.clearStoredUserInfo()
         initUserState()
     }
     

@@ -26,9 +26,10 @@ class UserCenterJournalViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        journalTableView.register(UINib(nibName: "UserCenterJournalTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterJournalTableViewCell")
+        
         journalTableView.delegate = self
         journalTableView.dataSource = self
-        journalTableView.register(UINib(nibName: "UserCenterJournalTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCenterJournalTableViewCell")
         
         journalTableView.separatorStyle = .none        
         
@@ -55,7 +56,6 @@ class UserCenterJournalViewController: UIViewController {
         
         isFetchingJournals = true
         
-        print(DeviantArtManager.generateGetJournalURL(username: ActiveUserInfo.getUsername(), offset:pageOffset, limit:pageLimit, accessToken: ActiveUserInfo.getAccesssToken()))
         AlamofireManager.sharedSession.request(DeviantArtManager.generateGetJournalURL(username: ActiveUserInfo.getUsername(), offset:pageOffset, limit:pageLimit, accessToken: ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
             response in
             

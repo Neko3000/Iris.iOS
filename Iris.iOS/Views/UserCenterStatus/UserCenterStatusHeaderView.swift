@@ -10,6 +10,8 @@ import UIKit
 
 class UserCenterStatusHeaderView: XibUIView {
     
+    @IBOutlet weak var monthLabel: UILabel!
+    
     var isInitialized:Bool = false
 
     /*

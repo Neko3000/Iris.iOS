@@ -12,7 +12,7 @@ import SwiftyJSON
 class DailyViewController: UIViewController{
 
     var dailyDeviations:[DailyDeviation] = [DailyDeviation]()
-    var deviationsForSingleRequest:[Deviation] = [Deviation]()
+    var dailyDeviationsForSingleRequest:DailyDeviation = DailyDeviation()
     
     let dispatchGroup:DispatchGroup = DispatchGroup()
     
@@ -63,8 +63,8 @@ class DailyViewController: UIViewController{
                     if let data = response.data{
                         let json = JSON(data)
                         
-                        let deviationsForSingleRequest = DailyDeviation(date: self.currentDate, deviations: DeviantionHandler.filterJournalDeviation(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)))
-                        self.dailyDeviations.append(deviationsForSingleRequest)
+                        self.dailyDeviationsForSingleRequest = DailyDeviation(date: self.currentDate, deviations: DeviantionHandler.filterJournalDeviation(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)))
+                        self.dailyDeviations.append(self.dailyDeviationsForSingleRequest)
                         
                         self.dailyTableView.reloadData()
                         
@@ -89,11 +89,11 @@ class DailyViewController: UIViewController{
     
     func fetchPreviewImage(){
         
-        for i in 0..<deviationsForSingleRequest.count{
+        for i in 0..<dailyDeviationsForSingleRequest.deviations.count{
             
             dispatchGroup.enter()
             
-            AlamofireManager.sharedSession.request(deviationsForSingleRequest[i].previewSrc).response(completionHandler: {
+            AlamofireManager.sharedSession.request(dailyDeviationsForSingleRequest.deviations[i].previewSrc).response(completionHandler: {
                 response in
                 
                 defer{
@@ -105,7 +105,7 @@ class DailyViewController: UIViewController{
                     if(response.response?.statusCode == 200){
                         
                         let previewImage = UIImage(data: response.data!)
-                        self.deviationsForSingleRequest[i].previewImage = previewImage
+                        self.dailyDeviationsForSingleRequest.deviations[i].previewImage = previewImage
                         
                         self.dailyTableView.reloadData()
                     }
@@ -131,10 +131,10 @@ class DailyViewController: UIViewController{
     
     func fetchAuthorAvatar(){
         
-        for i in 0..<deviationsForSingleRequest.count{
+        for i in 0..<dailyDeviationsForSingleRequest.deviations.count{
             
             dispatchGroup.enter()
-            AlamofireManager.sharedSession.request(deviationsForSingleRequest[i].authorAvatarSrc).response(completionHandler: {
+            AlamofireManager.sharedSession.request(dailyDeviationsForSingleRequest.deviations[i].authorAvatarSrc).response(completionHandler: {
                 response in
                 
                 defer{
@@ -146,7 +146,7 @@ class DailyViewController: UIViewController{
                     if(response.response?.statusCode == 200){
                         
                         let authorAvatarImage = UIImage(data: response.data!)
-                        self.deviationsForSingleRequest[i].authorAvatarImage = authorAvatarImage
+                        self.dailyDeviationsForSingleRequest.deviations[i].authorAvatarImage = authorAvatarImage
                         
                         self.dailyTableView.reloadData()
                     }
@@ -202,14 +202,6 @@ extension DailyViewController:UITableViewDelegate,UITableViewDataSource{
             specificCell.likeCountLabel.text = String(deviation.favouriteCount)
             specificCell.authorNameLabel.text = deviation.authorName
             specificCell.authorAvatarImageView.image = deviation.authorAvatarImage
-            
-//            // Setting
-//            specificCell.setArt(art: UIImage(named: "daily-ahri-1")!)
-//            specificCell.setTitle(title: "Ahri for iPhone case")
-//            specificCell.setCommentCount(commentCount: "\(2310)")
-//            specificCell.setLikeCount(likeCount: "\(10410)")
-//            specificCell.setAuthorName(authorName: "bibico-Atelier")
-//            specificCell.setAuthorAvatar(authorAvatar: UIImage(named: "bibico-Atelier")!)
             
             cell = specificCell
         }
