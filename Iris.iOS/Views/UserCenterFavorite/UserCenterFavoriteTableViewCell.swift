@@ -42,16 +42,19 @@ class UserCenterFavoriteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    public func setContentImage(leftContentImage:UIImage,rightContentImage:UIImage,fullHeight:CGFloat,fullWidth:CGFloat,gapWidth:CGFloat){
+    public func setContentImage(leftContentImage:UIImage?,rightContentImage:UIImage?,fullHeight:CGFloat,fullWidth:CGFloat,gapWidth:CGFloat){
         
         leftContentImageView.image = leftContentImage
         rightContentImageView.image = rightContentImage
         
-        leftContentImageView.frame = CGRect(x: 0, y: 0, width: leftContentImage.size.width * fullHeight / leftContentImage.size.height , height: fullHeight)
-        leftContentImageView.contentMode = .scaleToFill
-        
-        rightContentImageView.frame = CGRect(x: leftContentImageView.frame.width + gapWidth, y: 0, width: fullWidth - gapWidth - leftContentImageView.frame.width, height: fullHeight)
-        rightContentImageView.contentMode = .scaleAspectFill
-        
+        if(leftContentImage != nil){
+            leftContentImageView.frame = CGRect(x: 0, y: 0, width: leftContentImage!.size.width * fullHeight / leftContentImage!.size.height , height: fullHeight)
+            leftContentImageView.contentMode = .scaleToFill
+        }
+
+        if(rightContentImage != nil){
+            rightContentImageView.frame = CGRect(x: leftContentImageView.frame.width + gapWidth, y: 0, width: fullWidth - gapWidth - leftContentImageView.frame.width, height: fullHeight)
+            rightContentImageView.contentMode = .scaleAspectFill
+        }
     }
 }

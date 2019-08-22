@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class UserCenterFavoriteViewController: UIViewController {
     
-    var deviationCollectionFolders:[DeviationCollectionFolder]?
-
+    var deviationCollectionFolders:[DeviationCollectionFolder] = [DeviationCollectionFolder]()
+    var deviationCollectionFoldersForSingleRequest:[DeviationCollectionFolder] = [DeviationCollectionFolder]()
+    let dispatchGroup:DispatchGroup = DispatchGroup()
+    
+    var pageOffset:Int = 0
+    var pageLimit:Int = 24
+    
+    var isFetchDeviationCollectionFolders = false
+    
     @IBOutlet weak var favoriteTableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,6 +32,8 @@ class UserCenterFavoriteViewController: UIViewController {
         
         favoriteTableView.separatorStyle = .none
         favoriteTableView.allowsSelection =  false
+        
+        fetchDeivationCollectionFolder()
     
     }
     
@@ -42,24 +52,113 @@ class UserCenterFavoriteViewController: UIViewController {
     }
     */
 
+    func fetchDeivationCollectionFolder(){
+        
+        isFetchDeviationCollectionFolders = true
+        
+        print(DeviantArtManager.generateGetCollectionFolderURL(offset:pageOffset,limit:pageLimit,accessToken: ActiveUserInfo.getAccesssToken()))
+        AlamofireManager.sharedSession.request(DeviantArtManager.generateGetCollectionFolderURL(offset:pageOffset,limit:pageLimit,accessToken: ActiveUserInfo.getAccesssToken())).responseJSON(completionHandler: {
+            response in
+            
+            switch(response.result){
+            case .success(_):
+                
+                if(response.response?.statusCode == 200){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        self.deviationCollectionFoldersForSingleRequest = JSONObjectHandler.convertToObjectArray(jsonArray: json["results"].arrayValue)
+                        self.deviationCollectionFolders.append(contentsOf: self.deviationCollectionFoldersForSingleRequest)
+                        
+                        self.pageOffset += self.pageLimit
+                        self.favoriteTableView.reloadData()
+                        
+                        self.fetchPreviewImage()
+                    }
+                }
+                else if(response.response?.statusCode == 401){
+                    if let data = response.data{
+                        let json = JSON(data)
+                        
+                        print(json["error"])
+                    }
+                }
+                
+                break
+            case .failure(_):
+                break
+            }
+        })
+        
+    }
+    
+    func fetchPreviewImage(){
+        
+        for i in 0..<deviationCollectionFoldersForSingleRequest.count{
+            
+            for j in 0..<deviationCollectionFoldersForSingleRequest[i].deviations.count{
+                
+                dispatchGroup.enter()
+                AlamofireManager.sharedSession.request(deviationCollectionFoldersForSingleRequest[i].deviations[j].previewSrc).response(completionHandler: {
+                    response in
+                    
+                    defer{
+                        self.dispatchGroup.leave()
+                    }
+                    
+                    switch(response.result){
+                    case .success(_):
+                        if(response.response?.statusCode == 200){
+                            let previewImage = UIImage(data: response.data!)
+                            self.deviationCollectionFoldersForSingleRequest[i].deviations[j].previewImage = previewImage
+                            
+                            self.favoriteTableView.reloadData()
+                        }
+                        
+                        break
+                        
+                    case .failure(_):
+                        break
+                    }
+                    
+                })
+            }
+            
+        }
+        
+        // DispatchGroup
+        dispatchGroup.notify(queue: .main){
+            self.isFetchDeviationCollectionFolders = false
+            
+        }
+    }
+
+
 }
 
 extension UserCenterFavoriteViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return Int((deviationCollectionFolders[section].deviations.count - 1) / 2) + 1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return deviationCollectionFolders.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let deviationCollectionFolder = deviationCollectionFolders[indexPath.section]
+        let index = indexPath.row * 2
+        
         var cell:UITableViewCell?
+        
+        let leftContentImage = deviationCollectionFolder.deviations[index].previewImage
+        
+        let rightContentImage = (index + 1) > deviationCollectionFolder.deviations.count - 1 ? nil:deviationCollectionFolder.deviations[index + 1].previewImage
         
         let specificCell = tableView.dequeueReusableCell(withIdentifier: "UserCenterFavoriteTableViewCell") as! UserCenterFavoriteTableViewCell
         
-        specificCell.setContentImage(leftContentImage: UIImage(named: "user-center-favorite-ahri-1")!, rightContentImage: UIImage(named: "user-center-favorite-ahri-2")!, fullHeight: 142, fullWidth: tableView.frame.width, gapWidth: 8)
+        specificCell.setContentImage(leftContentImage: leftContentImage, rightContentImage: rightContentImage, fullHeight: 142, fullWidth: tableView.frame.width, gapWidth: 8)
         
         cell = specificCell
         
@@ -69,4 +168,30 @@ extension UserCenterFavoriteViewController:UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let deviationCollectionFolder = deviationCollectionFolders[section]
+
+        let tempView = UserCenterFavoriteHeaderView()
+        tempView.folderNameLabel.text = deviationCollectionFolder.name
+
+        return tempView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let tempView = UIView()
+        tempView.backgroundColor = UIColor.clear
+        return tempView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        return 20
+    }
+    
 }

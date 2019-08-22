@@ -62,6 +62,8 @@
 		EB6642B72293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6642B52293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib */; };
 		EB6642B92293EA1C00FE71B6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */; };
 		EB74337222F9B491002884BB /* ImageWithColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74337122F9B491002884BB /* ImageWithColorExtension.swift */; };
+		EB7D98BD230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D98BC230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift */; };
+		EB7D98BF230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7D98BE230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib */; };
 		EB9CC18322C64D3E00F665BD /* UserCenterJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */; };
 		EB9CC18422C64D3E00F665BD /* UserCenterJournalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */; };
 		EB9CC18622C64E5C00F665BD /* UserCenterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */; };
@@ -167,6 +169,8 @@
 		EB6642B52293BFBD00FE71B6 /* ActivityTableViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewNormalCell.xib; sourceTree = "<group>"; };
 		EB6642B82293EA1C00FE71B6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		EB74337122F9B491002884BB /* ImageWithColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithColorExtension.swift; sourceTree = "<group>"; };
+		EB7D98BC230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterFavoriteHeaderView.swift; sourceTree = "<group>"; };
+		EB7D98BE230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterFavoriteHeaderView.xib; sourceTree = "<group>"; };
 		EB9CC18122C64D3E00F665BD /* UserCenterJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterJournalTableViewCell.swift; sourceTree = "<group>"; };
 		EB9CC18222C64D3E00F665BD /* UserCenterJournalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCenterJournalTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC18522C64E5C00F665BD /* UserCenterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterJournalViewController.swift; sourceTree = "<group>"; };
@@ -442,6 +446,8 @@
 			children = (
 				EB40B34322D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift */,
 				EB40B34122D5BD9400E75C9B /* UserCenterFavoriteTableViewCell.xib */,
+				EB7D98BC230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift */,
+				EB7D98BE230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib */,
 			);
 			path = UserCenterFavorite;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 				EB48B5DD22EF1D4600F60F15 /* UserCenterCommentHeaderTableViewCell.xib in Resources */,
 				EBB63B02229D495C00F789BD /* UserCenterContentSwitchView.xib in Resources */,
 				EB9CC18422C64D3E00F665BD /* UserCenterJournalTableViewCell.xib in Resources */,
+				EB7D98BF230EF4DF0092C4EE /* UserCenterFavoriteHeaderView.xib in Resources */,
 				EB6642AC2292810200FE71B6 /* TreeStructureView.xib in Resources */,
 				EB488B6122431F8700AC925F /* LaunchScreen.storyboard in Resources */,
 				EB1E9E2C22F808B20095FDA9 /* MainBottomTabBar.xib in Resources */,
@@ -748,6 +755,7 @@
 				EBBA85712307C4A3009E0A7D /* DeviationComment.swift in Sources */,
 				EB267C39228A9A0E004979AC /* XibUIView.swift in Sources */,
 				EBBA85732307CD31009E0A7D /* JSONDateExtension.swift in Sources */,
+				EB7D98BD230EF4BF0092C4EE /* UserCenterFavoriteHeaderView.swift in Sources */,
 				EB40B34422D5BDAB00E75C9B /* UserCenterFavoriteTableViewCell.swift in Sources */,
 				EB188A7A22FA9D0400524B77 /* ObjectDictionaryProtocols.swift in Sources */,
 				EBF8E8F8230E6C06008C3337 /* DeviationCollectionFolder.swift in Sources */,

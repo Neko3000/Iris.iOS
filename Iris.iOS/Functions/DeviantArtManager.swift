@@ -226,7 +226,7 @@ class DeviantArtManager{
         return urlComponents!.url!
     }
     
-    static func generateGetCollectionFolderURL(username:String, calculateSize:Bool = true, extPreload:Bool = true,offset:Int? = nil, limit:Int? = nil, accessToken:String) -> URL{
+    static func generateGetCollectionFolderURL(username:String = "", calculateSize:Bool = true, extPreload:Bool = true,offset:Int? = nil, limit:Int? = nil, accessToken:String) -> URL{
         var urlComponents = URLComponents(string: getCollectionFolderURLEndPoint)
         urlComponents?.queryItems = [
             URLQueryItem(name: "username", value: username),

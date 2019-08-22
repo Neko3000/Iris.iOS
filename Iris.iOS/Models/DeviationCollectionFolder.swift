@@ -13,8 +13,8 @@ class DeviationCollectionFolder:ObjectFromJSON{
     
     var folderId:String = ""
     var name:String = ""
-    var size:String = ""
-    var deviations:[Deviation]?
+    var size:Int = 0
+    var deviations:[Deviation] = [Deviation]()
     
     init() {
         
@@ -23,7 +23,8 @@ class DeviationCollectionFolder:ObjectFromJSON{
     required init(json:JSON) {
         self.folderId = json["folderid"].string!
         self.name = json["name"].string!
-        self.size = json["size"].string!
-        self.deviations =  JSONObjectHandler.convertToObjectArray(jsonArray: json["deviations"].arrayValue)
+        self.size = json["size"].int!
+        
+        self.deviations =  DeviantionHandler.filterJournalDeviation(deviants: JSONObjectHandler.convertToObjectArray(jsonArray: json["deviations"].arrayValue))
     }
 }
