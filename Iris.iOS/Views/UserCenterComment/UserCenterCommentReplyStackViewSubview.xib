@@ -13,8 +13,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserCenterCommentReplyStackViewSubview" customModule="Iris_iOS" customModuleProvider="target">
             <connections>
-                <outlet property="avatarImageView" destination="3Jc-5Y-CNs" id="pQc-M0-dJz"/>
-                <outlet property="descriptionLabel" destination="7zU-7k-d7t" id="tOG-dJ-PCx"/>
+                <outlet property="authorAvatarImageView" destination="3Jc-5Y-CNs" id="ihf-Sd-96A"/>
+                <outlet property="authorNameDateLabel" destination="lIq-MC-BMg" id="Mmh-V3-3Jf"/>
+                <outlet property="bodyLabel" destination="7zU-7k-d7t" id="WI8-83-cMu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

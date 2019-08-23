@@ -133,8 +133,6 @@ class UserCenterFollowerViewController: UIViewController {
         
         for i in 0..<deviantArtUsersForSingleRequest.count{
             
-            print(DeviantArtManager.generateGetUserProfileURL(username:deviantArtUsersForSingleRequest[i].username,accessToken: ActiveUserInfo.getAccesssToken()))
-            
             dispatchGroup.enter()
             AlamofireManager.sharedSession.request(DeviantArtManager.generateGetUserProfileURL(username:deviantArtUsersForSingleRequest[i].username,accessToken: ActiveUserInfo.getAccesssToken())).response(completionHandler: {
                 response in

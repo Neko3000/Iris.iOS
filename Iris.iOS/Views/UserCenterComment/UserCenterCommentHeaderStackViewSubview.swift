@@ -19,9 +19,12 @@ class UserCenterCommentHeaderStackViewSubview: XibUIView {
     }
     */
     
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var authorAvatarImageView: UIImageView!
+    @IBOutlet weak var authorNameLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
     
     private var isInitialized:Bool = false
     
@@ -29,8 +32,8 @@ class UserCenterCommentHeaderStackViewSubview: XibUIView {
         super.layoutSubviews()
         
         if(!isInitialized){
-            avatarImageView.layer.cornerRadius = 13.0
-            avatarImageView.layer.masksToBounds = true
+            authorAvatarImageView.layer.cornerRadius = 13.0
+            authorAvatarImageView.layer.masksToBounds = true
 
             isInitialized = true
         }

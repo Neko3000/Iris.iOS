@@ -11,6 +11,11 @@ import UIKit
 
 class UserCenterCommentReplyStackViewSubview: XibUIView {
 
+    @IBOutlet weak var bodyLabel: UILabel!
+
+    @IBOutlet weak var authorAvatarImageView: UIImageView!
+    @IBOutlet weak var authorNameDateLabel: UILabel!
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -19,18 +24,14 @@ class UserCenterCommentReplyStackViewSubview: XibUIView {
     }
     */
     
-    @IBOutlet weak var avatarImageView: UIImageView!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
     private var isInitialized:Bool = false
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         if(!isInitialized){
-            avatarImageView.layer.cornerRadius = 13.0
-            avatarImageView.layer.masksToBounds = true
+            authorAvatarImageView.layer.cornerRadius = 13.0
+            authorAvatarImageView.layer.masksToBounds = true
 
             isInitialized = true
         }

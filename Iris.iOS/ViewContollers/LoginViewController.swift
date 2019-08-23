@@ -15,6 +15,8 @@ import SwiftyJSON
 class LoginViewController: UIViewController{
     
     var loginWKWebView:WKWebView?
+    
+    var mainRequest:URLRequest?
 
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var loginActivityIndicatorView: NVActivityIndicatorView!
@@ -31,7 +33,10 @@ class LoginViewController: UIViewController{
         loginWKWebView!.navigationDelegate = self
         loginWKWebView!.frame = view.bounds
         
-        // UserInfo.clearStoredUserInfo()
+        mainRequest = URLRequest(url: DeviantArtManager.generateAuthorizationCodeURL(responseType: "code", clientId: ApplicationKey.clientKey, redirectUrl: "https://www.roseandcage.com", scope: "basic browse feed user", state: "bingo"))
+        // mainRequest!.httpShouldHandleCookies = false
+                
+        UserInfo.clearStoredUserInfo()
         initUserState()
     }
     
@@ -78,7 +83,7 @@ class LoginViewController: UIViewController{
                                     ActiveUserInfo.setAcesssToken(accessToken: accessToken)
                                     ActiveUserInfo.setRefreshToken(refreshToken: refreshToken)
                                     
-                                    let userInfo = UserInfo(accessToken: accessToken, refreshToken: refreshToken)
+                                    let userInfo = UserInfo(username:loadedUserInfo.username, accessToken: accessToken, refreshToken: refreshToken)
                                     UserInfo.saveUserInfo(userInfoObject: userInfo)
                                     
                                     // segue to explore
@@ -204,9 +209,7 @@ class LoginViewController: UIViewController{
     @IBAction func loginBtnTouchUpInside(_ sender: Any) {
         view.addSubview(loginWKWebView!)
         
-        let request = URLRequest(url: DeviantArtManager.generateAuthorizationCodeURL(responseType: "code", clientId: ApplicationKey.clientKey, redirectUrl: "https://www.roseandcage.com", scope: "basic browse feed user", state: "bingo"))
-        
-        loginWKWebView?.load(request)
+        loginWKWebView?.load(mainRequest!)
     }
     
     func changeLayoutToLoading(){
@@ -227,6 +230,18 @@ class LoginViewController: UIViewController{
 extension LoginViewController:UIWebViewDelegate,WKUIDelegate,WKNavigationDelegate{
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        print(navigationAction.request.url!.absoluteURL)
+
+        
+        if(navigationAction.request.url!.absoluteString == "about:blank"){
+            loginWKWebView?.removeFromSuperview()
+            
+            changeLayoutToLoading()
+            
+            loginWKWebView?.load(mainRequest!)
+        }
+        
         
         if(navigationAction.request.url?.host == "www.roseandcage.com"){
             loginWKWebView?.removeFromSuperview()

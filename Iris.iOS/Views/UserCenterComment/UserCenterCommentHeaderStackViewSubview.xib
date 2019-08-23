@@ -13,8 +13,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserCenterCommentHeaderStackViewSubview" customModule="Iris_iOS" customModuleProvider="target">
             <connections>
-                <outlet property="avatarImageView" destination="3Jc-5Y-CNs" id="jQW-VY-QYg"/>
-                <outlet property="descriptionLabel" destination="7zU-7k-d7t" id="Bjh-00-YFr"/>
+                <outlet property="authorAvatarImageView" destination="3Jc-5Y-CNs" id="Jtx-Yh-Sl0"/>
+                <outlet property="authorNameLabel" destination="Af5-9i-jEc" id="RW3-Tq-l31"/>
+                <outlet property="bodyLabel" destination="7zU-7k-d7t" id="cIh-Ox-Iim"/>
+                <outlet property="dateLabel" destination="lIq-MC-BMg" id="psR-Vm-6Rg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
