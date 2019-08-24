@@ -21,16 +21,20 @@ Done!
 
 ## How to use
 <p align="center"> 
-<img width="300" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-sr1.gif" alt="screen-record-1">
-<img width="300" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-sr2.gif" alt="screen-record-2">
-<img width="300" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-sr3.gif" alt="screen-record-3">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-sr1.gif" alt="screen-record-1">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-sr2.gif" alt="screen-record-2">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-sr3.gif" alt="screen-record-3">
 </p>
 
 <p align="center"> 
 <img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s1.png" alt="screenshot-1">
-  <img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s2.png" alt="screenshot-2">
-  <img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s3.png" alt="screenshot-3">
-  <img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s4.png" alt="screenshot-4">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s2.png" alt="screenshot-2">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s3.png" alt="screenshot-3">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s4.png" alt="screenshot-4">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s5.png" alt="screenshot-5">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s6.png" alt="screenshot-6">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s7.png" alt="screenshot-7">
+<img width="200" src="https://raw.githubusercontent.com/Neko3000/resource-storage/master/img/screenshot/iris-ios-s8.png" alt="screenshot-8">
 </p>
 
 ## Features
