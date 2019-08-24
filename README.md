@@ -16,8 +16,7 @@ Simple clone it by:
 $ git clone https://github.com/Neko3000/Iris.iOS.git
 ```
 
-Open it, hit <kbd>command</kbd> + <kbd>R</kbd>,</br>
-Done!
+Open it then hit <kbd>command</kbd> + <kbd>R</kbd>, Done!
 
 ## How to use
 <p align="center"> 
