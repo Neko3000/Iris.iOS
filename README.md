@@ -2,7 +2,7 @@
 ![License: MIT](https://img.shields.io/github/license/Neko3000/Iris.iOS)
 ![Platforms: iOS](https://img.shields.io/badge/Platform-iOS-lightgrey)
 ![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)
-![Version: v0.70](https://img.shields.io/badge/version-v0.90-lightgrey)
+![Version: v0.70](https://img.shields.io/badge/version-v0.70-lightgrey)
 
 Iris is a model mobile application based on iOS.</br>
 It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/) and check Daily Arts, Notifications, Deviation Collections...</br>
@@ -87,12 +87,12 @@ E-mail: sheran_chen@outlook.com </br>
 Weibo: @妖绀
 
 ## Contributers
-Artists on DeviantArt.com:
-[pikaboots](https://www.deviantart.com/pikaboots/art/ahri-396860694)
-[NeoArtCorE](https://www.deviantart.com/neoartcore/art/Ahri-516972803)
-[MOYAILRIS](https://www.deviantart.com/moyailris/art/Ahri-355382339)
-[arseniquez](https://www.deviantart.com/arseniquez/art/Ahri-601141096)
-[NPye13](https://www.deviantart.com/npye13/art/Ahri-594746695)
+Artists on DeviantArt.com:</br>
+[pikaboots](https://www.deviantart.com/pikaboots/art/ahri-396860694)</br>
+[NeoArtCorE](https://www.deviantart.com/neoartcore/art/Ahri-516972803)</br>
+[MOYAILRIS](https://www.deviantart.com/moyailris/art/Ahri-355382339)</br>
+[arseniquez](https://www.deviantart.com/arseniquez/art/Ahri-601141096)</br>
+[NPye13](https://www.deviantart.com/npye13/art/Ahri-594746695)</br>
 
 ## License
 Distributed under the MIT license. See LICENSE for more information.
