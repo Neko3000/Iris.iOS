@@ -2,7 +2,7 @@
 ![License: MIT](https://img.shields.io/github/license/Neko3000/Iris.iOS)
 ![Platforms: iOS](https://img.shields.io/badge/Platform-iOS-lightgrey)
 ![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)
-![Version: v0.90](https://img.shields.io/badge/version-v0.90-lightgrey)
+![Version: v0.70](https://img.shields.io/badge/version-v0.90-lightgrey)
 
 Iris is a model mobile application based on iOS.</br>
 It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/) and check Daily Arts, Notifications, Deviation Collections...</br>
@@ -13,7 +13,7 @@ All contents are delivered by [DeviantArt API](https://www.deviantart.com/develo
 Simple clone it by:
 
 ```
-$ git clone https://github.com/Neko3000/StarryTarget.git
+$ git clone https://github.com/Neko3000/Iris.iOS.git
 ```
 
 Open it, hit <kbd>command</kbd> + <kbd>R</kbd>,</br>
@@ -44,12 +44,14 @@ Done!
 - [x] Deviation Detail
 - [x] Notification
 - [x] Gallery
-- [x] Joural
+- [x] Journal
 - [x] Status
 - [x] Collection (Featured)
-- [x] Follower
+- [x] Watcher
 - [x] Profile Comment
-- [x] More...
+- [] Submit Art
+- [] Update Profile
+- [X] More...
 
 ## Interface Design
 We fully customized its interface considering proper UX before we developed it on Xcode.</br>
@@ -62,18 +64,23 @@ And we also used some fantastic UI controls, likes [TwicketSegmentedControl](htt
 Pods have been included:
 
 ```
-pod 'RxSwift'
-pod 'RxCocoa'
-pod 'RealmSwift'
+pod 'Alamofire', '5.0.0-beta.7'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'TwicketSegmentedControl'
+pod 'NVActivityIndicatorView'
+
 ```
 
 ## Development
 You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of DeviantArt API](https://www.deviantart.com/developers/apps) to check the authentication details.
 
-Here's the path:
+We provided client_id and secret_key for testing in files.
+You should register your application to get client_id and secret_key, then apply them to here:
+
 ```
-// RealmManager.swift
-print(Realm.Configuration.defaultConfiguration.fileURL!)
+// ApplicationKey.swift
+static let clientKey = "XXXX"
+static let secretKey = "XXXXXXXXXXXXXX"
 ```
 
 ## Contact To Me
