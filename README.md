@@ -55,7 +55,7 @@ Done!
 
 ## Interface Design
 We fully customized its interface considering proper UX before we developed it on Xcode.</br>
-And we decided to provide its Sketch file, you could find it here.
+And we decided to provide its Sketch file, you could find it on [Iris.iOS on Behance](https://www.behance.net/gallery/84568283/IrisiOS).
 
 ## Dependencies
 For handling Network requests, we used famouse [Alamofire](https://github.com/Alamofire/Alamofire) and [SwfityJSON](https://github.com/SwiftyJSON/SwiftyJSON) in this project.</br>
@@ -87,6 +87,12 @@ E-mail: sheran_chen@outlook.com </br>
 Weibo: @妖绀
 
 ## Contributers
+Artists on DeviantArt.com:
+[pikaboots](https://www.deviantart.com/pikaboots/art/ahri-396860694)
+[NeoArtCorE](https://www.deviantart.com/neoartcore/art/Ahri-516972803)
+[MOYAILRIS](https://www.deviantart.com/moyailris/art/Ahri-355382339)
+[arseniquez](https://www.deviantart.com/arseniquez/art/Ahri-601141096)
+[NPye13](https://www.deviantart.com/npye13/art/Ahri-594746695)
 
 ## License
 Distributed under the MIT license. See LICENSE for more information.
