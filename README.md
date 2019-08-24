@@ -49,8 +49,8 @@ Done!
 - [x] Collection (Featured)
 - [x] Watcher
 - [x] Profile Comment
-- [] Submit Art
-- [] Update Profile
+- [ ] Submit Art
+- [ ] Update Profile
 - [X] More...
 
 ## Interface Design
@@ -72,10 +72,9 @@ pod 'NVActivityIndicatorView'
 ```
 
 ## Development
-You should use your own Applications Keys (client_id & client_secret), please refer to [Doc of DeviantArt API](https://www.deviantart.com/developers/apps) to check the authentication details.
+We provided client_id and secret_key for testing in files. But you should use your own Applications Keys (client_id & client_secret), please refer to [Doc of DeviantArt API](https://www.deviantart.com/developers/apps) to check the authentication details.</br>
 
-We provided client_id and secret_key for testing in files.
-You should register your application to get client_id and secret_key, then apply them to here:
+Those key values could be found here:
 
 ```
 // ApplicationKey.swift
