@@ -5,7 +5,7 @@
 ![Version: v0.70](https://img.shields.io/badge/version-v0.70-lightgrey)
 
 Iris is a model mobile application based on iOS.</br>
-It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/) and check Daily Arts, Notifications, Deviation Collections...</br>
+It provides basic functions allow users to explore on [DeviantArt](https://www.deviantart.com/) and check Daily Arts, Notifications, Deviation Collections, etc.</br>
 </br>
 All contents are delivered by [DeviantArt API](https://www.deviantart.com/developers/).</br>
 
@@ -16,7 +16,7 @@ Simple clone it by:
 $ git clone https://github.com/Neko3000/Iris.iOS.git
 ```
 
-Open it then hit <kbd>command</kbd> + <kbd>R</kbd>...Done!
+Open it then hit <kbd>command</kbd> + <kbd>R</kbd>, Done!
 
 ## How to use
 <p align="center"> 
