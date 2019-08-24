@@ -1,5 +1,5 @@
 # Iris.iOS
-![License: MIT](https://img.shields.io/github/license/Neko3000/Iris.iOS)
+![License: Mozilla](https://img.shields.io/github/license/neko3000/iris.ios)
 ![Platforms: iOS](https://img.shields.io/badge/Platform-iOS-lightgrey)
 ![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)
 ![Version: v0.70](https://img.shields.io/badge/version-v0.70-lightgrey)
