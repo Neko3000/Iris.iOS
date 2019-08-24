@@ -94,4 +94,4 @@ Artists on DeviantArt.com:</br>
 [NPye13](https://www.deviantart.com/npye13/art/Ahri-594746695)</br>
 
 ## License
-Distributed under the MIT license. See LICENSE for more information.
+Distributed under the Mozilla license. See LICENSE for more information.
