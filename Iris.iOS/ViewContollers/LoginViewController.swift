@@ -35,9 +35,10 @@ class LoginViewController: UIViewController{
         
         mainRequest = URLRequest(url: DeviantArtManager.generateAuthorizationCodeURL(responseType: "code", clientId: ApplicationKey.clientKey, redirectUrl: "https://www.roseandcage.com", scope: "basic browse feed user", state: "bingo"))
         // mainRequest!.httpShouldHandleCookies = false
-                
+        
         UserInfo.clearStoredUserInfo()
         initUserState()
+        
     }
     
     private func initUserState(){
@@ -233,7 +234,7 @@ extension LoginViewController:UIWebViewDelegate,WKUIDelegate,WKNavigationDelegat
         
         print(navigationAction.request.url!.absoluteURL)
 
-        
+        // DeviantArt changed login without redirect
         if(navigationAction.request.url!.absoluteString == "about:blank"){
             loginWKWebView?.removeFromSuperview()
             

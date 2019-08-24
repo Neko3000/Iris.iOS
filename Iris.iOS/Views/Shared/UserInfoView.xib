@@ -22,11 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="403" height="370"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-center-gallery-ahri-1" translatesAutoresizingMaskIntoConstraints="NO" id="GeM-vn-ZCY">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personal-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="GeM-vn-ZCY">
                     <rect key="frame" x="141.5" y="40" width="120" height="120"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24L-AK-ds1">
-                    <rect key="frame" x="185" y="180" width="33.5" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J.Collier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24L-AK-ds1">
+                    <rect key="frame" x="168.5" y="180" width="66" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                     <color key="textColor" name="text-normal-grey-3"/>
                     <nil key="highlightedColor"/>
@@ -778,7 +778,7 @@ bQAAAAAAAAAAAAAAAAAAncM
         <image name="horizontal-line" width="147" height="2"/>
         <image name="icon-edit" width="22" height="24"/>
         <image name="icon-left-arrow" width="22" height="22"/>
-        <image name="user-center-gallery-ahri-1" width="120" height="120"/>
+        <image name="personal-avatar" width="120" height="120"/>
         <namedColor name="text-normal-grey-3">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

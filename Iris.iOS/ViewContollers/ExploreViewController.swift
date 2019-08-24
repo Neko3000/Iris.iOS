@@ -26,7 +26,8 @@ class ExploreViewController: UIViewController {
         searchTextField.attributedPlaceholder = NSAttributedString(string: "enter keyword to find", attributes: [.foregroundColor:UIColor(named: "text-light-grey-2")!])
         
         backgroundContainerView.layer.masksToBounds = true
-        setImageBG(image: UIImage(named: "explore-ahri-1")!)
+        backgroundImageView.image = UIImage(named: "explore-ahri-1-blured")
+        // setImageBG(image: UIImage(named: "explore-ahri-1")!)
         
         searchTextField.layer.cornerRadius = 10.0
         searchTextField.layer.masksToBounds = true
