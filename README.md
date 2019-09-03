@@ -89,7 +89,7 @@ static let secretKey = "XXXXXXXXXXXXXX"
 E-mail: sheran_chen@outlook.com </br>
 Weibo: @妖绀
 
-## Contributers
+## Contributors
 Artists on DeviantArt.com:</br>
 [pikaboots](https://www.deviantart.com/pikaboots/art/ahri-396860694)</br>
 [NeoArtCorE](https://www.deviantart.com/neoartcore/art/Ahri-516972803)</br>
